@@ -4,6 +4,8 @@ _**Class-incremental learning: survey and performance evaluation**_ ([arxiv](htt
 The regularization-based approaches are EWC, MAS, PathInt, LwF, LwM and DMC. The rehearsal approaches are iCaRL, EEIL
 and RWalk. The bias-correction approaches are IL2M, BiC and LUCIR.
 
+The approache used in this article is CEFCIL.
+
 ## Main usage
 When running an experiment, the approach used can be defined in [main_incremental.py](../main_incremental.py) using
 `--approach`. Each approach is called by their respective `*.py` name. All approaches inherit from class

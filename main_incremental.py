@@ -78,7 +78,7 @@ def main(argv=None):
     parser.add_argument('--pretrained', action='store_true',
                         help='Use pretrained backbone (default=%(default)s)')
     # training args
-    parser.add_argument('--approach', default='ILFTF', type=str, choices=approach.__all__,
+    parser.add_argument('--approach', default='CEFCIL', type=str, choices=approach.__all__,
                         help='Learning approach used (default=%(default)s)', metavar="APPROACH")
     parser.add_argument('--nepochs', default=2, type=int, required=False,
                         help='Number of epochs per training session (default=%(default)s)')
@@ -236,7 +236,7 @@ def main(argv=None):
 
     # Network and Approach instances
     seed_everything(seed=args.seed)
-    if args.approach == "ILFTF":
+    if args.approach == "CEFCIL":
         net = ExtractorEnsemble(init_model, taskcla, args.network, device)
     else:
         net = LLL_Net(init_model, taskcla, remove_existing_head=not args.keep_existing_head)
