@@ -1,0 +1,237 @@
+gcc-9.3.0 loaded successful
+cuda-12.1 loaded successful
+============================================================================================================
+Arguments =
+	approach: ILFTF
+	batch_size: 128
+	clipping: 1.0
+	collapse_alpha: 0.2
+	datasets: ['imagenet_subset_kaggle']
+	eval_on_train: False
+	exp_name: image_0820_ma_I50_T6_C10-randseed1993
+	extra_aug: fetril
+	fix_bn: False
+	ftepochs: 100
+	gpu: 0
+	inc_sub_rate: 0.2
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.05
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.9
+	multi_softmax: False
+	nc_first_task: 50
+	nc_inc_tasks: 10
+	nc_total: 100
+	nepochs: 200
+	network: resnet18
+	no_cudnn_deterministic: False
+	num_experts: 5
+	num_tasks: 6
+	num_workers: 4
+	pin_memory: False
+	pretrained: False
+	random_seed: 1993
+	results_path: ../results
+	save_models: False
+	seed: 1
+	shared: 1.0
+	small_data_rate: 0.1
+	stop_at_task: 0
+	use_test_as_val: True
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0005
+============================================================================================================
+/home/bingxing2/home/scx7aum/.conda/envs/pytorch/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bingxing2/home/scx7aum/.conda/envs/pytorch/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Approach arguments =
+	alpha: 0.5
+	ftwd: 0
+	ini_kd_loss: 0.1
+	initialization_strategy: first
+	max_experts: 5
+	tau: 3.0
+	use_nmc: False
+============================================================================================================
+Generating train/test splits for ImageNet-Subset directory: ../data/seed_1993_subset_100_imagenet
+[(0, 50), (1, 10), (2, 10), (3, 10), (4, 10), (5, 10)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+Training backbone_0 on task_0:
+The expert_0 has 11,212,594 trainable parameters
+The expert_0 has 0 shared parameters
+
+Training backbone_1 on task_0:
+The expert_1 has 11,064,626 trainable parameters
+The expert_1 has 147,968 shared parameters
+
+Training backbone_2 on task_0:
+The expert_2 has 11,064,626 trainable parameters
+The expert_2 has 147,968 shared parameters
+
+Training backbone_3 on task_0:
+The expert_3 has 11,064,626 trainable parameters
+The expert_3 has 147,968 shared parameters
+
+Training backbone_4 on task_0:
+The expert_4 has 11,064,626 trainable parameters
+The expert_4 has 147,968 shared parameters
+
+Creating distributions for task_0:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 83.0%, forg=  0.0%| TAg acc= 83.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+[Elapsed time in init_stage = 14.4 h]
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+Finetuning backbone_0 on task_1:
+Finetuning other backbones_1 on task_1:
+Finetuning other backbones_2 on task_1:
+Finetuning other backbones_3 on task_1:
+Finetuning other backbones_4 on task_1:
+Creating distributions for task_1:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 74.0%, forg=  9.0%| TAg acc= 74.0%, forg=  9.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 88.0%, forg=  0.0%| TAg acc= 78.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+Finetuning backbone_0 on task_2:
+Finetuning other backbones_1 on task_2:
+Finetuning other backbones_2 on task_2:
+Finetuning other backbones_3 on task_2:
+Finetuning other backbones_4 on task_2:
+Creating distributions for task_2:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 67.0%, forg= 16.0%| TAg acc= 67.0%, forg= 16.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 85.0%, forg=  3.0%| TAg acc= 72.0%, forg=  6.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 90.0%, forg=  0.0%| TAg acc= 82.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+Finetuning backbone_0 on task_3:
+Finetuning other backbones_1 on task_3:
+Finetuning other backbones_2 on task_3:
+Finetuning other backbones_3 on task_3:
+Finetuning other backbones_4 on task_3:
+Creating distributions for task_3:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 58.0%, forg= 25.0%| TAg acc= 58.0%, forg= 25.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 81.0%, forg=  7.0%| TAg acc= 63.0%, forg= 15.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 83.0%, forg=  7.0%| TAg acc= 75.0%, forg=  7.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 91.0%, forg=  0.0%| TAg acc= 85.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+Finetuning backbone_0 on task_4:
+Finetuning other backbones_1 on task_4:
+Finetuning other backbones_2 on task_4:
+Finetuning other backbones_3 on task_4:
+Finetuning other backbones_4 on task_4:
+Creating distributions for task_4:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 52.0%, forg= 31.0%| TAg acc= 52.0%, forg= 31.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 76.0%, forg= 12.0%| TAg acc= 60.0%, forg= 18.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 80.0%, forg= 10.0%| TAg acc= 71.0%, forg= 11.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 87.0%, forg=  4.0%| TAg acc= 77.0%, forg=  8.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 90.0%, forg=  0.0%| TAg acc= 86.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+************************************************************************************************************
+Task  5
+************************************************************************************************************
+Finetuning backbone_0 on task_5:
+Finetuning other backbones_1 on task_5:
+Finetuning other backbones_2 on task_5:
+Finetuning other backbones_3 on task_5:
+Finetuning other backbones_4 on task_5:
+Creating distributions for task_5:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 45.0%, forg= 38.0%| TAg acc= 45.0%, forg= 38.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 73.0%, forg= 15.0%| TAg acc= 55.0%, forg= 23.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 77.0%, forg= 13.0%| TAg acc= 67.0%, forg= 15.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 82.0%, forg=  9.0%| TAg acc= 70.0%, forg= 15.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 83.0%, forg=  7.0%| TAg acc= 75.0%, forg= 11.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 91.0%, forg=  0.0%| TAg acc= 85.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_ILFTF_image_0820_ma_I50_T6_C10-randseed1993
+************************************************************************************************************
+TAw Acc
+	 83.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 83.0% 
+	 74.0%  88.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 81.0% 
+	 67.0%  85.0%  90.0%   0.0%   0.0%   0.0% 	Avg.: 80.7% 
+	 58.0%  81.0%  83.0%  91.0%   0.0%   0.0% 	Avg.: 78.3% 
+	 52.0%  76.0%  80.0%  87.0%  90.0%   0.0% 	Avg.: 77.0% 
+	 45.0%  73.0%  77.0%  82.0%  83.0%  91.0% 	Avg.: 75.2% 
+Average incremental: 79.2% 
+--------------------------------------------------
+TAw Acc on CIL taskes
+
+	 88.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 88.0% 
+	 85.0%  90.0%   0.0%   0.0%   0.0% 	Avg.: 87.5% 
+	 81.0%  83.0%  91.0%   0.0%   0.0% 	Avg.: 85.0% 
+	 76.0%  80.0%  87.0%  90.0%   0.0% 	Avg.: 83.2% 
+	 73.0%  77.0%  82.0%  83.0%  91.0% 	Avg.: 81.2% 
+Average on CIL taskes: 85.0% 
+************************************************************************************************************
+TAg Acc
+	 83.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 83.0% 
+	 74.0%  78.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 76.0% 
+	 67.0%  72.0%  82.0%   0.0%   0.0%   0.0% 	Avg.: 73.7% 
+	 58.0%  63.0%  75.0%  85.0%   0.0%   0.0% 	Avg.: 70.2% 
+	 52.0%  60.0%  71.0%  77.0%  86.0%   0.0% 	Avg.: 69.2% 
+	 45.0%  55.0%  67.0%  70.0%  75.0%  85.0% 	Avg.: 66.2% 
+Average incremental: 73.0% 
+--------------------------------------------------
+TAg Acc on CIL taskes
+
+	 78.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 78.0% 
+	 72.0%  82.0%   0.0%   0.0%   0.0% 	Avg.: 77.0% 
+	 63.0%  75.0%  85.0%   0.0%   0.0% 	Avg.: 74.3% 
+	 60.0%  71.0%  77.0%  86.0%   0.0% 	Avg.: 73.5% 
+	 55.0%  67.0%  70.0%  75.0%  85.0% 	Avg.: 70.4% 
+Average on CIL taskes: 74.6% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.4% 
+	  9.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  9.0% 
+	 16.0%   3.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  9.5% 
+	 25.0%   7.0%   7.0%   0.0%   0.0%   0.0% 	Avg.: 13.0% 
+	 31.0%  12.0%  10.0%   4.0%   0.0%   0.0% 	Avg.: 14.2% 
+	 38.0%  15.0%  13.0%   9.0%   7.0%   0.0% 	Avg.: 16.4% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 16.4% 
+	  9.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  9.0% 
+	 16.0%   6.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 11.0% 
+	 25.0%  15.0%   7.0%   0.0%   0.0%   0.0% 	Avg.: 15.7% 
+	 31.0%  18.0%  11.0%   8.0%   0.0%   0.0% 	Avg.: 17.0% 
+	 38.0%  23.0%  15.0%  15.0%  11.0%   0.0% 	Avg.: 20.4% 
+************************************************************************************************************
+[Elapsed time for incremental learning = 4.2 h]
+Done!

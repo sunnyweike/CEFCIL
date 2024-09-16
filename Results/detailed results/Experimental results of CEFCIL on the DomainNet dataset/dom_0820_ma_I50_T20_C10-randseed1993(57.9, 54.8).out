@@ -1,0 +1,838 @@
+gcc-9.3.0 loaded successful
+cuda-12.1 loaded successful
+============================================================================================================
+Arguments =
+	approach: ILFTF
+	batch_size: 128
+	clipping: 1.0
+	collapse_alpha: 0.2
+	datasets: ['domainnet']
+	eval_on_train: False
+	exp_name: domain_0820_ma_I50_T20_C10-randseed1993
+	extra_aug: fetril
+	fix_bn: False
+	ftepochs: 100
+	gpu: 0
+	inc_sub_rate: 0.2
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.05
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.9
+	multi_softmax: False
+	nc_first_task: 50
+	nc_inc_tasks: 10
+	nc_total: 240
+	nepochs: 200
+	network: resnet18
+	no_cudnn_deterministic: False
+	num_experts: 5
+	num_tasks: 20
+	num_workers: 4
+	pin_memory: False
+	pretrained: False
+	random_seed: 1993
+	results_path: ../results
+	save_models: False
+	seed: 1
+	shared: 1.0
+	small_data_rate: 0.1
+	stop_at_task: 0
+	use_test_as_val: True
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0005
+============================================================================================================
+/home/bingxing2/home/scx7aum/.conda/envs/pytorch/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bingxing2/home/scx7aum/.conda/envs/pytorch/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Approach arguments =
+	alpha: 0.5
+	ftwd: 0
+	ini_kd_loss: 0.1
+	initialization_strategy: first
+	max_experts: 5
+	tau: 3.0
+	use_nmc: False
+============================================================================================================
+[(0, 50), (1, 10), (2, 10), (3, 10), (4, 10), (5, 10), (6, 10), (7, 10), (8, 10), (9, 10), (10, 10), (11, 10), (12, 10), (13, 10), (14, 10), (15, 10), (16, 10), (17, 10), (18, 10), (19, 10)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+Training backbone_0 on task_0:
+The expert_0 has 11,212,594 trainable parameters
+The expert_0 has 0 shared parameters
+
+Training backbone_1 on task_0:
+The expert_1 has 11,064,626 trainable parameters
+The expert_1 has 147,968 shared parameters
+
+Training backbone_2 on task_0:
+The expert_2 has 11,064,626 trainable parameters
+The expert_2 has 147,968 shared parameters
+
+Training backbone_3 on task_0:
+The expert_3 has 11,064,626 trainable parameters
+The expert_3 has 147,968 shared parameters
+
+Training backbone_4 on task_0:
+The expert_4 has 11,064,626 trainable parameters
+The expert_4 has 147,968 shared parameters
+
+Creating distributions for task_0:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 81.0%, forg=  0.0%| TAg acc= 81.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+[Elapsed time in init_stage = 2.2 h]
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+Finetuning backbone_0 on task_1:
+Finetuning other backbones_1 on task_1:
+Finetuning other backbones_2 on task_1:
+Finetuning other backbones_3 on task_1:
+Finetuning other backbones_4 on task_1:
+Creating distributions for task_1:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 80.0%, forg=  1.0%| TAg acc= 80.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 85.0%, forg=  0.0%| TAg acc= 68.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+Finetuning backbone_0 on task_2:
+Finetuning other backbones_1 on task_2:
+Finetuning other backbones_2 on task_2:
+Finetuning other backbones_3 on task_2:
+Finetuning other backbones_4 on task_2:
+Creating distributions for task_2:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 80.0%, forg=  1.0%| TAg acc= 80.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 85.0%, forg=  0.0%| TAg acc= 67.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 71.0%, forg=  0.0%| TAg acc= 63.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+Finetuning backbone_0 on task_3:
+Finetuning other backbones_1 on task_3:
+Finetuning other backbones_2 on task_3:
+Finetuning other backbones_3 on task_3:
+Finetuning other backbones_4 on task_3:
+Creating distributions for task_3:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 80.0%, forg=  1.0%| TAg acc= 80.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 85.0%, forg=  0.0%| TAg acc= 66.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 72.0%, forg= -1.0%| TAg acc= 63.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 44.0%, forg=  0.0%| TAg acc= 28.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+Finetuning backbone_0 on task_4:
+Finetuning other backbones_1 on task_4:
+Finetuning other backbones_2 on task_4:
+Finetuning other backbones_3 on task_4:
+Finetuning other backbones_4 on task_4:
+Creating distributions for task_4:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 78.0%, forg=  3.0%| TAg acc= 78.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 83.0%, forg=  2.0%| TAg acc= 64.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 69.0%, forg=  3.0%| TAg acc= 60.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 43.0%, forg=  1.0%| TAg acc= 27.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 57.0%, forg=  0.0%| TAg acc= 50.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  5
+************************************************************************************************************
+Finetuning backbone_0 on task_5:
+Finetuning other backbones_1 on task_5:
+Finetuning other backbones_2 on task_5:
+Finetuning other backbones_3 on task_5:
+Finetuning other backbones_4 on task_5:
+Creating distributions for task_5:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 71.0%, forg= 10.0%| TAg acc= 71.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 79.0%, forg=  6.0%| TAg acc= 68.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 63.0%, forg=  9.0%| TAg acc= 44.0%, forg= 19.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 34.0%, forg= 10.0%| TAg acc= 17.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 50.0%, forg=  7.0%| TAg acc= 33.0%, forg= 17.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 88.0%, forg=  0.0%| TAg acc= 88.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  6
+************************************************************************************************************
+Finetuning backbone_0 on task_6:
+Finetuning other backbones_1 on task_6:
+Finetuning other backbones_2 on task_6:
+Finetuning other backbones_3 on task_6:
+Finetuning other backbones_4 on task_6:
+Creating distributions for task_6:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 71.0%, forg= 10.0%| TAg acc= 71.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 81.0%, forg=  4.0%| TAg acc= 70.0%, forg= -2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 70.0%, forg=  2.0%| TAg acc= 52.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 37.0%, forg=  7.0%| TAg acc= 21.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 52.0%, forg=  5.0%| TAg acc= 36.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 88.0%, forg=  0.0%| TAg acc= 88.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 84.0%, forg=  0.0%| TAg acc= 81.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  7
+************************************************************************************************************
+Finetuning backbone_0 on task_7:
+Finetuning other backbones_1 on task_7:
+Finetuning other backbones_2 on task_7:
+Finetuning other backbones_3 on task_7:
+Finetuning other backbones_4 on task_7:
+Creating distributions for task_7:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 71.0%, forg= 10.0%| TAg acc= 71.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 82.0%, forg=  3.0%| TAg acc= 70.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 68.0%, forg=  4.0%| TAg acc= 47.0%, forg= 16.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 38.0%, forg=  6.0%| TAg acc= 21.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 55.0%, forg=  2.0%| TAg acc= 39.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 87.0%, forg=  1.0%| TAg acc= 87.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 84.0%, forg=  0.0%| TAg acc= 80.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 77.0%, forg=  0.0%| TAg acc= 73.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  8
+************************************************************************************************************
+Finetuning backbone_0 on task_8:
+Finetuning other backbones_1 on task_8:
+Finetuning other backbones_2 on task_8:
+Finetuning other backbones_3 on task_8:
+Finetuning other backbones_4 on task_8:
+Creating distributions for task_8:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 71.0%, forg= 10.0%| TAg acc= 71.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 80.0%, forg=  5.0%| TAg acc= 67.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 68.0%, forg=  4.0%| TAg acc= 51.0%, forg= 12.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 38.0%, forg=  6.0%| TAg acc= 20.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 54.0%, forg=  3.0%| TAg acc= 39.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 87.0%, forg=  1.0%| TAg acc= 86.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 83.0%, forg=  1.0%| TAg acc= 77.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 75.0%, forg=  2.0%| TAg acc= 70.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 70.0%, forg=  0.0%| TAg acc= 67.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task  9
+************************************************************************************************************
+Finetuning backbone_0 on task_9:
+Finetuning other backbones_1 on task_9:
+Finetuning other backbones_2 on task_9:
+Finetuning other backbones_3 on task_9:
+Finetuning other backbones_4 on task_9:
+Creating distributions for task_9:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 70.0%, forg= 11.0%| TAg acc= 70.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 80.0%, forg=  5.0%| TAg acc= 67.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 67.0%, forg=  5.0%| TAg acc= 50.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 37.0%, forg=  7.0%| TAg acc= 20.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 53.0%, forg=  4.0%| TAg acc= 38.0%, forg= 12.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 84.0%, forg=  4.0%| TAg acc= 83.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 82.0%, forg=  2.0%| TAg acc= 73.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 74.0%, forg=  3.0%| TAg acc= 65.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 71.0%, forg= -1.0%| TAg acc= 67.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 45.0%, forg=  0.0%| TAg acc= 41.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 10
+************************************************************************************************************
+Finetuning backbone_0 on task_10:
+Finetuning other backbones_1 on task_10:
+Finetuning other backbones_2 on task_10:
+Finetuning other backbones_3 on task_10:
+Finetuning other backbones_4 on task_10:
+Creating distributions for task_10:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 68.0%, forg= 13.0%| TAg acc= 68.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 80.0%, forg=  5.0%| TAg acc= 65.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 68.0%, forg=  4.0%| TAg acc= 50.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 37.0%, forg=  7.0%| TAg acc= 18.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 53.0%, forg=  4.0%| TAg acc= 35.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 83.0%, forg=  5.0%| TAg acc= 82.0%, forg=  6.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 82.0%, forg=  2.0%| TAg acc= 67.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 72.0%, forg=  5.0%| TAg acc= 62.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 71.0%, forg=  0.0%| TAg acc= 66.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 43.0%, forg=  2.0%| TAg acc= 39.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 72.0%, forg=  0.0%| TAg acc= 69.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 11
+************************************************************************************************************
+Finetuning backbone_0 on task_11:
+Finetuning other backbones_1 on task_11:
+Finetuning other backbones_2 on task_11:
+Finetuning other backbones_3 on task_11:
+Finetuning other backbones_4 on task_11:
+Creating distributions for task_11:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 60.0%, forg= 21.0%| TAg acc= 60.0%, forg= 21.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 73.0%, forg= 12.0%| TAg acc= 64.0%, forg=  6.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 58.0%, forg= 14.0%| TAg acc= 33.0%, forg= 30.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 32.0%, forg= 12.0%| TAg acc= 13.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 44.0%, forg= 13.0%| TAg acc= 16.0%, forg= 34.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 82.0%, forg=  6.0%| TAg acc= 81.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 76.0%, forg=  8.0%| TAg acc= 69.0%, forg= 12.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 65.0%, forg= 12.0%| TAg acc= 60.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 64.0%, forg=  7.0%| TAg acc= 58.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 37.0%, forg=  8.0%| TAg acc= 31.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 63.0%, forg=  9.0%| TAg acc= 54.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 87.0%, forg=  0.0%| TAg acc= 87.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 12
+************************************************************************************************************
+Finetuning backbone_0 on task_12:
+Finetuning other backbones_1 on task_12:
+Finetuning other backbones_2 on task_12:
+Finetuning other backbones_3 on task_12:
+Finetuning other backbones_4 on task_12:
+Creating distributions for task_12:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 61.0%, forg= 20.0%| TAg acc= 61.0%, forg= 20.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 75.0%, forg= 10.0%| TAg acc= 66.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 58.0%, forg= 14.0%| TAg acc= 36.0%, forg= 27.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 32.0%, forg= 12.0%| TAg acc= 14.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 45.0%, forg= 12.0%| TAg acc= 18.0%, forg= 32.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 80.0%, forg=  8.0%| TAg acc= 79.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 77.0%, forg=  7.0%| TAg acc= 69.0%, forg= 12.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 65.0%, forg= 12.0%| TAg acc= 58.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 67.0%, forg=  4.0%| TAg acc= 62.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 38.0%, forg=  7.0%| TAg acc= 32.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 67.0%, forg=  5.0%| TAg acc= 58.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 86.0%, forg=  1.0%| TAg acc= 86.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 85.0%, forg=  0.0%| TAg acc= 83.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 13
+************************************************************************************************************
+Finetuning backbone_0 on task_13:
+Finetuning other backbones_1 on task_13:
+Finetuning other backbones_2 on task_13:
+Finetuning other backbones_3 on task_13:
+Finetuning other backbones_4 on task_13:
+Creating distributions for task_13:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 61.0%, forg= 20.0%| TAg acc= 61.0%, forg= 20.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 75.0%, forg= 10.0%| TAg acc= 66.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 57.0%, forg= 15.0%| TAg acc= 37.0%, forg= 26.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 32.0%, forg= 12.0%| TAg acc= 13.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 46.0%, forg= 11.0%| TAg acc= 22.0%, forg= 28.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 76.0%, forg= 12.0%| TAg acc= 75.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 77.0%, forg=  7.0%| TAg acc= 65.0%, forg= 16.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 66.0%, forg= 11.0%| TAg acc= 58.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 69.0%, forg=  2.0%| TAg acc= 63.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 38.0%, forg=  7.0%| TAg acc= 33.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 69.0%, forg=  3.0%| TAg acc= 61.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 84.0%, forg=  3.0%| TAg acc= 84.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 84.0%, forg=  1.0%| TAg acc= 82.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 80.0%, forg=  0.0%| TAg acc= 71.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 14
+************************************************************************************************************
+Finetuning backbone_0 on task_14:
+Finetuning other backbones_1 on task_14:
+Finetuning other backbones_2 on task_14:
+Finetuning other backbones_3 on task_14:
+Finetuning other backbones_4 on task_14:
+Creating distributions for task_14:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 59.0%, forg= 22.0%| TAg acc= 59.0%, forg= 22.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 74.0%, forg= 11.0%| TAg acc= 64.0%, forg=  6.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 60.0%, forg= 12.0%| TAg acc= 41.0%, forg= 22.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 33.0%, forg= 11.0%| TAg acc= 15.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 46.0%, forg= 11.0%| TAg acc= 22.0%, forg= 28.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 78.0%, forg= 10.0%| TAg acc= 75.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 74.0%, forg= 10.0%| TAg acc= 59.0%, forg= 22.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 65.0%, forg= 12.0%| TAg acc= 54.0%, forg= 19.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 69.0%, forg=  2.0%| TAg acc= 62.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 38.0%, forg=  7.0%| TAg acc= 32.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 69.0%, forg=  3.0%| TAg acc= 61.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 82.0%, forg=  5.0%| TAg acc= 82.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 84.0%, forg=  1.0%| TAg acc= 79.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 77.0%, forg=  3.0%| TAg acc= 67.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 14 : loss=0.000 | TAw acc= 71.0%, forg=  0.0%| TAg acc= 68.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 15
+************************************************************************************************************
+Finetuning backbone_0 on task_15:
+Finetuning other backbones_1 on task_15:
+Finetuning other backbones_2 on task_15:
+Finetuning other backbones_3 on task_15:
+Finetuning other backbones_4 on task_15:
+Creating distributions for task_15:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 56.0%, forg= 25.0%| TAg acc= 56.0%, forg= 25.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 76.0%, forg=  9.0%| TAg acc= 63.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 63.0%, forg=  9.0%| TAg acc= 42.0%, forg= 21.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 32.0%, forg= 12.0%| TAg acc= 15.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 45.0%, forg= 12.0%| TAg acc= 23.0%, forg= 27.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 76.0%, forg= 12.0%| TAg acc= 71.0%, forg= 17.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 76.0%, forg=  8.0%| TAg acc= 57.0%, forg= 24.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 65.0%, forg= 12.0%| TAg acc= 52.0%, forg= 21.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 67.0%, forg=  4.0%| TAg acc= 58.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 41.0%, forg=  4.0%| TAg acc= 34.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 66.0%, forg=  6.0%| TAg acc= 55.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 81.0%, forg=  6.0%| TAg acc= 81.0%, forg=  6.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 82.0%, forg=  3.0%| TAg acc= 75.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 75.0%, forg=  5.0%| TAg acc= 64.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 14 : loss=0.000 | TAw acc= 68.0%, forg=  3.0%| TAg acc= 64.0%, forg=  4.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 15 : loss=0.000 | TAw acc= 43.0%, forg=  0.0%| TAg acc= 39.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 16
+************************************************************************************************************
+Finetuning backbone_0 on task_16:
+Finetuning other backbones_1 on task_16:
+Finetuning other backbones_2 on task_16:
+Finetuning other backbones_3 on task_16:
+Finetuning other backbones_4 on task_16:
+Creating distributions for task_16:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 54.0%, forg= 27.0%| TAg acc= 54.0%, forg= 27.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 76.0%, forg=  9.0%| TAg acc= 63.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 61.0%, forg= 11.0%| TAg acc= 41.0%, forg= 22.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 33.0%, forg= 11.0%| TAg acc= 16.0%, forg= 12.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 46.0%, forg= 11.0%| TAg acc= 23.0%, forg= 27.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 72.0%, forg= 16.0%| TAg acc= 64.0%, forg= 24.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 76.0%, forg=  8.0%| TAg acc= 50.0%, forg= 31.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 65.0%, forg= 12.0%| TAg acc= 51.0%, forg= 22.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 66.0%, forg=  5.0%| TAg acc= 53.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 42.0%, forg=  3.0%| TAg acc= 34.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 66.0%, forg=  6.0%| TAg acc= 52.0%, forg= 17.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 80.0%, forg=  7.0%| TAg acc= 80.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 80.0%, forg=  5.0%| TAg acc= 68.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 75.0%, forg=  5.0%| TAg acc= 62.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 14 : loss=0.000 | TAw acc= 66.0%, forg=  5.0%| TAg acc= 62.0%, forg=  6.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 15 : loss=0.000 | TAw acc= 43.0%, forg=  0.0%| TAg acc= 39.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 16 : loss=0.000 | TAw acc= 58.0%, forg=  0.0%| TAg acc= 44.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 17
+************************************************************************************************************
+Finetuning backbone_0 on task_17:
+Finetuning other backbones_1 on task_17:
+Finetuning other backbones_2 on task_17:
+Finetuning other backbones_3 on task_17:
+Finetuning other backbones_4 on task_17:
+Creating distributions for task_17:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 50.0%, forg= 31.0%| TAg acc= 50.0%, forg= 31.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 70.0%, forg= 15.0%| TAg acc= 63.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 54.0%, forg= 18.0%| TAg acc= 30.0%, forg= 33.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 28.0%, forg= 16.0%| TAg acc= 13.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 39.0%, forg= 18.0%| TAg acc=  8.0%, forg= 42.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 73.0%, forg= 15.0%| TAg acc= 67.0%, forg= 21.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 70.0%, forg= 14.0%| TAg acc= 52.0%, forg= 29.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 59.0%, forg= 18.0%| TAg acc= 51.0%, forg= 22.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 61.0%, forg= 10.0%| TAg acc= 51.0%, forg= 16.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 34.0%, forg= 11.0%| TAg acc= 28.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 56.0%, forg= 16.0%| TAg acc= 37.0%, forg= 32.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 80.0%, forg=  7.0%| TAg acc= 79.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 77.0%, forg=  8.0%| TAg acc= 72.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 70.0%, forg= 10.0%| TAg acc= 62.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 14 : loss=0.000 | TAw acc= 65.0%, forg=  6.0%| TAg acc= 58.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 15 : loss=0.000 | TAw acc= 40.0%, forg=  3.0%| TAg acc= 37.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 16 : loss=0.000 | TAw acc= 55.0%, forg=  3.0%| TAg acc= 30.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 17 : loss=0.000 | TAw acc= 87.0%, forg=  0.0%| TAg acc= 87.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 18
+************************************************************************************************************
+Finetuning backbone_0 on task_18:
+Finetuning other backbones_1 on task_18:
+Finetuning other backbones_2 on task_18:
+Finetuning other backbones_3 on task_18:
+Finetuning other backbones_4 on task_18:
+Creating distributions for task_18:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 46.0%, forg= 35.0%| TAg acc= 46.0%, forg= 35.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 73.0%, forg= 12.0%| TAg acc= 67.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 58.0%, forg= 14.0%| TAg acc= 33.0%, forg= 30.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 29.0%, forg= 15.0%| TAg acc= 14.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 40.0%, forg= 17.0%| TAg acc= 10.0%, forg= 40.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 66.0%, forg= 22.0%| TAg acc= 57.0%, forg= 31.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 73.0%, forg= 11.0%| TAg acc= 49.0%, forg= 32.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 59.0%, forg= 18.0%| TAg acc= 47.0%, forg= 26.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 61.0%, forg= 10.0%| TAg acc= 49.0%, forg= 18.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 35.0%, forg= 10.0%| TAg acc= 30.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 56.0%, forg= 16.0%| TAg acc= 36.0%, forg= 33.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 79.0%, forg=  8.0%| TAg acc= 78.0%, forg=  9.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 77.0%, forg=  8.0%| TAg acc= 72.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 71.0%, forg=  9.0%| TAg acc= 61.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 14 : loss=0.000 | TAw acc= 69.0%, forg=  2.0%| TAg acc= 61.0%, forg=  7.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 15 : loss=0.000 | TAw acc= 38.0%, forg=  5.0%| TAg acc= 34.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 16 : loss=0.000 | TAw acc= 56.0%, forg=  2.0%| TAg acc= 34.0%, forg= 10.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 17 : loss=0.000 | TAw acc= 85.0%, forg=  2.0%| TAg acc= 85.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 18 : loss=0.000 | TAw acc= 72.0%, forg=  0.0%| TAg acc= 68.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+Task 19
+************************************************************************************************************
+Finetuning backbone_0 on task_19:
+Finetuning other backbones_1 on task_19:
+Finetuning other backbones_2 on task_19:
+Finetuning other backbones_3 on task_19:
+Finetuning other backbones_4 on task_19:
+Creating distributions for task_19:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 46.0%, forg= 35.0%| TAg acc= 46.0%, forg= 35.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  1 : loss=0.000 | TAw acc= 75.0%, forg= 10.0%| TAg acc= 68.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  2 : loss=0.000 | TAw acc= 56.0%, forg= 16.0%| TAg acc= 32.0%, forg= 31.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  3 : loss=0.000 | TAw acc= 28.0%, forg= 16.0%| TAg acc= 13.0%, forg= 15.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  4 : loss=0.000 | TAw acc= 37.0%, forg= 20.0%| TAg acc= 10.0%, forg= 40.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 64.0%, forg= 24.0%| TAg acc= 53.0%, forg= 35.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 72.0%, forg= 12.0%| TAg acc= 42.0%, forg= 39.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 59.0%, forg= 18.0%| TAg acc= 45.0%, forg= 28.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 60.0%, forg= 11.0%| TAg acc= 46.0%, forg= 21.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 34.0%, forg= 11.0%| TAg acc= 28.0%, forg= 13.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 10 : loss=0.000 | TAw acc= 53.0%, forg= 19.0%| TAg acc= 34.0%, forg= 35.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 11 : loss=0.000 | TAw acc= 78.0%, forg=  9.0%| TAg acc= 76.0%, forg= 11.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 12 : loss=0.000 | TAw acc= 77.0%, forg=  8.0%| TAg acc= 69.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 13 : loss=0.000 | TAw acc= 70.0%, forg= 10.0%| TAg acc= 57.0%, forg= 14.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 14 : loss=0.000 | TAw acc= 71.0%, forg=  0.0%| TAg acc= 63.0%, forg=  5.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 15 : loss=0.000 | TAw acc= 41.0%, forg=  2.0%| TAg acc= 37.0%, forg=  2.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 16 : loss=0.000 | TAw acc= 57.0%, forg=  1.0%| TAg acc= 36.0%, forg=  8.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 17 : loss=0.000 | TAw acc= 84.0%, forg=  3.0%| TAg acc= 84.0%, forg=  3.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 18 : loss=0.000 | TAw acc= 71.0%, forg=  1.0%| TAg acc= 67.0%, forg=  1.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+>>> Test on task 19 : loss=0.000 | TAw acc= 71.0%, forg=  0.0%| TAg acc= 62.0%, forg=  0.0% <<<
+Save at ../results/domainnet_ILFTF_domain_0820_ma_I50_T20_C10-randseed1993
+************************************************************************************************************
+TAw Acc
+	 81.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 81.0% 
+	 80.0%  85.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 82.5% 
+	 80.0%  85.0%  71.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 78.7% 
+	 80.0%  85.0%  72.0%  44.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.2% 
+	 78.0%  83.0%  69.0%  43.0%  57.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 66.0% 
+	 71.0%  79.0%  63.0%  34.0%  50.0%  88.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 64.2% 
+	 71.0%  81.0%  70.0%  37.0%  52.0%  88.0%  84.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 69.0% 
+	 71.0%  82.0%  68.0%  38.0%  55.0%  87.0%  84.0%  77.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.2% 
+	 71.0%  80.0%  68.0%  38.0%  54.0%  87.0%  83.0%  75.0%  70.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 69.6% 
+	 70.0%  80.0%  67.0%  37.0%  53.0%  84.0%  82.0%  74.0%  71.0%  45.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 66.3% 
+	 68.0%  80.0%  68.0%  37.0%  53.0%  83.0%  82.0%  72.0%  71.0%  43.0%  72.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 66.3% 
+	 60.0%  73.0%  58.0%  32.0%  44.0%  82.0%  76.0%  65.0%  64.0%  37.0%  63.0%  87.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 61.8% 
+	 61.0%  75.0%  58.0%  32.0%  45.0%  80.0%  77.0%  65.0%  67.0%  38.0%  67.0%  86.0%  85.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 64.3% 
+	 61.0%  75.0%  57.0%  32.0%  46.0%  76.0%  77.0%  66.0%  69.0%  38.0%  69.0%  84.0%  84.0%  80.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 65.3% 
+	 59.0%  74.0%  60.0%  33.0%  46.0%  78.0%  74.0%  65.0%  69.0%  38.0%  69.0%  82.0%  84.0%  77.0%  71.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 65.3% 
+	 56.0%  76.0%  63.0%  32.0%  45.0%  76.0%  76.0%  65.0%  67.0%  41.0%  66.0%  81.0%  82.0%  75.0%  68.0%  43.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 63.3% 
+	 54.0%  76.0%  61.0%  33.0%  46.0%  72.0%  76.0%  65.0%  66.0%  42.0%  66.0%  80.0%  80.0%  75.0%  66.0%  43.0%  58.0%   0.0%   0.0%   0.0% 	Avg.: 62.3% 
+	 50.0%  70.0%  54.0%  28.0%  39.0%  73.0%  70.0%  59.0%  61.0%  34.0%  56.0%  80.0%  77.0%  70.0%  65.0%  40.0%  55.0%  87.0%   0.0%   0.0% 	Avg.: 59.3% 
+	 46.0%  73.0%  58.0%  29.0%  40.0%  66.0%  73.0%  59.0%  61.0%  35.0%  56.0%  79.0%  77.0%  71.0%  69.0%  38.0%  56.0%  85.0%  72.0%   0.0% 	Avg.: 60.2% 
+	 46.0%  75.0%  56.0%  28.0%  37.0%  64.0%  72.0%  59.0%  60.0%  34.0%  53.0%  78.0%  77.0%  70.0%  71.0%  41.0%  57.0%  84.0%  71.0%  71.0% 	Avg.: 60.2% 
+Average incremental: 67.3% 
+--------------------------------------------------
+TAw Acc on CIL taskes
+
+	 85.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 85.0% 
+	 85.0%  71.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 78.0% 
+	 85.0%  72.0%  44.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 67.0% 
+	 83.0%  69.0%  43.0%  57.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 63.0% 
+	 79.0%  63.0%  34.0%  50.0%  88.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 62.8% 
+	 81.0%  70.0%  37.0%  52.0%  88.0%  84.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 68.7% 
+	 82.0%  68.0%  38.0%  55.0%  87.0%  84.0%  77.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.1% 
+	 80.0%  68.0%  38.0%  54.0%  87.0%  83.0%  75.0%  70.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 69.4% 
+	 80.0%  67.0%  37.0%  53.0%  84.0%  82.0%  74.0%  71.0%  45.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 65.9% 
+	 80.0%  68.0%  37.0%  53.0%  83.0%  82.0%  72.0%  71.0%  43.0%  72.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 66.1% 
+	 73.0%  58.0%  32.0%  44.0%  82.0%  76.0%  65.0%  64.0%  37.0%  63.0%  87.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 61.9% 
+	 75.0%  58.0%  32.0%  45.0%  80.0%  77.0%  65.0%  67.0%  38.0%  67.0%  86.0%  85.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 64.6% 
+	 75.0%  57.0%  32.0%  46.0%  76.0%  77.0%  66.0%  69.0%  38.0%  69.0%  84.0%  84.0%  80.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 65.6% 
+	 74.0%  60.0%  33.0%  46.0%  78.0%  74.0%  65.0%  69.0%  38.0%  69.0%  82.0%  84.0%  77.0%  71.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 65.7% 
+	 76.0%  63.0%  32.0%  45.0%  76.0%  76.0%  65.0%  67.0%  41.0%  66.0%  81.0%  82.0%  75.0%  68.0%  43.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 63.7% 
+	 76.0%  61.0%  33.0%  46.0%  72.0%  76.0%  65.0%  66.0%  42.0%  66.0%  80.0%  80.0%  75.0%  66.0%  43.0%  58.0%   0.0%   0.0%   0.0% 	Avg.: 62.8% 
+	 70.0%  54.0%  28.0%  39.0%  73.0%  70.0%  59.0%  61.0%  34.0%  56.0%  80.0%  77.0%  70.0%  65.0%  40.0%  55.0%  87.0%   0.0%   0.0% 	Avg.: 59.9% 
+	 73.0%  58.0%  29.0%  40.0%  66.0%  73.0%  59.0%  61.0%  35.0%  56.0%  79.0%  77.0%  71.0%  69.0%  38.0%  56.0%  85.0%  72.0%   0.0% 	Avg.: 60.9% 
+	 75.0%  56.0%  28.0%  37.0%  64.0%  72.0%  59.0%  60.0%  34.0%  53.0%  78.0%  77.0%  70.0%  71.0%  41.0%  57.0%  84.0%  71.0%  71.0% 	Avg.: 60.9% 
+Average on CIL taskes: 66.4% 
+************************************************************************************************************
+TAg Acc
+	 81.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 81.0% 
+	 80.0%  68.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 74.0% 
+	 80.0%  67.0%  63.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.0% 
+	 80.0%  66.0%  63.0%  28.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 59.2% 
+	 78.0%  64.0%  60.0%  27.0%  50.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 55.8% 
+	 71.0%  68.0%  44.0%  17.0%  33.0%  88.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 53.5% 
+	 71.0%  70.0%  52.0%  21.0%  36.0%  88.0%  81.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 59.9% 
+	 71.0%  70.0%  47.0%  21.0%  39.0%  87.0%  80.0%  73.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 61.0% 
+	 71.0%  67.0%  51.0%  20.0%  39.0%  86.0%  77.0%  70.0%  67.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 60.9% 
+	 70.0%  67.0%  50.0%  20.0%  38.0%  83.0%  73.0%  65.0%  67.0%  41.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 57.4% 
+	 68.0%  65.0%  50.0%  18.0%  35.0%  82.0%  67.0%  62.0%  66.0%  39.0%  69.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 56.5% 
+	 60.0%  64.0%  33.0%  13.0%  16.0%  81.0%  69.0%  60.0%  58.0%  31.0%  54.0%  87.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 52.2% 
+	 61.0%  66.0%  36.0%  14.0%  18.0%  79.0%  69.0%  58.0%  62.0%  32.0%  58.0%  86.0%  83.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 55.5% 
+	 61.0%  66.0%  37.0%  13.0%  22.0%  75.0%  65.0%  58.0%  63.0%  33.0%  61.0%  84.0%  82.0%  71.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 56.5% 
+	 59.0%  64.0%  41.0%  15.0%  22.0%  75.0%  59.0%  54.0%  62.0%  32.0%  61.0%  82.0%  79.0%  67.0%  68.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 56.0% 
+	 56.0%  63.0%  42.0%  15.0%  23.0%  71.0%  57.0%  52.0%  58.0%  34.0%  55.0%  81.0%  75.0%  64.0%  64.0%  39.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 53.1% 
+	 54.0%  63.0%  41.0%  16.0%  23.0%  64.0%  50.0%  51.0%  53.0%  34.0%  52.0%  80.0%  68.0%  62.0%  62.0%  39.0%  44.0%   0.0%   0.0%   0.0% 	Avg.: 50.4% 
+	 50.0%  63.0%  30.0%  13.0%   8.0%  67.0%  52.0%  51.0%  51.0%  28.0%  37.0%  79.0%  72.0%  62.0%  58.0%  37.0%  30.0%  87.0%   0.0%   0.0% 	Avg.: 48.6% 
+	 46.0%  67.0%  33.0%  14.0%  10.0%  57.0%  49.0%  47.0%  49.0%  30.0%  36.0%  78.0%  72.0%  61.0%  61.0%  34.0%  34.0%  85.0%  68.0%   0.0% 	Avg.: 49.0% 
+	 46.0%  68.0%  32.0%  13.0%  10.0%  53.0%  42.0%  45.0%  46.0%  28.0%  34.0%  76.0%  69.0%  57.0%  63.0%  37.0%  36.0%  84.0%  67.0%  62.0% 	Avg.: 48.4% 
+Average incremental: 57.9% 
+--------------------------------------------------
+TAg Acc on CIL taskes
+
+	 68.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 68.0% 
+	 67.0%  63.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 65.0% 
+	 66.0%  63.0%  28.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 52.3% 
+	 64.0%  60.0%  27.0%  50.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 50.2% 
+	 68.0%  44.0%  17.0%  33.0%  88.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 50.0% 
+	 70.0%  52.0%  21.0%  36.0%  88.0%  81.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 58.0% 
+	 70.0%  47.0%  21.0%  39.0%  87.0%  80.0%  73.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 59.6% 
+	 67.0%  51.0%  20.0%  39.0%  86.0%  77.0%  70.0%  67.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 59.6% 
+	 67.0%  50.0%  20.0%  38.0%  83.0%  73.0%  65.0%  67.0%  41.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 56.0% 
+	 65.0%  50.0%  18.0%  35.0%  82.0%  67.0%  62.0%  66.0%  39.0%  69.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 55.3% 
+	 64.0%  33.0%  13.0%  16.0%  81.0%  69.0%  60.0%  58.0%  31.0%  54.0%  87.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 51.5% 
+	 66.0%  36.0%  14.0%  18.0%  79.0%  69.0%  58.0%  62.0%  32.0%  58.0%  86.0%  83.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 55.1% 
+	 66.0%  37.0%  13.0%  22.0%  75.0%  65.0%  58.0%  63.0%  33.0%  61.0%  84.0%  82.0%  71.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 56.2% 
+	 64.0%  41.0%  15.0%  22.0%  75.0%  59.0%  54.0%  62.0%  32.0%  61.0%  82.0%  79.0%  67.0%  68.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 55.8% 
+	 63.0%  42.0%  15.0%  23.0%  71.0%  57.0%  52.0%  58.0%  34.0%  55.0%  81.0%  75.0%  64.0%  64.0%  39.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 52.9% 
+	 63.0%  41.0%  16.0%  23.0%  64.0%  50.0%  51.0%  53.0%  34.0%  52.0%  80.0%  68.0%  62.0%  62.0%  39.0%  44.0%   0.0%   0.0%   0.0% 	Avg.: 50.1% 
+	 63.0%  30.0%  13.0%   8.0%  67.0%  52.0%  51.0%  51.0%  28.0%  37.0%  79.0%  72.0%  62.0%  58.0%  37.0%  30.0%  87.0%   0.0%   0.0% 	Avg.: 48.5% 
+	 67.0%  33.0%  14.0%  10.0%  57.0%  49.0%  47.0%  49.0%  30.0%  36.0%  78.0%  72.0%  61.0%  61.0%  34.0%  34.0%  85.0%  68.0%   0.0% 	Avg.: 49.2% 
+	 68.0%  32.0%  13.0%  10.0%  53.0%  42.0%  45.0%  46.0%  28.0%  34.0%  76.0%  69.0%  57.0%  63.0%  37.0%  36.0%  84.0%  67.0%  62.0% 	Avg.: 48.5% 
+Average on CIL taskes: 54.8% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 48.5% 
+	  1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  1.0% 
+	  1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.5% 
+	  1.0%   0.0%  -1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+	  3.0%   2.0%   3.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  2.3% 
+	 10.0%   6.0%   9.0%  10.0%   7.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  8.4% 
+	 10.0%   4.0%   2.0%   7.0%   5.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.7% 
+	 10.0%   3.0%   4.0%   6.0%   2.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.7% 
+	 10.0%   5.0%   4.0%   6.0%   3.0%   1.0%   1.0%   2.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.0% 
+	 11.0%   5.0%   5.0%   7.0%   4.0%   4.0%   2.0%   3.0%  -1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.4% 
+	 13.0%   5.0%   4.0%   7.0%   4.0%   5.0%   2.0%   5.0%   0.0%   2.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.7% 
+	 21.0%  12.0%  14.0%  12.0%  13.0%   6.0%   8.0%  12.0%   7.0%   8.0%   9.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 11.1% 
+	 20.0%  10.0%  14.0%  12.0%  12.0%   8.0%   7.0%  12.0%   4.0%   7.0%   5.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  9.3% 
+	 20.0%  10.0%  15.0%  12.0%  11.0%  12.0%   7.0%  11.0%   2.0%   7.0%   3.0%   3.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  8.8% 
+	 22.0%  11.0%  12.0%  11.0%  11.0%  10.0%  10.0%  12.0%   2.0%   7.0%   3.0%   5.0%   1.0%   3.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  8.6% 
+	 25.0%   9.0%   9.0%  12.0%  12.0%  12.0%   8.0%  12.0%   4.0%   4.0%   6.0%   6.0%   3.0%   5.0%   3.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  8.7% 
+	 27.0%   9.0%  11.0%  11.0%  11.0%  16.0%   8.0%  12.0%   5.0%   3.0%   6.0%   7.0%   5.0%   5.0%   5.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  8.8% 
+	 31.0%  15.0%  18.0%  16.0%  18.0%  15.0%  14.0%  18.0%  10.0%  11.0%  16.0%   7.0%   8.0%  10.0%   6.0%   3.0%   3.0%   0.0%   0.0%   0.0% 	Avg.: 12.9% 
+	 35.0%  12.0%  14.0%  15.0%  17.0%  22.0%  11.0%  18.0%  10.0%  10.0%  16.0%   8.0%   8.0%   9.0%   2.0%   5.0%   2.0%   2.0%   0.0%   0.0% 	Avg.: 12.0% 
+	 35.0%  10.0%  16.0%  16.0%  20.0%  24.0%  12.0%  18.0%  11.0%  11.0%  19.0%   9.0%   8.0%  10.0%   0.0%   2.0%   1.0%   3.0%   1.0%   0.0% 	Avg.: 11.9% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 11.9% 
+	  1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  1.0% 
+	  1.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  1.0% 
+	  1.0%   2.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  1.0% 
+	  3.0%   4.0%   3.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  2.8% 
+	 10.0%   0.0%  19.0%  11.0%  17.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 11.4% 
+	 10.0%  -2.0%  11.0%   7.0%  14.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  6.7% 
+	 10.0%   0.0%  16.0%   7.0%  11.0%   1.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  6.6% 
+	 10.0%   3.0%  12.0%   8.0%  11.0%   2.0%   4.0%   3.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  6.6% 
+	 11.0%   3.0%  13.0%   8.0%  12.0%   5.0%   8.0%   8.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  7.6% 
+	 13.0%   5.0%  13.0%  10.0%  15.0%   6.0%  14.0%  11.0%   1.0%   2.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  9.0% 
+	 21.0%   6.0%  30.0%  15.0%  34.0%   7.0%  12.0%  13.0%   9.0%  10.0%  15.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 15.6% 
+	 20.0%   4.0%  27.0%  14.0%  32.0%   9.0%  12.0%  15.0%   5.0%   9.0%  11.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 13.2% 
+	 20.0%   4.0%  26.0%  15.0%  28.0%  13.0%  16.0%  15.0%   4.0%   8.0%   8.0%   3.0%   1.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 12.4% 
+	 22.0%   6.0%  22.0%  13.0%  28.0%  13.0%  22.0%  19.0%   5.0%   9.0%   8.0%   5.0%   4.0%   4.0%   0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 12.9% 
+	 25.0%   7.0%  21.0%  13.0%  27.0%  17.0%  24.0%  21.0%   9.0%   7.0%  14.0%   6.0%   8.0%   7.0%   4.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 14.0% 
+	 27.0%   7.0%  22.0%  12.0%  27.0%  24.0%  31.0%  22.0%  14.0%   7.0%  17.0%   7.0%  15.0%   9.0%   6.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 15.4% 
+	 31.0%   7.0%  33.0%  15.0%  42.0%  21.0%  29.0%  22.0%  16.0%  13.0%  32.0%   8.0%  11.0%   9.0%  10.0%   2.0%  14.0%   0.0%   0.0%   0.0% 	Avg.: 18.5% 
+	 35.0%   3.0%  30.0%  14.0%  40.0%  31.0%  32.0%  26.0%  18.0%  11.0%  33.0%   9.0%  11.0%  10.0%   7.0%   5.0%  10.0%   2.0%   0.0%   0.0% 	Avg.: 18.2% 
+	 35.0%   2.0%  31.0%  15.0%  40.0%  35.0%  39.0%  28.0%  21.0%  13.0%  35.0%  11.0%  14.0%  14.0%   5.0%   2.0%   8.0%   3.0%   1.0%   0.0% 	Avg.: 18.5% 
+************************************************************************************************************
+[Elapsed time for incremental learning = 5.1 h]
+Done!
