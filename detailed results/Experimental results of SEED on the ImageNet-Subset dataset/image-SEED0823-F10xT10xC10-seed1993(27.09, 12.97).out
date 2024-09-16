@@ -1,0 +1,2006 @@
+gcc-9.3.0 loaded successful
+cuda-12.1 loaded successful
+============================================================================================================
+Arguments =
+	approach: seed
+	batch_size: 128
+	clipping: 1.0
+	datasets: ['imagenet_subset_kaggle']
+	eval_on_train: False
+	exp_name: image-SEED0823-F10xT10xC10-seed1993
+	extra_aug: fetril
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.05
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.9
+	multi_softmax: False
+	nc_first_task: 10
+	nepochs: 200
+	network: resnet18
+	no_cudnn_deterministic: False
+	num_tasks: 10
+	num_workers: 4
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 1993
+	stop_at_task: 0
+	use_test_as_val: True
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0005
+============================================================================================================
+/home/bingxing2/home/scx7aum/.conda/envs/pytorch/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/bingxing2/home/scx7aum/.conda/envs/pytorch/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Approach arguments =
+	alpha: 0.99
+	compensate_drifts: False
+	ftepochs: 100
+	ftwd: 0
+	gmms: 1
+	initialization_strategy: first
+	max_experts: 5
+	shared: 0
+	tau: 3.0
+	use_multivariate: True
+	use_nmc: False
+============================================================================================================
+WARNING: ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993 already exists!
+Generating train/test splits for ImageNet-Subset directory: ../data/seed_1993_subset_100_imagenet
+[(0, 10), (1, 10), (2, 10), (3, 10), (4, 10), (5, 10), (6, 10), (7, 10), (8, 10), (9, 10)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+Training backbone on task 0:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 2.22 Val loss: 2.50 Train acc: 24.19 Val acc: 20.60
+Epoch: 1 Train loss: 1.94 Val loss: 1.92 Train acc: 33.01 Val acc: 38.00
+Epoch: 2 Train loss: 1.80 Val loss: 1.61 Train acc: 39.14 Val acc: 43.80
+Epoch: 3 Train loss: 1.71 Val loss: 1.97 Train acc: 42.44 Val acc: 37.00
+Epoch: 4 Train loss: 1.62 Val loss: 1.56 Train acc: 45.42 Val acc: 49.20
+Epoch: 5 Train loss: 1.57 Val loss: 1.34 Train acc: 47.54 Val acc: 63.00
+Epoch: 6 Train loss: 1.51 Val loss: 1.35 Train acc: 49.60 Val acc: 55.40
+Epoch: 7 Train loss: 1.46 Val loss: 1.54 Train acc: 50.95 Val acc: 51.80
+Epoch: 8 Train loss: 1.45 Val loss: 1.67 Train acc: 51.81 Val acc: 48.00
+Epoch: 9 Train loss: 1.39 Val loss: 1.10 Train acc: 54.53 Val acc: 62.20
+Epoch: 10 Train loss: 1.36 Val loss: 1.31 Train acc: 54.64 Val acc: 57.00
+Epoch: 11 Train loss: 1.33 Val loss: 1.05 Train acc: 56.28 Val acc: 67.80
+Epoch: 12 Train loss: 1.31 Val loss: 1.19 Train acc: 56.47 Val acc: 64.40
+Epoch: 13 Train loss: 1.28 Val loss: 1.16 Train acc: 57.92 Val acc: 60.80
+Epoch: 14 Train loss: 1.24 Val loss: 0.86 Train acc: 58.92 Val acc: 72.40
+Epoch: 15 Train loss: 1.24 Val loss: 1.03 Train acc: 58.76 Val acc: 67.80
+Epoch: 16 Train loss: 1.20 Val loss: 0.94 Train acc: 60.09 Val acc: 69.80
+Epoch: 17 Train loss: 1.19 Val loss: 1.02 Train acc: 60.87 Val acc: 69.00
+Epoch: 18 Train loss: 1.15 Val loss: 1.00 Train acc: 61.92 Val acc: 66.80
+Epoch: 19 Train loss: 1.15 Val loss: 1.00 Train acc: 61.77 Val acc: 65.00
+Epoch: 20 Train loss: 1.13 Val loss: 0.94 Train acc: 62.74 Val acc: 70.40
+Epoch: 21 Train loss: 1.10 Val loss: 0.85 Train acc: 63.78 Val acc: 73.20
+Epoch: 22 Train loss: 1.10 Val loss: 0.88 Train acc: 63.92 Val acc: 75.60
+Epoch: 23 Train loss: 1.08 Val loss: 0.95 Train acc: 64.51 Val acc: 70.20
+Epoch: 24 Train loss: 1.07 Val loss: 0.75 Train acc: 64.25 Val acc: 77.40
+Epoch: 25 Train loss: 1.06 Val loss: 0.82 Train acc: 64.87 Val acc: 74.20
+Epoch: 26 Train loss: 1.04 Val loss: 0.76 Train acc: 65.82 Val acc: 77.00
+Epoch: 27 Train loss: 1.04 Val loss: 1.01 Train acc: 65.93 Val acc: 72.00
+Epoch: 28 Train loss: 1.01 Val loss: 0.70 Train acc: 66.96 Val acc: 78.20
+Epoch: 29 Train loss: 1.00 Val loss: 0.88 Train acc: 67.02 Val acc: 71.80
+Epoch: 30 Train loss: 0.98 Val loss: 1.13 Train acc: 67.97 Val acc: 65.20
+Epoch: 31 Train loss: 0.98 Val loss: 0.80 Train acc: 67.70 Val acc: 74.40
+Epoch: 32 Train loss: 1.00 Val loss: 0.88 Train acc: 67.16 Val acc: 73.80
+Epoch: 33 Train loss: 0.97 Val loss: 0.94 Train acc: 68.34 Val acc: 72.00
+Epoch: 34 Train loss: 0.96 Val loss: 0.92 Train acc: 68.32 Val acc: 72.20
+Epoch: 35 Train loss: 0.98 Val loss: 1.06 Train acc: 68.45 Val acc: 68.80
+Epoch: 36 Train loss: 0.94 Val loss: 0.83 Train acc: 69.00 Val acc: 72.40
+Epoch: 37 Train loss: 0.93 Val loss: 0.72 Train acc: 69.78 Val acc: 77.60
+Epoch: 38 Train loss: 0.92 Val loss: 0.69 Train acc: 70.10 Val acc: 80.00
+Epoch: 39 Train loss: 0.91 Val loss: 0.69 Train acc: 69.88 Val acc: 78.40
+Epoch: 40 Train loss: 0.93 Val loss: 0.83 Train acc: 69.91 Val acc: 75.80
+Epoch: 41 Train loss: 0.90 Val loss: 0.66 Train acc: 70.44 Val acc: 78.80
+Epoch: 42 Train loss: 0.90 Val loss: 0.69 Train acc: 70.55 Val acc: 79.80
+Epoch: 43 Train loss: 0.89 Val loss: 0.63 Train acc: 71.10 Val acc: 80.20
+Epoch: 44 Train loss: 0.87 Val loss: 0.66 Train acc: 71.43 Val acc: 79.00
+Epoch: 45 Train loss: 0.87 Val loss: 0.74 Train acc: 71.05 Val acc: 77.60
+Epoch: 46 Train loss: 0.86 Val loss: 0.63 Train acc: 71.92 Val acc: 81.20
+Epoch: 47 Train loss: 0.85 Val loss: 0.69 Train acc: 72.12 Val acc: 78.20
+Epoch: 48 Train loss: 0.85 Val loss: 0.72 Train acc: 72.49 Val acc: 79.40
+Epoch: 49 Train loss: 0.84 Val loss: 0.72 Train acc: 73.14 Val acc: 77.20
+Epoch: 50 Train loss: 0.85 Val loss: 0.54 Train acc: 72.36 Val acc: 83.80
+Epoch: 51 Train loss: 0.83 Val loss: 0.70 Train acc: 72.91 Val acc: 77.20
+Epoch: 52 Train loss: 0.84 Val loss: 0.62 Train acc: 72.36 Val acc: 82.20
+Epoch: 53 Train loss: 0.81 Val loss: 0.75 Train acc: 72.94 Val acc: 76.80
+Epoch: 54 Train loss: 0.82 Val loss: 0.57 Train acc: 73.30 Val acc: 81.40
+Epoch: 55 Train loss: 0.83 Val loss: 0.64 Train acc: 72.88 Val acc: 79.60
+Epoch: 56 Train loss: 0.81 Val loss: 0.62 Train acc: 73.52 Val acc: 80.60
+Epoch: 57 Train loss: 0.81 Val loss: 0.79 Train acc: 73.42 Val acc: 75.60
+Epoch: 58 Train loss: 0.81 Val loss: 0.60 Train acc: 73.90 Val acc: 81.60
+Epoch: 59 Train loss: 0.79 Val loss: 0.62 Train acc: 74.05 Val acc: 80.20
+Epoch: 60 Train loss: 0.69 Val loss: 0.40 Train acc: 77.82 Val acc: 87.60
+Epoch: 61 Train loss: 0.64 Val loss: 0.39 Train acc: 79.32 Val acc: 87.20
+Epoch: 62 Train loss: 0.62 Val loss: 0.38 Train acc: 79.77 Val acc: 87.40
+Epoch: 63 Train loss: 0.60 Val loss: 0.37 Train acc: 80.16 Val acc: 87.80
+Epoch: 64 Train loss: 0.60 Val loss: 0.39 Train acc: 80.38 Val acc: 88.20
+Epoch: 65 Train loss: 0.58 Val loss: 0.36 Train acc: 80.91 Val acc: 88.60
+Epoch: 66 Train loss: 0.58 Val loss: 0.37 Train acc: 81.00 Val acc: 89.20
+Epoch: 67 Train loss: 0.57 Val loss: 0.38 Train acc: 81.33 Val acc: 88.80
+Epoch: 68 Train loss: 0.56 Val loss: 0.36 Train acc: 81.81 Val acc: 89.40
+Epoch: 69 Train loss: 0.56 Val loss: 0.38 Train acc: 81.99 Val acc: 88.80
+Epoch: 70 Train loss: 0.54 Val loss: 0.36 Train acc: 82.08 Val acc: 89.00
+Epoch: 71 Train loss: 0.56 Val loss: 0.35 Train acc: 81.77 Val acc: 89.00
+Epoch: 72 Train loss: 0.53 Val loss: 0.35 Train acc: 82.71 Val acc: 89.20
+Epoch: 73 Train loss: 0.55 Val loss: 0.34 Train acc: 82.14 Val acc: 89.80
+Epoch: 74 Train loss: 0.55 Val loss: 0.36 Train acc: 82.35 Val acc: 90.00
+Epoch: 75 Train loss: 0.53 Val loss: 0.35 Train acc: 82.43 Val acc: 89.60
+Epoch: 76 Train loss: 0.54 Val loss: 0.35 Train acc: 82.44 Val acc: 90.60
+Epoch: 77 Train loss: 0.54 Val loss: 0.40 Train acc: 82.21 Val acc: 89.20
+Epoch: 78 Train loss: 0.53 Val loss: 0.34 Train acc: 82.76 Val acc: 89.80
+Epoch: 79 Train loss: 0.52 Val loss: 0.33 Train acc: 83.05 Val acc: 90.00
+Epoch: 80 Train loss: 0.52 Val loss: 0.33 Train acc: 83.27 Val acc: 89.40
+Epoch: 81 Train loss: 0.53 Val loss: 0.31 Train acc: 83.02 Val acc: 90.80
+Epoch: 82 Train loss: 0.51 Val loss: 0.32 Train acc: 83.60 Val acc: 90.40
+Epoch: 83 Train loss: 0.52 Val loss: 0.32 Train acc: 83.36 Val acc: 90.00
+Epoch: 84 Train loss: 0.52 Val loss: 0.33 Train acc: 83.18 Val acc: 91.00
+Epoch: 85 Train loss: 0.51 Val loss: 0.31 Train acc: 83.09 Val acc: 90.40
+Epoch: 86 Train loss: 0.49 Val loss: 0.33 Train acc: 84.08 Val acc: 89.60
+Epoch: 87 Train loss: 0.52 Val loss: 0.34 Train acc: 83.27 Val acc: 89.40
+Epoch: 88 Train loss: 0.51 Val loss: 0.36 Train acc: 83.29 Val acc: 88.80
+Epoch: 89 Train loss: 0.50 Val loss: 0.34 Train acc: 83.58 Val acc: 90.60
+Epoch: 90 Train loss: 0.50 Val loss: 0.32 Train acc: 83.45 Val acc: 89.80
+Epoch: 91 Train loss: 0.51 Val loss: 0.31 Train acc: 83.51 Val acc: 90.00
+Epoch: 92 Train loss: 0.50 Val loss: 0.32 Train acc: 83.64 Val acc: 89.60
+Epoch: 93 Train loss: 0.49 Val loss: 0.32 Train acc: 83.55 Val acc: 90.80
+Epoch: 94 Train loss: 0.48 Val loss: 0.30 Train acc: 84.55 Val acc: 90.60
+Epoch: 95 Train loss: 0.49 Val loss: 0.33 Train acc: 84.42 Val acc: 89.80
+Epoch: 96 Train loss: 0.49 Val loss: 0.33 Train acc: 84.33 Val acc: 89.00
+Epoch: 97 Train loss: 0.50 Val loss: 0.33 Train acc: 83.60 Val acc: 89.20
+Epoch: 98 Train loss: 0.49 Val loss: 0.31 Train acc: 84.11 Val acc: 91.80
+Epoch: 99 Train loss: 0.49 Val loss: 0.28 Train acc: 83.77 Val acc: 91.80
+Epoch: 100 Train loss: 0.49 Val loss: 0.32 Train acc: 84.00 Val acc: 90.40
+Epoch: 101 Train loss: 0.47 Val loss: 0.33 Train acc: 84.46 Val acc: 90.80
+Epoch: 102 Train loss: 0.48 Val loss: 0.29 Train acc: 84.57 Val acc: 90.80
+Epoch: 103 Train loss: 0.47 Val loss: 0.32 Train acc: 84.78 Val acc: 89.40
+Epoch: 104 Train loss: 0.48 Val loss: 0.29 Train acc: 84.25 Val acc: 90.80
+Epoch: 105 Train loss: 0.47 Val loss: 0.33 Train acc: 84.96 Val acc: 90.00
+Epoch: 106 Train loss: 0.47 Val loss: 0.34 Train acc: 84.93 Val acc: 90.20
+Epoch: 107 Train loss: 0.47 Val loss: 0.32 Train acc: 84.56 Val acc: 90.20
+Epoch: 108 Train loss: 0.46 Val loss: 0.33 Train acc: 85.12 Val acc: 91.20
+Epoch: 109 Train loss: 0.46 Val loss: 0.32 Train acc: 85.08 Val acc: 90.20
+Epoch: 110 Train loss: 0.46 Val loss: 0.32 Train acc: 84.86 Val acc: 90.40
+Epoch: 111 Train loss: 0.47 Val loss: 0.31 Train acc: 84.95 Val acc: 90.40
+Epoch: 112 Train loss: 0.46 Val loss: 0.34 Train acc: 84.82 Val acc: 89.20
+Epoch: 113 Train loss: 0.46 Val loss: 0.32 Train acc: 85.16 Val acc: 90.20
+Epoch: 114 Train loss: 0.46 Val loss: 0.32 Train acc: 85.45 Val acc: 90.80
+Epoch: 115 Train loss: 0.46 Val loss: 0.32 Train acc: 84.69 Val acc: 89.60
+Epoch: 116 Train loss: 0.45 Val loss: 0.30 Train acc: 84.96 Val acc: 91.60
+Epoch: 117 Train loss: 0.45 Val loss: 0.31 Train acc: 85.37 Val acc: 90.80
+Epoch: 118 Train loss: 0.45 Val loss: 0.33 Train acc: 85.06 Val acc: 89.40
+Epoch: 119 Train loss: 0.44 Val loss: 0.31 Train acc: 85.67 Val acc: 90.20
+Epoch: 120 Train loss: 0.44 Val loss: 0.30 Train acc: 86.02 Val acc: 91.00
+Epoch: 121 Train loss: 0.43 Val loss: 0.29 Train acc: 85.87 Val acc: 91.40
+Epoch: 122 Train loss: 0.43 Val loss: 0.30 Train acc: 86.21 Val acc: 90.80
+Epoch: 123 Train loss: 0.43 Val loss: 0.29 Train acc: 86.40 Val acc: 91.40
+Epoch: 124 Train loss: 0.42 Val loss: 0.29 Train acc: 86.55 Val acc: 91.40
+Epoch: 125 Train loss: 0.42 Val loss: 0.29 Train acc: 86.31 Val acc: 90.80
+Epoch: 126 Train loss: 0.41 Val loss: 0.29 Train acc: 86.35 Val acc: 91.60
+Epoch: 127 Train loss: 0.42 Val loss: 0.28 Train acc: 86.58 Val acc: 91.20
+Epoch: 128 Train loss: 0.42 Val loss: 0.29 Train acc: 86.62 Val acc: 91.40
+Epoch: 129 Train loss: 0.41 Val loss: 0.29 Train acc: 86.43 Val acc: 91.00
+Epoch: 130 Train loss: 0.43 Val loss: 0.29 Train acc: 86.15 Val acc: 91.40
+Epoch: 131 Train loss: 0.42 Val loss: 0.29 Train acc: 86.45 Val acc: 91.40
+Epoch: 132 Train loss: 0.41 Val loss: 0.29 Train acc: 86.64 Val acc: 91.40
+Epoch: 133 Train loss: 0.42 Val loss: 0.29 Train acc: 86.36 Val acc: 91.20
+Epoch: 134 Train loss: 0.42 Val loss: 0.29 Train acc: 86.69 Val acc: 91.20
+Epoch: 135 Train loss: 0.43 Val loss: 0.29 Train acc: 86.42 Val acc: 91.40
+Epoch: 136 Train loss: 0.42 Val loss: 0.28 Train acc: 86.48 Val acc: 91.60
+Epoch: 137 Train loss: 0.41 Val loss: 0.28 Train acc: 86.69 Val acc: 91.60
+Epoch: 138 Train loss: 0.42 Val loss: 0.29 Train acc: 86.31 Val acc: 91.40
+Epoch: 139 Train loss: 0.40 Val loss: 0.28 Train acc: 86.83 Val acc: 92.00
+Epoch: 140 Train loss: 0.41 Val loss: 0.28 Train acc: 86.23 Val acc: 91.60
+Epoch: 141 Train loss: 0.42 Val loss: 0.29 Train acc: 86.45 Val acc: 91.00
+Epoch: 142 Train loss: 0.41 Val loss: 0.29 Train acc: 86.91 Val acc: 91.40
+Epoch: 143 Train loss: 0.41 Val loss: 0.28 Train acc: 86.61 Val acc: 92.00
+Epoch: 144 Train loss: 0.41 Val loss: 0.29 Train acc: 86.75 Val acc: 91.80
+Epoch: 145 Train loss: 0.40 Val loss: 0.28 Train acc: 86.90 Val acc: 91.60
+Epoch: 146 Train loss: 0.41 Val loss: 0.28 Train acc: 87.13 Val acc: 91.60
+Epoch: 147 Train loss: 0.42 Val loss: 0.29 Train acc: 86.51 Val acc: 91.60
+Epoch: 148 Train loss: 0.40 Val loss: 0.28 Train acc: 86.94 Val acc: 91.20
+Epoch: 149 Train loss: 0.41 Val loss: 0.29 Train acc: 86.96 Val acc: 92.00
+Epoch: 150 Train loss: 0.40 Val loss: 0.28 Train acc: 87.15 Val acc: 91.60
+Epoch: 151 Train loss: 0.40 Val loss: 0.28 Train acc: 86.96 Val acc: 91.80
+Epoch: 152 Train loss: 0.41 Val loss: 0.28 Train acc: 86.71 Val acc: 91.60
+Epoch: 153 Train loss: 0.41 Val loss: 0.28 Train acc: 86.64 Val acc: 91.20
+Epoch: 154 Train loss: 0.41 Val loss: 0.28 Train acc: 86.81 Val acc: 91.40
+Epoch: 155 Train loss: 0.41 Val loss: 0.29 Train acc: 87.07 Val acc: 90.80
+Epoch: 156 Train loss: 0.41 Val loss: 0.30 Train acc: 87.08 Val acc: 91.00
+Epoch: 157 Train loss: 0.41 Val loss: 0.28 Train acc: 86.74 Val acc: 91.60
+Epoch: 158 Train loss: 0.40 Val loss: 0.28 Train acc: 87.25 Val acc: 91.20
+Epoch: 159 Train loss: 0.41 Val loss: 0.29 Train acc: 86.80 Val acc: 91.20
+Epoch: 160 Train loss: 0.41 Val loss: 0.29 Train acc: 86.79 Val acc: 91.40
+Epoch: 161 Train loss: 0.40 Val loss: 0.28 Train acc: 86.89 Val acc: 91.60
+Epoch: 162 Train loss: 0.41 Val loss: 0.28 Train acc: 87.01 Val acc: 91.40
+Epoch: 163 Train loss: 0.41 Val loss: 0.29 Train acc: 86.86 Val acc: 91.60
+Epoch: 164 Train loss: 0.40 Val loss: 0.28 Train acc: 87.35 Val acc: 91.20
+Epoch: 165 Train loss: 0.40 Val loss: 0.29 Train acc: 86.89 Val acc: 91.20
+Epoch: 166 Train loss: 0.41 Val loss: 0.28 Train acc: 86.63 Val acc: 91.60
+Epoch: 167 Train loss: 0.40 Val loss: 0.28 Train acc: 86.97 Val acc: 91.20
+Epoch: 168 Train loss: 0.40 Val loss: 0.29 Train acc: 86.76 Val acc: 91.40
+Epoch: 169 Train loss: 0.41 Val loss: 0.29 Train acc: 86.58 Val acc: 91.20
+Epoch: 170 Train loss: 0.41 Val loss: 0.28 Train acc: 86.36 Val acc: 91.00
+Epoch: 171 Train loss: 0.40 Val loss: 0.28 Train acc: 86.94 Val acc: 91.80
+Epoch: 172 Train loss: 0.40 Val loss: 0.28 Train acc: 87.12 Val acc: 91.40
+Epoch: 173 Train loss: 0.41 Val loss: 0.28 Train acc: 86.72 Val acc: 91.20
+Epoch: 174 Train loss: 0.40 Val loss: 0.28 Train acc: 86.95 Val acc: 91.80
+Epoch: 175 Train loss: 0.39 Val loss: 0.29 Train acc: 87.44 Val acc: 91.40
+Epoch: 176 Train loss: 0.40 Val loss: 0.28 Train acc: 87.27 Val acc: 91.60
+Epoch: 177 Train loss: 0.41 Val loss: 0.28 Train acc: 86.95 Val acc: 91.20
+Epoch: 178 Train loss: 0.41 Val loss: 0.29 Train acc: 86.62 Val acc: 91.40
+Epoch: 179 Train loss: 0.40 Val loss: 0.29 Train acc: 87.39 Val acc: 91.40
+Epoch: 180 Train loss: 0.42 Val loss: 0.28 Train acc: 86.32 Val acc: 91.60
+Epoch: 181 Train loss: 0.40 Val loss: 0.29 Train acc: 87.03 Val acc: 91.20
+Epoch: 182 Train loss: 0.40 Val loss: 0.28 Train acc: 87.11 Val acc: 91.20
+Epoch: 183 Train loss: 0.41 Val loss: 0.28 Train acc: 86.58 Val acc: 91.20
+Epoch: 184 Train loss: 0.40 Val loss: 0.28 Train acc: 87.40 Val acc: 90.80
+Epoch: 185 Train loss: 0.40 Val loss: 0.29 Train acc: 87.37 Val acc: 91.00
+Epoch: 186 Train loss: 0.41 Val loss: 0.28 Train acc: 87.07 Val acc: 91.40
+Epoch: 187 Train loss: 0.39 Val loss: 0.29 Train acc: 87.61 Val acc: 91.40
+Epoch: 188 Train loss: 0.39 Val loss: 0.28 Train acc: 87.65 Val acc: 91.80
+Epoch: 189 Train loss: 0.40 Val loss: 0.28 Train acc: 87.06 Val acc: 91.00
+Epoch: 190 Train loss: 0.40 Val loss: 0.28 Train acc: 87.06 Val acc: 91.60
+Epoch: 191 Train loss: 0.41 Val loss: 0.28 Train acc: 86.52 Val acc: 91.20
+Epoch: 192 Train loss: 0.41 Val loss: 0.28 Train acc: 86.89 Val acc: 91.20
+Epoch: 193 Train loss: 0.40 Val loss: 0.29 Train acc: 86.94 Val acc: 91.20
+Epoch: 194 Train loss: 0.41 Val loss: 0.28 Train acc: 86.62 Val acc: 91.60
+Epoch: 195 Train loss: 0.40 Val loss: 0.28 Train acc: 86.90 Val acc: 90.80
+Epoch: 196 Train loss: 0.42 Val loss: 0.28 Train acc: 86.53 Val acc: 91.60
+Epoch: 197 Train loss: 0.41 Val loss: 0.28 Train acc: 86.60 Val acc: 91.00
+Epoch: 198 Train loss: 0.40 Val loss: 0.28 Train acc: 87.23 Val acc: 91.40
+Epoch: 199 Train loss: 0.40 Val loss: 0.28 Train acc: 87.27 Val acc: 91.60
+Creating distributions for task 0:
+------------------------------------------------------------------------------------------------------------
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+Training backbone on task 1:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 1.36 Val loss: 0.86 Train acc: 54.00 Val acc: 69.40
+Epoch: 1 Train loss: 1.08 Val loss: 1.22 Train acc: 63.81 Val acc: 62.60
+Epoch: 2 Train loss: 0.99 Val loss: 0.91 Train acc: 66.99 Val acc: 69.80
+Epoch: 3 Train loss: 0.94 Val loss: 0.75 Train acc: 68.25 Val acc: 74.40
+Epoch: 4 Train loss: 0.92 Val loss: 0.90 Train acc: 69.17 Val acc: 71.40
+Epoch: 5 Train loss: 0.89 Val loss: 1.04 Train acc: 70.37 Val acc: 65.60
+Epoch: 6 Train loss: 0.87 Val loss: 0.58 Train acc: 71.13 Val acc: 80.20
+Epoch: 7 Train loss: 0.86 Val loss: 0.61 Train acc: 71.94 Val acc: 79.40
+Epoch: 8 Train loss: 0.86 Val loss: 0.84 Train acc: 71.42 Val acc: 73.60
+Epoch: 9 Train loss: 0.81 Val loss: 0.56 Train acc: 73.11 Val acc: 82.20
+Epoch: 10 Train loss: 0.82 Val loss: 0.76 Train acc: 72.81 Val acc: 75.20
+Epoch: 11 Train loss: 0.79 Val loss: 0.69 Train acc: 73.84 Val acc: 76.80
+Epoch: 12 Train loss: 0.77 Val loss: 0.85 Train acc: 74.81 Val acc: 74.40
+Epoch: 13 Train loss: 0.77 Val loss: 0.56 Train acc: 74.19 Val acc: 81.60
+Epoch: 14 Train loss: 0.76 Val loss: 0.56 Train acc: 75.00 Val acc: 82.40
+Epoch: 15 Train loss: 0.75 Val loss: 0.56 Train acc: 75.23 Val acc: 82.40
+Epoch: 16 Train loss: 0.74 Val loss: 0.56 Train acc: 75.61 Val acc: 81.80
+Epoch: 17 Train loss: 0.74 Val loss: 0.59 Train acc: 75.73 Val acc: 81.80
+Epoch: 18 Train loss: 0.72 Val loss: 0.54 Train acc: 75.87 Val acc: 82.00
+Epoch: 19 Train loss: 0.73 Val loss: 0.72 Train acc: 76.09 Val acc: 78.60
+Epoch: 20 Train loss: 0.71 Val loss: 0.53 Train acc: 76.32 Val acc: 81.60
+Epoch: 21 Train loss: 0.72 Val loss: 0.71 Train acc: 76.03 Val acc: 78.20
+Epoch: 22 Train loss: 0.70 Val loss: 0.58 Train acc: 77.01 Val acc: 78.80
+Epoch: 23 Train loss: 0.72 Val loss: 0.50 Train acc: 76.09 Val acc: 83.40
+Epoch: 24 Train loss: 0.68 Val loss: 0.56 Train acc: 77.80 Val acc: 83.20
+Epoch: 25 Train loss: 0.68 Val loss: 0.74 Train acc: 77.13 Val acc: 75.00
+Epoch: 26 Train loss: 0.69 Val loss: 0.70 Train acc: 77.07 Val acc: 78.80
+Epoch: 27 Train loss: 0.68 Val loss: 0.49 Train acc: 77.35 Val acc: 83.60
+Epoch: 28 Train loss: 0.67 Val loss: 0.61 Train acc: 78.22 Val acc: 78.80
+Epoch: 29 Train loss: 0.67 Val loss: 0.71 Train acc: 77.63 Val acc: 80.60
+Epoch: 30 Train loss: 0.66 Val loss: 0.54 Train acc: 77.86 Val acc: 81.80
+Epoch: 31 Train loss: 0.66 Val loss: 0.61 Train acc: 77.72 Val acc: 81.00
+Epoch: 32 Train loss: 0.67 Val loss: 0.51 Train acc: 78.14 Val acc: 85.60
+Epoch: 33 Train loss: 0.64 Val loss: 0.85 Train acc: 79.17 Val acc: 76.00
+Epoch: 34 Train loss: 0.65 Val loss: 0.50 Train acc: 78.67 Val acc: 84.60
+Epoch: 35 Train loss: 0.65 Val loss: 0.63 Train acc: 78.45 Val acc: 80.00
+Epoch: 36 Train loss: 0.65 Val loss: 0.60 Train acc: 78.79 Val acc: 80.60
+Epoch: 37 Train loss: 0.66 Val loss: 0.57 Train acc: 78.47 Val acc: 82.40
+Epoch: 38 Train loss: 0.66 Val loss: 0.55 Train acc: 78.65 Val acc: 84.00
+Epoch: 39 Train loss: 0.61 Val loss: 0.66 Train acc: 79.56 Val acc: 79.80
+Epoch: 40 Train loss: 0.63 Val loss: 0.61 Train acc: 78.84 Val acc: 80.80
+Epoch: 41 Train loss: 0.63 Val loss: 0.54 Train acc: 79.70 Val acc: 82.40
+Epoch: 42 Train loss: 0.62 Val loss: 0.54 Train acc: 79.68 Val acc: 83.20
+Epoch: 43 Train loss: 0.63 Val loss: 0.47 Train acc: 79.29 Val acc: 83.40
+Epoch: 44 Train loss: 0.61 Val loss: 0.55 Train acc: 80.02 Val acc: 83.40
+Epoch: 45 Train loss: 0.62 Val loss: 0.64 Train acc: 79.34 Val acc: 78.60
+Epoch: 46 Train loss: 0.62 Val loss: 0.58 Train acc: 79.78 Val acc: 82.00
+Epoch: 47 Train loss: 0.62 Val loss: 0.64 Train acc: 79.29 Val acc: 79.80
+Epoch: 48 Train loss: 0.62 Val loss: 0.44 Train acc: 79.47 Val acc: 86.20
+Epoch: 49 Train loss: 0.62 Val loss: 0.52 Train acc: 79.62 Val acc: 82.80
+Epoch: 50 Train loss: 0.61 Val loss: 0.55 Train acc: 80.11 Val acc: 84.20
+Epoch: 51 Train loss: 0.60 Val loss: 0.63 Train acc: 80.17 Val acc: 80.20
+Epoch: 52 Train loss: 0.60 Val loss: 0.61 Train acc: 79.80 Val acc: 81.40
+Epoch: 53 Train loss: 0.60 Val loss: 0.52 Train acc: 79.83 Val acc: 82.40
+Epoch: 54 Train loss: 0.63 Val loss: 0.56 Train acc: 79.16 Val acc: 82.80
+Epoch: 55 Train loss: 0.61 Val loss: 0.53 Train acc: 79.74 Val acc: 84.80
+Epoch: 56 Train loss: 0.59 Val loss: 0.55 Train acc: 80.56 Val acc: 81.80
+Epoch: 57 Train loss: 0.59 Val loss: 0.43 Train acc: 80.49 Val acc: 86.40
+Epoch: 58 Train loss: 0.60 Val loss: 0.49 Train acc: 80.35 Val acc: 83.40
+Epoch: 59 Train loss: 0.60 Val loss: 0.42 Train acc: 80.56 Val acc: 86.00
+Epoch: 60 Train loss: 0.49 Val loss: 0.34 Train acc: 83.80 Val acc: 88.60
+Epoch: 61 Train loss: 0.43 Val loss: 0.33 Train acc: 85.90 Val acc: 90.00
+Epoch: 62 Train loss: 0.40 Val loss: 0.33 Train acc: 86.58 Val acc: 89.20
+Epoch: 63 Train loss: 0.41 Val loss: 0.31 Train acc: 86.78 Val acc: 89.80
+Epoch: 64 Train loss: 0.39 Val loss: 0.32 Train acc: 87.34 Val acc: 88.40
+Epoch: 65 Train loss: 0.37 Val loss: 0.35 Train acc: 87.63 Val acc: 89.40
+Epoch: 66 Train loss: 0.37 Val loss: 0.36 Train acc: 88.04 Val acc: 88.40
+Epoch: 67 Train loss: 0.37 Val loss: 0.33 Train acc: 87.94 Val acc: 89.60
+Epoch: 68 Train loss: 0.35 Val loss: 0.33 Train acc: 88.63 Val acc: 88.60
+Epoch: 69 Train loss: 0.35 Val loss: 0.32 Train acc: 88.34 Val acc: 88.40
+Epoch: 70 Train loss: 0.34 Val loss: 0.33 Train acc: 88.50 Val acc: 89.00
+Epoch: 71 Train loss: 0.34 Val loss: 0.34 Train acc: 88.88 Val acc: 88.80
+Epoch: 72 Train loss: 0.35 Val loss: 0.34 Train acc: 88.89 Val acc: 88.80
+Epoch: 73 Train loss: 0.35 Val loss: 0.33 Train acc: 88.72 Val acc: 89.20
+Epoch: 74 Train loss: 0.34 Val loss: 0.33 Train acc: 89.09 Val acc: 89.40
+Epoch: 75 Train loss: 0.34 Val loss: 0.33 Train acc: 88.98 Val acc: 89.20
+Epoch: 76 Train loss: 0.33 Val loss: 0.35 Train acc: 88.92 Val acc: 89.00
+Epoch: 77 Train loss: 0.33 Val loss: 0.32 Train acc: 89.03 Val acc: 89.60
+Epoch: 78 Train loss: 0.33 Val loss: 0.32 Train acc: 89.30 Val acc: 89.00
+Epoch: 79 Train loss: 0.33 Val loss: 0.34 Train acc: 89.27 Val acc: 89.40
+Epoch: 80 Train loss: 0.32 Val loss: 0.33 Train acc: 89.67 Val acc: 89.20
+Epoch: 81 Train loss: 0.32 Val loss: 0.34 Train acc: 89.29 Val acc: 89.00
+Epoch: 82 Train loss: 0.32 Val loss: 0.34 Train acc: 89.56 Val acc: 89.00
+Epoch: 83 Train loss: 0.30 Val loss: 0.33 Train acc: 89.81 Val acc: 89.00
+Epoch: 84 Train loss: 0.33 Val loss: 0.33 Train acc: 89.36 Val acc: 89.80
+Epoch: 85 Train loss: 0.32 Val loss: 0.32 Train acc: 89.62 Val acc: 88.60
+Epoch: 86 Train loss: 0.32 Val loss: 0.34 Train acc: 89.65 Val acc: 88.80
+Epoch: 87 Train loss: 0.29 Val loss: 0.34 Train acc: 90.53 Val acc: 89.20
+Epoch: 88 Train loss: 0.30 Val loss: 0.33 Train acc: 90.33 Val acc: 89.60
+Epoch: 89 Train loss: 0.30 Val loss: 0.34 Train acc: 89.71 Val acc: 89.00
+Epoch: 90 Train loss: 0.31 Val loss: 0.33 Train acc: 90.02 Val acc: 89.60
+Epoch: 91 Train loss: 0.30 Val loss: 0.35 Train acc: 90.26 Val acc: 89.60
+Epoch: 92 Train loss: 0.29 Val loss: 0.32 Train acc: 90.56 Val acc: 89.60
+Epoch: 93 Train loss: 0.28 Val loss: 0.34 Train acc: 90.67 Val acc: 89.60
+Epoch: 94 Train loss: 0.30 Val loss: 0.35 Train acc: 90.49 Val acc: 90.00
+Epoch: 95 Train loss: 0.30 Val loss: 0.35 Train acc: 90.16 Val acc: 89.00
+Epoch: 96 Train loss: 0.29 Val loss: 0.34 Train acc: 90.51 Val acc: 89.40
+Epoch: 97 Train loss: 0.29 Val loss: 0.33 Train acc: 90.48 Val acc: 89.20
+Epoch: 98 Train loss: 0.30 Val loss: 0.34 Train acc: 90.25 Val acc: 89.40
+Epoch: 99 Train loss: 0.28 Val loss: 0.32 Train acc: 90.77 Val acc: 90.40
+Epoch: 100 Train loss: 0.29 Val loss: 0.35 Train acc: 90.64 Val acc: 90.00
+Epoch: 101 Train loss: 0.28 Val loss: 0.34 Train acc: 90.92 Val acc: 89.00
+Epoch: 102 Train loss: 0.28 Val loss: 0.36 Train acc: 90.44 Val acc: 89.80
+Epoch: 103 Train loss: 0.29 Val loss: 0.32 Train acc: 90.48 Val acc: 89.20
+Epoch: 104 Train loss: 0.28 Val loss: 0.33 Train acc: 90.86 Val acc: 90.00
+Epoch: 105 Train loss: 0.28 Val loss: 0.32 Train acc: 91.05 Val acc: 89.40
+Epoch: 106 Train loss: 0.27 Val loss: 0.36 Train acc: 90.94 Val acc: 89.20
+Epoch: 107 Train loss: 0.28 Val loss: 0.32 Train acc: 91.06 Val acc: 90.40
+Epoch: 108 Train loss: 0.28 Val loss: 0.31 Train acc: 90.93 Val acc: 89.20
+Epoch: 109 Train loss: 0.28 Val loss: 0.34 Train acc: 90.89 Val acc: 88.80
+Epoch: 110 Train loss: 0.28 Val loss: 0.32 Train acc: 90.77 Val acc: 90.20
+Epoch: 111 Train loss: 0.27 Val loss: 0.33 Train acc: 91.06 Val acc: 89.60
+Epoch: 112 Train loss: 0.28 Val loss: 0.34 Train acc: 90.89 Val acc: 89.40
+Epoch: 113 Train loss: 0.28 Val loss: 0.32 Train acc: 91.17 Val acc: 89.60
+Epoch: 114 Train loss: 0.26 Val loss: 0.31 Train acc: 91.12 Val acc: 89.80
+Epoch: 115 Train loss: 0.27 Val loss: 0.35 Train acc: 91.20 Val acc: 89.00
+Epoch: 116 Train loss: 0.26 Val loss: 0.35 Train acc: 91.35 Val acc: 89.20
+Epoch: 117 Train loss: 0.27 Val loss: 0.34 Train acc: 91.01 Val acc: 90.20
+Epoch: 118 Train loss: 0.27 Val loss: 0.32 Train acc: 91.48 Val acc: 89.60
+Epoch: 119 Train loss: 0.27 Val loss: 0.36 Train acc: 91.24 Val acc: 88.40
+Epoch: 120 Train loss: 0.25 Val loss: 0.33 Train acc: 91.62 Val acc: 89.00
+Epoch: 121 Train loss: 0.25 Val loss: 0.33 Train acc: 91.97 Val acc: 89.40
+Epoch: 122 Train loss: 0.25 Val loss: 0.33 Train acc: 92.10 Val acc: 89.40
+Epoch: 123 Train loss: 0.24 Val loss: 0.33 Train acc: 92.45 Val acc: 89.40
+Epoch: 124 Train loss: 0.25 Val loss: 0.32 Train acc: 91.82 Val acc: 89.00
+Epoch: 125 Train loss: 0.23 Val loss: 0.32 Train acc: 92.32 Val acc: 89.40
+Epoch: 126 Train loss: 0.25 Val loss: 0.32 Train acc: 92.11 Val acc: 89.40
+Epoch: 127 Train loss: 0.24 Val loss: 0.32 Train acc: 92.32 Val acc: 89.60
+Epoch: 128 Train loss: 0.24 Val loss: 0.32 Train acc: 92.34 Val acc: 90.00
+Epoch: 129 Train loss: 0.24 Val loss: 0.32 Train acc: 92.31 Val acc: 89.60
+Epoch: 130 Train loss: 0.24 Val loss: 0.32 Train acc: 92.03 Val acc: 90.20
+Epoch: 131 Train loss: 0.23 Val loss: 0.32 Train acc: 92.64 Val acc: 89.60
+Epoch: 132 Train loss: 0.24 Val loss: 0.33 Train acc: 92.27 Val acc: 89.80
+Epoch: 133 Train loss: 0.23 Val loss: 0.33 Train acc: 92.40 Val acc: 89.20
+Epoch: 134 Train loss: 0.25 Val loss: 0.33 Train acc: 91.89 Val acc: 89.60
+Epoch: 135 Train loss: 0.24 Val loss: 0.33 Train acc: 92.03 Val acc: 89.80
+Epoch: 136 Train loss: 0.24 Val loss: 0.32 Train acc: 92.40 Val acc: 89.60
+Epoch: 137 Train loss: 0.23 Val loss: 0.32 Train acc: 92.57 Val acc: 89.80
+Epoch: 138 Train loss: 0.23 Val loss: 0.31 Train acc: 92.25 Val acc: 89.80
+Epoch: 139 Train loss: 0.23 Val loss: 0.32 Train acc: 92.27 Val acc: 89.60
+Epoch: 140 Train loss: 0.23 Val loss: 0.32 Train acc: 92.46 Val acc: 89.40
+Epoch: 141 Train loss: 0.23 Val loss: 0.33 Train acc: 92.65 Val acc: 89.00
+Epoch: 142 Train loss: 0.24 Val loss: 0.33 Train acc: 92.30 Val acc: 89.20
+Epoch: 143 Train loss: 0.24 Val loss: 0.32 Train acc: 92.28 Val acc: 89.60
+Epoch: 144 Train loss: 0.24 Val loss: 0.33 Train acc: 92.25 Val acc: 89.80
+Epoch: 145 Train loss: 0.24 Val loss: 0.33 Train acc: 92.22 Val acc: 89.80
+Epoch: 146 Train loss: 0.22 Val loss: 0.32 Train acc: 92.88 Val acc: 89.60
+Epoch: 147 Train loss: 0.23 Val loss: 0.32 Train acc: 92.81 Val acc: 90.20
+Epoch: 148 Train loss: 0.23 Val loss: 0.32 Train acc: 92.62 Val acc: 90.20
+Epoch: 149 Train loss: 0.23 Val loss: 0.32 Train acc: 92.66 Val acc: 90.20
+Epoch: 150 Train loss: 0.23 Val loss: 0.32 Train acc: 92.46 Val acc: 89.40
+Epoch: 151 Train loss: 0.23 Val loss: 0.33 Train acc: 92.66 Val acc: 89.80
+Epoch: 152 Train loss: 0.23 Val loss: 0.32 Train acc: 92.74 Val acc: 90.40
+Epoch: 153 Train loss: 0.23 Val loss: 0.32 Train acc: 92.60 Val acc: 90.00
+Epoch: 154 Train loss: 0.24 Val loss: 0.33 Train acc: 92.21 Val acc: 89.40
+Epoch: 155 Train loss: 0.23 Val loss: 0.32 Train acc: 92.48 Val acc: 89.60
+Epoch: 156 Train loss: 0.23 Val loss: 0.32 Train acc: 92.55 Val acc: 90.40
+Epoch: 157 Train loss: 0.23 Val loss: 0.32 Train acc: 92.59 Val acc: 89.80
+Epoch: 158 Train loss: 0.23 Val loss: 0.31 Train acc: 92.67 Val acc: 90.00
+Epoch: 159 Train loss: 0.24 Val loss: 0.32 Train acc: 92.36 Val acc: 89.60
+Epoch: 160 Train loss: 0.23 Val loss: 0.32 Train acc: 92.54 Val acc: 89.20
+Epoch: 161 Train loss: 0.24 Val loss: 0.32 Train acc: 92.35 Val acc: 89.40
+Epoch: 162 Train loss: 0.22 Val loss: 0.33 Train acc: 92.64 Val acc: 89.40
+Epoch: 163 Train loss: 0.23 Val loss: 0.32 Train acc: 92.80 Val acc: 89.60
+Epoch: 164 Train loss: 0.23 Val loss: 0.33 Train acc: 92.58 Val acc: 89.40
+Epoch: 165 Train loss: 0.23 Val loss: 0.32 Train acc: 92.74 Val acc: 89.60
+Epoch: 166 Train loss: 0.24 Val loss: 0.32 Train acc: 92.18 Val acc: 89.40
+Epoch: 167 Train loss: 0.22 Val loss: 0.32 Train acc: 92.74 Val acc: 89.40
+Epoch: 168 Train loss: 0.22 Val loss: 0.32 Train acc: 93.16 Val acc: 89.20
+Epoch: 169 Train loss: 0.23 Val loss: 0.32 Train acc: 92.54 Val acc: 90.00
+Epoch: 170 Train loss: 0.24 Val loss: 0.32 Train acc: 92.46 Val acc: 89.20
+Epoch: 171 Train loss: 0.22 Val loss: 0.32 Train acc: 92.98 Val acc: 89.60
+Epoch: 172 Train loss: 0.22 Val loss: 0.32 Train acc: 92.54 Val acc: 89.60
+Epoch: 173 Train loss: 0.22 Val loss: 0.32 Train acc: 93.09 Val acc: 89.80
+Epoch: 174 Train loss: 0.22 Val loss: 0.32 Train acc: 92.98 Val acc: 89.40
+Epoch: 175 Train loss: 0.23 Val loss: 0.32 Train acc: 92.64 Val acc: 89.40
+Epoch: 176 Train loss: 0.23 Val loss: 0.32 Train acc: 92.69 Val acc: 89.20
+Epoch: 177 Train loss: 0.23 Val loss: 0.32 Train acc: 92.30 Val acc: 89.80
+Epoch: 178 Train loss: 0.23 Val loss: 0.32 Train acc: 92.62 Val acc: 89.40
+Epoch: 179 Train loss: 0.22 Val loss: 0.32 Train acc: 92.86 Val acc: 89.60
+Epoch: 180 Train loss: 0.23 Val loss: 0.32 Train acc: 92.44 Val acc: 89.40
+Epoch: 181 Train loss: 0.24 Val loss: 0.32 Train acc: 92.32 Val acc: 89.60
+Epoch: 182 Train loss: 0.22 Val loss: 0.32 Train acc: 93.15 Val acc: 90.00
+Epoch: 183 Train loss: 0.23 Val loss: 0.33 Train acc: 92.79 Val acc: 89.60
+Epoch: 184 Train loss: 0.22 Val loss: 0.32 Train acc: 93.00 Val acc: 90.00
+Epoch: 185 Train loss: 0.23 Val loss: 0.32 Train acc: 92.45 Val acc: 89.80
+Epoch: 186 Train loss: 0.23 Val loss: 0.32 Train acc: 92.37 Val acc: 89.40
+Epoch: 187 Train loss: 0.22 Val loss: 0.33 Train acc: 92.74 Val acc: 89.60
+Epoch: 188 Train loss: 0.23 Val loss: 0.32 Train acc: 92.42 Val acc: 89.40
+Epoch: 189 Train loss: 0.23 Val loss: 0.33 Train acc: 92.74 Val acc: 89.80
+Epoch: 190 Train loss: 0.24 Val loss: 0.33 Train acc: 92.18 Val acc: 89.80
+Epoch: 191 Train loss: 0.24 Val loss: 0.32 Train acc: 92.38 Val acc: 89.80
+Epoch: 192 Train loss: 0.23 Val loss: 0.32 Train acc: 92.70 Val acc: 89.60
+Epoch: 193 Train loss: 0.23 Val loss: 0.33 Train acc: 92.65 Val acc: 89.60
+Epoch: 194 Train loss: 0.22 Val loss: 0.32 Train acc: 92.43 Val acc: 89.40
+Epoch: 195 Train loss: 0.23 Val loss: 0.32 Train acc: 92.82 Val acc: 89.60
+Epoch: 196 Train loss: 0.24 Val loss: 0.32 Train acc: 92.15 Val acc: 89.80
+Epoch: 197 Train loss: 0.22 Val loss: 0.32 Train acc: 92.59 Val acc: 89.00
+Epoch: 198 Train loss: 0.23 Val loss: 0.32 Train acc: 92.88 Val acc: 90.00
+Epoch: 199 Train loss: 0.22 Val loss: 0.32 Train acc: 92.77 Val acc: 89.80
+Creating distributions for task 1:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+Training backbone on task 2:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 1.20 Val loss: 0.93 Train acc: 59.18 Val acc: 64.80
+Epoch: 1 Train loss: 0.95 Val loss: 0.86 Train acc: 67.98 Val acc: 70.40
+Epoch: 2 Train loss: 0.88 Val loss: 0.89 Train acc: 70.41 Val acc: 68.80
+Epoch: 3 Train loss: 0.84 Val loss: 0.64 Train acc: 72.09 Val acc: 79.40
+Epoch: 4 Train loss: 0.81 Val loss: 0.73 Train acc: 72.76 Val acc: 72.00
+Epoch: 5 Train loss: 0.80 Val loss: 0.72 Train acc: 73.25 Val acc: 75.40
+Epoch: 6 Train loss: 0.77 Val loss: 0.56 Train acc: 74.18 Val acc: 80.20
+Epoch: 7 Train loss: 0.76 Val loss: 0.87 Train acc: 74.95 Val acc: 70.60
+Epoch: 8 Train loss: 0.74 Val loss: 0.82 Train acc: 75.41 Val acc: 72.60
+Epoch: 9 Train loss: 0.74 Val loss: 0.72 Train acc: 75.90 Val acc: 76.80
+Epoch: 10 Train loss: 0.71 Val loss: 0.57 Train acc: 76.01 Val acc: 81.20
+Epoch: 11 Train loss: 0.73 Val loss: 0.54 Train acc: 75.92 Val acc: 82.80
+Epoch: 12 Train loss: 0.70 Val loss: 0.60 Train acc: 76.88 Val acc: 78.80
+Epoch: 13 Train loss: 0.70 Val loss: 0.51 Train acc: 76.88 Val acc: 85.40
+Epoch: 14 Train loss: 0.69 Val loss: 0.62 Train acc: 77.53 Val acc: 79.40
+Epoch: 15 Train loss: 0.68 Val loss: 0.67 Train acc: 77.41 Val acc: 77.80
+Epoch: 16 Train loss: 0.68 Val loss: 0.69 Train acc: 77.55 Val acc: 77.60
+Epoch: 17 Train loss: 0.66 Val loss: 0.61 Train acc: 78.19 Val acc: 79.80
+Epoch: 18 Train loss: 0.66 Val loss: 0.57 Train acc: 78.11 Val acc: 80.60
+Epoch: 19 Train loss: 0.65 Val loss: 0.56 Train acc: 78.58 Val acc: 82.00
+Epoch: 20 Train loss: 0.64 Val loss: 0.53 Train acc: 78.42 Val acc: 83.20
+Epoch: 21 Train loss: 0.65 Val loss: 0.55 Train acc: 78.68 Val acc: 82.20
+Epoch: 22 Train loss: 0.64 Val loss: 1.02 Train acc: 79.13 Val acc: 69.60
+Epoch: 23 Train loss: 0.64 Val loss: 0.50 Train acc: 78.72 Val acc: 85.60
+Epoch: 24 Train loss: 0.64 Val loss: 0.58 Train acc: 78.90 Val acc: 82.00
+Epoch: 25 Train loss: 0.62 Val loss: 0.59 Train acc: 79.42 Val acc: 78.60
+Epoch: 26 Train loss: 0.62 Val loss: 0.59 Train acc: 79.60 Val acc: 81.00
+Epoch: 27 Train loss: 0.62 Val loss: 0.47 Train acc: 79.58 Val acc: 84.00
+Epoch: 28 Train loss: 0.60 Val loss: 0.46 Train acc: 79.76 Val acc: 86.60
+Epoch: 29 Train loss: 0.62 Val loss: 0.60 Train acc: 79.53 Val acc: 79.60
+Epoch: 30 Train loss: 0.61 Val loss: 0.48 Train acc: 80.13 Val acc: 85.60
+Epoch: 31 Train loss: 0.61 Val loss: 0.49 Train acc: 79.90 Val acc: 83.80
+Epoch: 32 Train loss: 0.60 Val loss: 0.48 Train acc: 80.03 Val acc: 83.80
+Epoch: 33 Train loss: 0.60 Val loss: 0.50 Train acc: 79.90 Val acc: 82.40
+Epoch: 34 Train loss: 0.59 Val loss: 0.49 Train acc: 80.03 Val acc: 84.60
+Epoch: 35 Train loss: 0.60 Val loss: 0.51 Train acc: 80.02 Val acc: 83.40
+Epoch: 36 Train loss: 0.58 Val loss: 0.40 Train acc: 80.38 Val acc: 86.00
+Epoch: 37 Train loss: 0.57 Val loss: 0.47 Train acc: 81.02 Val acc: 85.00
+Epoch: 38 Train loss: 0.61 Val loss: 0.55 Train acc: 80.15 Val acc: 82.20
+Epoch: 39 Train loss: 0.57 Val loss: 0.65 Train acc: 81.16 Val acc: 79.60
+Epoch: 40 Train loss: 0.57 Val loss: 0.46 Train acc: 81.00 Val acc: 83.60
+Epoch: 41 Train loss: 0.59 Val loss: 0.53 Train acc: 80.68 Val acc: 83.80
+Epoch: 42 Train loss: 0.58 Val loss: 0.53 Train acc: 80.92 Val acc: 84.20
+Epoch: 43 Train loss: 0.58 Val loss: 0.60 Train acc: 81.19 Val acc: 80.60
+Epoch: 44 Train loss: 0.58 Val loss: 0.46 Train acc: 80.80 Val acc: 84.00
+Epoch: 45 Train loss: 0.58 Val loss: 0.49 Train acc: 81.20 Val acc: 83.00
+Epoch: 46 Train loss: 0.56 Val loss: 0.50 Train acc: 81.55 Val acc: 82.60
+Epoch: 47 Train loss: 0.58 Val loss: 0.54 Train acc: 80.96 Val acc: 83.40
+Epoch: 48 Train loss: 0.56 Val loss: 0.38 Train acc: 81.15 Val acc: 88.00
+Epoch: 49 Train loss: 0.57 Val loss: 0.42 Train acc: 81.17 Val acc: 86.40
+Epoch: 50 Train loss: 0.55 Val loss: 0.49 Train acc: 81.67 Val acc: 85.00
+Epoch: 51 Train loss: 0.55 Val loss: 0.47 Train acc: 81.57 Val acc: 85.00
+Epoch: 52 Train loss: 0.56 Val loss: 0.64 Train acc: 81.87 Val acc: 79.00
+Epoch: 53 Train loss: 0.56 Val loss: 0.51 Train acc: 81.49 Val acc: 84.80
+Epoch: 54 Train loss: 0.57 Val loss: 0.50 Train acc: 80.95 Val acc: 82.80
+Epoch: 55 Train loss: 0.57 Val loss: 0.45 Train acc: 81.35 Val acc: 83.80
+Epoch: 56 Train loss: 0.55 Val loss: 0.60 Train acc: 81.88 Val acc: 79.20
+Epoch: 57 Train loss: 0.55 Val loss: 0.37 Train acc: 81.93 Val acc: 88.00
+Epoch: 58 Train loss: 0.55 Val loss: 0.49 Train acc: 81.92 Val acc: 84.60
+Epoch: 59 Train loss: 0.56 Val loss: 0.42 Train acc: 81.30 Val acc: 87.20
+Epoch: 60 Train loss: 0.45 Val loss: 0.27 Train acc: 85.14 Val acc: 93.20
+Epoch: 61 Train loss: 0.41 Val loss: 0.25 Train acc: 86.71 Val acc: 93.00
+Epoch: 62 Train loss: 0.38 Val loss: 0.25 Train acc: 87.86 Val acc: 92.60
+Epoch: 63 Train loss: 0.37 Val loss: 0.25 Train acc: 88.03 Val acc: 92.60
+Epoch: 64 Train loss: 0.37 Val loss: 0.25 Train acc: 88.25 Val acc: 92.80
+Epoch: 65 Train loss: 0.36 Val loss: 0.24 Train acc: 88.35 Val acc: 92.80
+Epoch: 66 Train loss: 0.35 Val loss: 0.23 Train acc: 88.51 Val acc: 94.00
+Epoch: 67 Train loss: 0.35 Val loss: 0.25 Train acc: 88.68 Val acc: 93.40
+Epoch: 68 Train loss: 0.34 Val loss: 0.24 Train acc: 88.62 Val acc: 93.00
+Epoch: 69 Train loss: 0.33 Val loss: 0.23 Train acc: 88.90 Val acc: 93.40
+Epoch: 70 Train loss: 0.33 Val loss: 0.23 Train acc: 89.08 Val acc: 94.00
+Epoch: 71 Train loss: 0.34 Val loss: 0.22 Train acc: 89.12 Val acc: 93.80
+Epoch: 72 Train loss: 0.33 Val loss: 0.23 Train acc: 89.28 Val acc: 93.80
+Epoch: 73 Train loss: 0.31 Val loss: 0.24 Train acc: 89.72 Val acc: 93.00
+Epoch: 74 Train loss: 0.32 Val loss: 0.24 Train acc: 89.87 Val acc: 93.00
+Epoch: 75 Train loss: 0.31 Val loss: 0.22 Train acc: 89.98 Val acc: 94.00
+Epoch: 76 Train loss: 0.32 Val loss: 0.23 Train acc: 89.72 Val acc: 92.60
+Epoch: 77 Train loss: 0.32 Val loss: 0.23 Train acc: 89.29 Val acc: 93.00
+Epoch: 78 Train loss: 0.31 Val loss: 0.23 Train acc: 89.79 Val acc: 92.80
+Epoch: 79 Train loss: 0.31 Val loss: 0.23 Train acc: 90.18 Val acc: 92.20
+Epoch: 80 Train loss: 0.31 Val loss: 0.20 Train acc: 89.85 Val acc: 95.00
+Epoch: 81 Train loss: 0.31 Val loss: 0.22 Train acc: 90.16 Val acc: 93.00
+Epoch: 82 Train loss: 0.31 Val loss: 0.21 Train acc: 90.27 Val acc: 93.60
+Epoch: 83 Train loss: 0.30 Val loss: 0.21 Train acc: 90.17 Val acc: 93.40
+Epoch: 84 Train loss: 0.29 Val loss: 0.21 Train acc: 90.30 Val acc: 94.00
+Epoch: 85 Train loss: 0.30 Val loss: 0.21 Train acc: 90.45 Val acc: 94.40
+Epoch: 86 Train loss: 0.30 Val loss: 0.22 Train acc: 90.16 Val acc: 93.40
+Epoch: 87 Train loss: 0.30 Val loss: 0.21 Train acc: 90.13 Val acc: 93.40
+Epoch: 88 Train loss: 0.30 Val loss: 0.21 Train acc: 90.28 Val acc: 94.20
+Epoch: 89 Train loss: 0.29 Val loss: 0.21 Train acc: 90.58 Val acc: 94.60
+Epoch: 90 Train loss: 0.29 Val loss: 0.21 Train acc: 90.30 Val acc: 94.40
+Epoch: 91 Train loss: 0.29 Val loss: 0.21 Train acc: 90.72 Val acc: 95.20
+Epoch: 92 Train loss: 0.28 Val loss: 0.21 Train acc: 91.18 Val acc: 94.60
+Epoch: 93 Train loss: 0.29 Val loss: 0.22 Train acc: 90.55 Val acc: 93.60
+Epoch: 94 Train loss: 0.29 Val loss: 0.21 Train acc: 90.77 Val acc: 94.00
+Epoch: 95 Train loss: 0.29 Val loss: 0.21 Train acc: 90.70 Val acc: 93.40
+Epoch: 96 Train loss: 0.28 Val loss: 0.22 Train acc: 90.80 Val acc: 94.00
+Epoch: 97 Train loss: 0.29 Val loss: 0.22 Train acc: 90.53 Val acc: 94.40
+Epoch: 98 Train loss: 0.27 Val loss: 0.22 Train acc: 91.02 Val acc: 93.60
+Epoch: 99 Train loss: 0.27 Val loss: 0.20 Train acc: 91.37 Val acc: 94.60
+Epoch: 100 Train loss: 0.27 Val loss: 0.22 Train acc: 91.22 Val acc: 94.00
+Epoch: 101 Train loss: 0.28 Val loss: 0.20 Train acc: 90.98 Val acc: 94.20
+Epoch: 102 Train loss: 0.27 Val loss: 0.20 Train acc: 91.20 Val acc: 94.40
+Epoch: 103 Train loss: 0.27 Val loss: 0.22 Train acc: 91.43 Val acc: 94.80
+Epoch: 104 Train loss: 0.27 Val loss: 0.23 Train acc: 91.32 Val acc: 93.40
+Epoch: 105 Train loss: 0.28 Val loss: 0.22 Train acc: 90.83 Val acc: 93.40
+Epoch: 106 Train loss: 0.28 Val loss: 0.22 Train acc: 90.83 Val acc: 93.20
+Epoch: 107 Train loss: 0.27 Val loss: 0.21 Train acc: 91.23 Val acc: 94.20
+Epoch: 108 Train loss: 0.27 Val loss: 0.21 Train acc: 91.28 Val acc: 93.80
+Epoch: 109 Train loss: 0.27 Val loss: 0.22 Train acc: 90.93 Val acc: 93.60
+Epoch: 110 Train loss: 0.28 Val loss: 0.21 Train acc: 91.08 Val acc: 94.00
+Epoch: 111 Train loss: 0.27 Val loss: 0.22 Train acc: 91.00 Val acc: 93.20
+Epoch: 112 Train loss: 0.27 Val loss: 0.23 Train acc: 91.42 Val acc: 92.80
+Epoch: 113 Train loss: 0.27 Val loss: 0.20 Train acc: 91.18 Val acc: 93.60
+Epoch: 114 Train loss: 0.26 Val loss: 0.20 Train acc: 91.38 Val acc: 93.60
+Epoch: 115 Train loss: 0.27 Val loss: 0.19 Train acc: 91.38 Val acc: 94.40
+Epoch: 116 Train loss: 0.27 Val loss: 0.21 Train acc: 91.49 Val acc: 93.80
+Epoch: 117 Train loss: 0.26 Val loss: 0.20 Train acc: 91.38 Val acc: 93.60
+Epoch: 118 Train loss: 0.26 Val loss: 0.22 Train acc: 91.62 Val acc: 93.00
+Epoch: 119 Train loss: 0.25 Val loss: 0.21 Train acc: 91.79 Val acc: 93.80
+Epoch: 120 Train loss: 0.25 Val loss: 0.20 Train acc: 91.88 Val acc: 93.80
+Epoch: 121 Train loss: 0.24 Val loss: 0.20 Train acc: 91.93 Val acc: 93.40
+Epoch: 122 Train loss: 0.24 Val loss: 0.20 Train acc: 92.32 Val acc: 93.80
+Epoch: 123 Train loss: 0.24 Val loss: 0.20 Train acc: 92.15 Val acc: 93.60
+Epoch: 124 Train loss: 0.23 Val loss: 0.19 Train acc: 92.69 Val acc: 93.60
+Epoch: 125 Train loss: 0.24 Val loss: 0.20 Train acc: 92.35 Val acc: 93.60
+Epoch: 126 Train loss: 0.24 Val loss: 0.19 Train acc: 92.55 Val acc: 93.40
+Epoch: 127 Train loss: 0.24 Val loss: 0.19 Train acc: 92.62 Val acc: 93.40
+Epoch: 128 Train loss: 0.23 Val loss: 0.19 Train acc: 92.60 Val acc: 93.60
+Epoch: 129 Train loss: 0.23 Val loss: 0.19 Train acc: 92.53 Val acc: 93.80
+Epoch: 130 Train loss: 0.24 Val loss: 0.19 Train acc: 92.18 Val acc: 93.80
+Epoch: 131 Train loss: 0.23 Val loss: 0.20 Train acc: 92.61 Val acc: 93.60
+Epoch: 132 Train loss: 0.23 Val loss: 0.19 Train acc: 92.56 Val acc: 93.60
+Epoch: 133 Train loss: 0.22 Val loss: 0.19 Train acc: 92.69 Val acc: 93.60
+Epoch: 134 Train loss: 0.23 Val loss: 0.19 Train acc: 92.37 Val acc: 93.60
+Epoch: 135 Train loss: 0.23 Val loss: 0.19 Train acc: 92.75 Val acc: 93.60
+Epoch: 136 Train loss: 0.23 Val loss: 0.19 Train acc: 92.70 Val acc: 93.40
+Epoch: 137 Train loss: 0.23 Val loss: 0.19 Train acc: 92.48 Val acc: 93.60
+Epoch: 138 Train loss: 0.22 Val loss: 0.19 Train acc: 92.89 Val acc: 93.80
+Epoch: 139 Train loss: 0.23 Val loss: 0.19 Train acc: 92.82 Val acc: 93.20
+Epoch: 140 Train loss: 0.23 Val loss: 0.19 Train acc: 92.59 Val acc: 93.60
+Epoch: 141 Train loss: 0.23 Val loss: 0.19 Train acc: 92.68 Val acc: 93.80
+Epoch: 142 Train loss: 0.23 Val loss: 0.19 Train acc: 92.42 Val acc: 94.00
+Epoch: 143 Train loss: 0.23 Val loss: 0.19 Train acc: 92.72 Val acc: 93.40
+Epoch: 144 Train loss: 0.23 Val loss: 0.20 Train acc: 92.53 Val acc: 93.60
+Epoch: 145 Train loss: 0.23 Val loss: 0.19 Train acc: 92.85 Val acc: 93.40
+Epoch: 146 Train loss: 0.24 Val loss: 0.19 Train acc: 92.31 Val acc: 93.60
+Epoch: 147 Train loss: 0.23 Val loss: 0.19 Train acc: 92.63 Val acc: 94.20
+Epoch: 148 Train loss: 0.23 Val loss: 0.19 Train acc: 92.55 Val acc: 93.80
+Epoch: 149 Train loss: 0.24 Val loss: 0.19 Train acc: 92.34 Val acc: 94.00
+Epoch: 150 Train loss: 0.23 Val loss: 0.19 Train acc: 92.50 Val acc: 94.20
+Epoch: 151 Train loss: 0.22 Val loss: 0.19 Train acc: 92.84 Val acc: 93.80
+Epoch: 152 Train loss: 0.23 Val loss: 0.19 Train acc: 92.42 Val acc: 94.20
+Epoch: 153 Train loss: 0.22 Val loss: 0.19 Train acc: 92.88 Val acc: 94.80
+Epoch: 154 Train loss: 0.22 Val loss: 0.19 Train acc: 93.11 Val acc: 94.00
+Epoch: 155 Train loss: 0.24 Val loss: 0.19 Train acc: 92.28 Val acc: 94.20
+Epoch: 156 Train loss: 0.22 Val loss: 0.19 Train acc: 92.86 Val acc: 93.80
+Epoch: 157 Train loss: 0.23 Val loss: 0.19 Train acc: 92.88 Val acc: 93.80
+Epoch: 158 Train loss: 0.22 Val loss: 0.19 Train acc: 92.70 Val acc: 93.80
+Epoch: 159 Train loss: 0.23 Val loss: 0.19 Train acc: 92.65 Val acc: 93.80
+Epoch: 160 Train loss: 0.22 Val loss: 0.19 Train acc: 92.91 Val acc: 93.80
+Epoch: 161 Train loss: 0.22 Val loss: 0.19 Train acc: 92.77 Val acc: 93.80
+Epoch: 162 Train loss: 0.23 Val loss: 0.19 Train acc: 92.63 Val acc: 94.20
+Epoch: 163 Train loss: 0.23 Val loss: 0.19 Train acc: 92.82 Val acc: 93.60
+Epoch: 164 Train loss: 0.22 Val loss: 0.19 Train acc: 92.95 Val acc: 93.60
+Epoch: 165 Train loss: 0.22 Val loss: 0.19 Train acc: 92.95 Val acc: 94.00
+Epoch: 166 Train loss: 0.22 Val loss: 0.19 Train acc: 92.90 Val acc: 94.00
+Epoch: 167 Train loss: 0.22 Val loss: 0.19 Train acc: 92.92 Val acc: 94.00
+Epoch: 168 Train loss: 0.23 Val loss: 0.19 Train acc: 92.64 Val acc: 93.80
+Epoch: 169 Train loss: 0.23 Val loss: 0.19 Train acc: 92.74 Val acc: 94.00
+Epoch: 170 Train loss: 0.22 Val loss: 0.19 Train acc: 92.98 Val acc: 94.00
+Epoch: 171 Train loss: 0.22 Val loss: 0.19 Train acc: 92.91 Val acc: 94.00
+Epoch: 172 Train loss: 0.23 Val loss: 0.19 Train acc: 92.71 Val acc: 94.40
+Epoch: 173 Train loss: 0.23 Val loss: 0.19 Train acc: 92.56 Val acc: 93.60
+Epoch: 174 Train loss: 0.22 Val loss: 0.19 Train acc: 92.91 Val acc: 93.80
+Epoch: 175 Train loss: 0.22 Val loss: 0.19 Train acc: 93.08 Val acc: 93.80
+Epoch: 176 Train loss: 0.22 Val loss: 0.19 Train acc: 93.16 Val acc: 93.80
+Epoch: 177 Train loss: 0.22 Val loss: 0.19 Train acc: 92.88 Val acc: 94.00
+Epoch: 178 Train loss: 0.21 Val loss: 0.19 Train acc: 92.91 Val acc: 93.80
+Epoch: 179 Train loss: 0.22 Val loss: 0.19 Train acc: 92.87 Val acc: 94.00
+Epoch: 180 Train loss: 0.23 Val loss: 0.19 Train acc: 92.87 Val acc: 94.00
+Epoch: 181 Train loss: 0.22 Val loss: 0.18 Train acc: 93.02 Val acc: 93.80
+Epoch: 182 Train loss: 0.22 Val loss: 0.19 Train acc: 92.88 Val acc: 94.20
+Epoch: 183 Train loss: 0.22 Val loss: 0.19 Train acc: 92.94 Val acc: 94.00
+Epoch: 184 Train loss: 0.22 Val loss: 0.19 Train acc: 92.92 Val acc: 94.00
+Epoch: 185 Train loss: 0.23 Val loss: 0.19 Train acc: 92.58 Val acc: 93.80
+Epoch: 186 Train loss: 0.22 Val loss: 0.19 Train acc: 92.76 Val acc: 93.80
+Epoch: 187 Train loss: 0.22 Val loss: 0.19 Train acc: 92.86 Val acc: 94.20
+Epoch: 188 Train loss: 0.22 Val loss: 0.19 Train acc: 92.89 Val acc: 93.80
+Epoch: 189 Train loss: 0.22 Val loss: 0.19 Train acc: 92.85 Val acc: 94.00
+Epoch: 190 Train loss: 0.23 Val loss: 0.19 Train acc: 92.78 Val acc: 93.80
+Epoch: 191 Train loss: 0.23 Val loss: 0.19 Train acc: 92.72 Val acc: 94.00
+Epoch: 192 Train loss: 0.23 Val loss: 0.19 Train acc: 92.64 Val acc: 94.20
+Epoch: 193 Train loss: 0.23 Val loss: 0.19 Train acc: 92.82 Val acc: 93.80
+Epoch: 194 Train loss: 0.23 Val loss: 0.19 Train acc: 92.54 Val acc: 94.20
+Epoch: 195 Train loss: 0.22 Val loss: 0.19 Train acc: 92.78 Val acc: 94.00
+Epoch: 196 Train loss: 0.22 Val loss: 0.19 Train acc: 92.92 Val acc: 94.20
+Epoch: 197 Train loss: 0.22 Val loss: 0.19 Train acc: 92.85 Val acc: 94.00
+Epoch: 198 Train loss: 0.22 Val loss: 0.19 Train acc: 93.04 Val acc: 93.40
+Epoch: 199 Train loss: 0.22 Val loss: 0.19 Train acc: 93.32 Val acc: 94.20
+Creating distributions for task 2:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+Training backbone on task 3:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 1.29 Val loss: 1.09 Train acc: 55.72 Val acc: 64.40
+Epoch: 1 Train loss: 0.98 Val loss: 0.91 Train acc: 67.62 Val acc: 69.00
+Epoch: 2 Train loss: 0.90 Val loss: 0.85 Train acc: 69.92 Val acc: 71.20
+Epoch: 3 Train loss: 0.85 Val loss: 0.66 Train acc: 72.07 Val acc: 77.60
+Epoch: 4 Train loss: 0.83 Val loss: 0.55 Train acc: 72.10 Val acc: 84.20
+Epoch: 5 Train loss: 0.79 Val loss: 0.82 Train acc: 73.72 Val acc: 72.60
+Epoch: 6 Train loss: 0.79 Val loss: 0.86 Train acc: 73.99 Val acc: 71.40
+Epoch: 7 Train loss: 0.75 Val loss: 0.90 Train acc: 74.74 Val acc: 70.60
+Epoch: 8 Train loss: 0.75 Val loss: 0.67 Train acc: 75.05 Val acc: 77.20
+Epoch: 9 Train loss: 0.73 Val loss: 0.78 Train acc: 76.08 Val acc: 76.20
+Epoch: 10 Train loss: 0.72 Val loss: 0.59 Train acc: 76.04 Val acc: 79.40
+Epoch: 11 Train loss: 0.71 Val loss: 0.59 Train acc: 76.45 Val acc: 81.80
+Epoch: 12 Train loss: 0.70 Val loss: 0.59 Train acc: 76.92 Val acc: 79.00
+Epoch: 13 Train loss: 0.68 Val loss: 0.61 Train acc: 77.08 Val acc: 78.80
+Epoch: 14 Train loss: 0.67 Val loss: 0.61 Train acc: 77.53 Val acc: 80.20
+Epoch: 15 Train loss: 0.69 Val loss: 0.56 Train acc: 76.69 Val acc: 83.00
+Epoch: 16 Train loss: 0.66 Val loss: 0.56 Train acc: 77.82 Val acc: 81.00
+Epoch: 17 Train loss: 0.67 Val loss: 0.62 Train acc: 77.79 Val acc: 80.00
+Epoch: 18 Train loss: 0.64 Val loss: 0.82 Train acc: 78.81 Val acc: 75.20
+Epoch: 19 Train loss: 0.65 Val loss: 0.53 Train acc: 78.30 Val acc: 81.60
+Epoch: 20 Train loss: 0.64 Val loss: 0.77 Train acc: 78.91 Val acc: 77.80
+Epoch: 21 Train loss: 0.64 Val loss: 0.50 Train acc: 78.71 Val acc: 82.80
+Epoch: 22 Train loss: 0.62 Val loss: 0.58 Train acc: 79.35 Val acc: 76.20
+Epoch: 23 Train loss: 0.62 Val loss: 0.55 Train acc: 79.21 Val acc: 83.00
+Epoch: 24 Train loss: 0.62 Val loss: 0.48 Train acc: 79.22 Val acc: 84.20
+Epoch: 25 Train loss: 0.62 Val loss: 0.49 Train acc: 79.60 Val acc: 83.40
+Epoch: 26 Train loss: 0.63 Val loss: 0.47 Train acc: 79.30 Val acc: 84.00
+Epoch: 27 Train loss: 0.62 Val loss: 0.44 Train acc: 79.42 Val acc: 85.40
+Epoch: 28 Train loss: 0.61 Val loss: 0.56 Train acc: 79.98 Val acc: 81.20
+Epoch: 29 Train loss: 0.61 Val loss: 0.64 Train acc: 79.74 Val acc: 79.00
+Epoch: 30 Train loss: 0.61 Val loss: 0.86 Train acc: 79.63 Val acc: 72.60
+Epoch: 31 Train loss: 0.60 Val loss: 0.51 Train acc: 80.42 Val acc: 83.60
+Epoch: 32 Train loss: 0.59 Val loss: 0.51 Train acc: 80.59 Val acc: 81.60
+Epoch: 33 Train loss: 0.60 Val loss: 0.51 Train acc: 80.28 Val acc: 82.80
+Epoch: 34 Train loss: 0.59 Val loss: 0.44 Train acc: 80.45 Val acc: 86.40
+Epoch: 35 Train loss: 0.60 Val loss: 0.70 Train acc: 80.09 Val acc: 77.20
+Epoch: 36 Train loss: 0.58 Val loss: 0.61 Train acc: 80.95 Val acc: 82.00
+Epoch: 37 Train loss: 0.59 Val loss: 0.48 Train acc: 80.74 Val acc: 83.80
+Epoch: 38 Train loss: 0.58 Val loss: 0.65 Train acc: 80.73 Val acc: 79.20
+Epoch: 39 Train loss: 0.58 Val loss: 0.58 Train acc: 80.55 Val acc: 83.40
+Epoch: 40 Train loss: 0.57 Val loss: 0.57 Train acc: 80.98 Val acc: 82.40
+Epoch: 41 Train loss: 0.57 Val loss: 0.45 Train acc: 80.99 Val acc: 84.00
+Epoch: 42 Train loss: 0.56 Val loss: 0.53 Train acc: 81.68 Val acc: 82.00
+Epoch: 43 Train loss: 0.57 Val loss: 0.41 Train acc: 81.33 Val acc: 86.20
+Epoch: 44 Train loss: 0.57 Val loss: 0.51 Train acc: 81.52 Val acc: 83.80
+Epoch: 45 Train loss: 0.56 Val loss: 0.47 Train acc: 81.35 Val acc: 84.00
+Epoch: 46 Train loss: 0.56 Val loss: 0.40 Train acc: 81.38 Val acc: 88.00
+Epoch: 47 Train loss: 0.57 Val loss: 0.46 Train acc: 81.10 Val acc: 84.40
+Epoch: 48 Train loss: 0.56 Val loss: 0.41 Train acc: 81.31 Val acc: 85.80
+Epoch: 49 Train loss: 0.55 Val loss: 0.41 Train acc: 81.81 Val acc: 86.40
+Epoch: 50 Train loss: 0.55 Val loss: 0.51 Train acc: 81.89 Val acc: 83.80
+Epoch: 51 Train loss: 0.56 Val loss: 0.58 Train acc: 81.78 Val acc: 80.60
+Epoch: 52 Train loss: 0.55 Val loss: 0.55 Train acc: 81.83 Val acc: 82.80
+Epoch: 53 Train loss: 0.56 Val loss: 0.55 Train acc: 81.31 Val acc: 81.60
+Epoch: 54 Train loss: 0.55 Val loss: 0.48 Train acc: 81.61 Val acc: 84.00
+Epoch: 55 Train loss: 0.55 Val loss: 0.42 Train acc: 81.42 Val acc: 84.80
+Epoch: 56 Train loss: 0.54 Val loss: 0.55 Train acc: 82.18 Val acc: 82.20
+Epoch: 57 Train loss: 0.55 Val loss: 0.56 Train acc: 82.14 Val acc: 83.00
+Epoch: 58 Train loss: 0.54 Val loss: 0.48 Train acc: 82.52 Val acc: 85.20
+Epoch: 59 Train loss: 0.55 Val loss: 0.43 Train acc: 81.86 Val acc: 85.20
+Epoch: 60 Train loss: 0.45 Val loss: 0.27 Train acc: 85.27 Val acc: 91.00
+Epoch: 61 Train loss: 0.38 Val loss: 0.25 Train acc: 87.68 Val acc: 91.40
+Epoch: 62 Train loss: 0.37 Val loss: 0.25 Train acc: 87.89 Val acc: 92.00
+Epoch: 63 Train loss: 0.35 Val loss: 0.24 Train acc: 88.84 Val acc: 91.40
+Epoch: 64 Train loss: 0.33 Val loss: 0.23 Train acc: 88.90 Val acc: 91.80
+Epoch: 65 Train loss: 0.34 Val loss: 0.24 Train acc: 88.88 Val acc: 92.60
+Epoch: 66 Train loss: 0.32 Val loss: 0.24 Train acc: 89.78 Val acc: 91.60
+Epoch: 67 Train loss: 0.33 Val loss: 0.23 Train acc: 89.11 Val acc: 91.40
+Epoch: 68 Train loss: 0.32 Val loss: 0.23 Train acc: 89.42 Val acc: 92.40
+Epoch: 69 Train loss: 0.31 Val loss: 0.22 Train acc: 89.98 Val acc: 92.00
+Epoch: 70 Train loss: 0.32 Val loss: 0.24 Train acc: 89.82 Val acc: 92.00
+Epoch: 71 Train loss: 0.32 Val loss: 0.23 Train acc: 89.93 Val acc: 92.20
+Epoch: 72 Train loss: 0.32 Val loss: 0.23 Train acc: 89.45 Val acc: 92.00
+Epoch: 73 Train loss: 0.30 Val loss: 0.22 Train acc: 89.84 Val acc: 91.80
+Epoch: 74 Train loss: 0.32 Val loss: 0.23 Train acc: 89.77 Val acc: 92.60
+Epoch: 75 Train loss: 0.30 Val loss: 0.22 Train acc: 90.13 Val acc: 91.80
+Epoch: 76 Train loss: 0.29 Val loss: 0.23 Train acc: 90.62 Val acc: 92.60
+Epoch: 77 Train loss: 0.30 Val loss: 0.23 Train acc: 90.41 Val acc: 92.60
+Epoch: 78 Train loss: 0.30 Val loss: 0.24 Train acc: 90.13 Val acc: 91.20
+Epoch: 79 Train loss: 0.30 Val loss: 0.24 Train acc: 90.12 Val acc: 92.40
+Epoch: 80 Train loss: 0.28 Val loss: 0.22 Train acc: 90.95 Val acc: 92.40
+Epoch: 81 Train loss: 0.29 Val loss: 0.22 Train acc: 90.68 Val acc: 92.60
+Epoch: 82 Train loss: 0.29 Val loss: 0.24 Train acc: 90.40 Val acc: 92.00
+Epoch: 83 Train loss: 0.29 Val loss: 0.24 Train acc: 90.92 Val acc: 91.60
+Epoch: 84 Train loss: 0.28 Val loss: 0.24 Train acc: 90.55 Val acc: 92.20
+Epoch: 85 Train loss: 0.28 Val loss: 0.23 Train acc: 91.12 Val acc: 92.00
+Epoch: 86 Train loss: 0.29 Val loss: 0.23 Train acc: 90.65 Val acc: 92.00
+Epoch: 87 Train loss: 0.28 Val loss: 0.23 Train acc: 90.70 Val acc: 91.60
+Epoch: 88 Train loss: 0.28 Val loss: 0.22 Train acc: 90.89 Val acc: 91.80
+Epoch: 89 Train loss: 0.28 Val loss: 0.23 Train acc: 90.83 Val acc: 92.00
+Epoch: 90 Train loss: 0.27 Val loss: 0.23 Train acc: 91.31 Val acc: 91.20
+Epoch: 91 Train loss: 0.28 Val loss: 0.22 Train acc: 90.73 Val acc: 91.80
+Epoch: 92 Train loss: 0.27 Val loss: 0.22 Train acc: 91.15 Val acc: 91.80
+Epoch: 93 Train loss: 0.27 Val loss: 0.23 Train acc: 91.28 Val acc: 92.40
+Epoch: 94 Train loss: 0.27 Val loss: 0.22 Train acc: 91.45 Val acc: 92.60
+Epoch: 95 Train loss: 0.28 Val loss: 0.22 Train acc: 90.93 Val acc: 92.60
+Epoch: 96 Train loss: 0.26 Val loss: 0.21 Train acc: 91.66 Val acc: 93.00
+Epoch: 97 Train loss: 0.27 Val loss: 0.21 Train acc: 91.10 Val acc: 92.80
+Epoch: 98 Train loss: 0.26 Val loss: 0.22 Train acc: 91.35 Val acc: 93.20
+Epoch: 99 Train loss: 0.26 Val loss: 0.21 Train acc: 91.53 Val acc: 92.80
+Epoch: 100 Train loss: 0.27 Val loss: 0.24 Train acc: 90.88 Val acc: 93.00
+Epoch: 101 Train loss: 0.26 Val loss: 0.20 Train acc: 91.68 Val acc: 92.40
+Epoch: 102 Train loss: 0.25 Val loss: 0.22 Train acc: 91.92 Val acc: 92.40
+Epoch: 103 Train loss: 0.27 Val loss: 0.21 Train acc: 91.27 Val acc: 93.00
+Epoch: 104 Train loss: 0.26 Val loss: 0.23 Train acc: 91.72 Val acc: 92.20
+Epoch: 105 Train loss: 0.26 Val loss: 0.21 Train acc: 91.60 Val acc: 92.60
+Epoch: 106 Train loss: 0.26 Val loss: 0.22 Train acc: 91.89 Val acc: 92.40
+Epoch: 107 Train loss: 0.25 Val loss: 0.23 Train acc: 91.72 Val acc: 91.40
+Epoch: 108 Train loss: 0.25 Val loss: 0.21 Train acc: 92.19 Val acc: 93.60
+Epoch: 109 Train loss: 0.26 Val loss: 0.21 Train acc: 91.62 Val acc: 93.20
+Epoch: 110 Train loss: 0.24 Val loss: 0.22 Train acc: 92.28 Val acc: 92.80
+Epoch: 111 Train loss: 0.25 Val loss: 0.23 Train acc: 91.82 Val acc: 92.00
+Epoch: 112 Train loss: 0.26 Val loss: 0.21 Train acc: 91.26 Val acc: 93.20
+Epoch: 113 Train loss: 0.25 Val loss: 0.20 Train acc: 91.92 Val acc: 93.00
+Epoch: 114 Train loss: 0.25 Val loss: 0.22 Train acc: 92.09 Val acc: 92.80
+Epoch: 115 Train loss: 0.26 Val loss: 0.21 Train acc: 91.35 Val acc: 93.40
+Epoch: 116 Train loss: 0.26 Val loss: 0.23 Train acc: 91.63 Val acc: 92.80
+Epoch: 117 Train loss: 0.25 Val loss: 0.23 Train acc: 91.99 Val acc: 92.00
+Epoch: 118 Train loss: 0.24 Val loss: 0.22 Train acc: 92.06 Val acc: 92.00
+Epoch: 119 Train loss: 0.25 Val loss: 0.21 Train acc: 91.68 Val acc: 92.80
+Epoch: 120 Train loss: 0.23 Val loss: 0.19 Train acc: 92.48 Val acc: 93.60
+Epoch: 121 Train loss: 0.23 Val loss: 0.20 Train acc: 92.38 Val acc: 93.80
+Epoch: 122 Train loss: 0.22 Val loss: 0.19 Train acc: 93.07 Val acc: 93.40
+Epoch: 123 Train loss: 0.23 Val loss: 0.20 Train acc: 92.72 Val acc: 93.60
+Epoch: 124 Train loss: 0.23 Val loss: 0.20 Train acc: 92.73 Val acc: 93.20
+Epoch: 125 Train loss: 0.22 Val loss: 0.19 Train acc: 92.82 Val acc: 93.60
+Epoch: 126 Train loss: 0.22 Val loss: 0.20 Train acc: 93.07 Val acc: 93.20
+Epoch: 127 Train loss: 0.22 Val loss: 0.20 Train acc: 92.89 Val acc: 93.80
+Epoch: 128 Train loss: 0.22 Val loss: 0.21 Train acc: 92.95 Val acc: 92.80
+Epoch: 129 Train loss: 0.22 Val loss: 0.20 Train acc: 92.85 Val acc: 93.00
+Epoch: 130 Train loss: 0.22 Val loss: 0.19 Train acc: 92.92 Val acc: 93.20
+Epoch: 131 Train loss: 0.22 Val loss: 0.20 Train acc: 93.08 Val acc: 93.40
+Epoch: 132 Train loss: 0.22 Val loss: 0.20 Train acc: 93.32 Val acc: 93.60
+Epoch: 133 Train loss: 0.22 Val loss: 0.20 Train acc: 93.02 Val acc: 93.40
+Epoch: 134 Train loss: 0.22 Val loss: 0.20 Train acc: 92.95 Val acc: 93.20
+Epoch: 135 Train loss: 0.22 Val loss: 0.20 Train acc: 92.94 Val acc: 93.20
+Epoch: 136 Train loss: 0.22 Val loss: 0.20 Train acc: 93.07 Val acc: 93.40
+Epoch: 137 Train loss: 0.23 Val loss: 0.20 Train acc: 92.82 Val acc: 93.40
+Epoch: 138 Train loss: 0.22 Val loss: 0.20 Train acc: 92.81 Val acc: 93.40
+Epoch: 139 Train loss: 0.23 Val loss: 0.21 Train acc: 92.85 Val acc: 93.00
+Epoch: 140 Train loss: 0.22 Val loss: 0.20 Train acc: 92.68 Val acc: 93.60
+Epoch: 141 Train loss: 0.22 Val loss: 0.20 Train acc: 93.06 Val acc: 93.20
+Epoch: 142 Train loss: 0.21 Val loss: 0.20 Train acc: 93.15 Val acc: 93.40
+Epoch: 143 Train loss: 0.21 Val loss: 0.20 Train acc: 93.13 Val acc: 93.20
+Epoch: 144 Train loss: 0.21 Val loss: 0.20 Train acc: 93.16 Val acc: 93.40
+Epoch: 145 Train loss: 0.22 Val loss: 0.20 Train acc: 93.05 Val acc: 94.00
+Epoch: 146 Train loss: 0.21 Val loss: 0.20 Train acc: 93.40 Val acc: 93.00
+Epoch: 147 Train loss: 0.23 Val loss: 0.21 Train acc: 92.64 Val acc: 92.80
+Epoch: 148 Train loss: 0.22 Val loss: 0.20 Train acc: 92.68 Val acc: 93.80
+Epoch: 149 Train loss: 0.21 Val loss: 0.21 Train acc: 93.17 Val acc: 93.60
+Epoch: 150 Train loss: 0.20 Val loss: 0.20 Train acc: 93.56 Val acc: 93.20
+Epoch: 151 Train loss: 0.22 Val loss: 0.21 Train acc: 92.94 Val acc: 93.40
+Epoch: 152 Train loss: 0.22 Val loss: 0.21 Train acc: 93.00 Val acc: 93.40
+Epoch: 153 Train loss: 0.21 Val loss: 0.20 Train acc: 93.15 Val acc: 93.20
+Epoch: 154 Train loss: 0.21 Val loss: 0.20 Train acc: 93.31 Val acc: 93.60
+Epoch: 155 Train loss: 0.22 Val loss: 0.20 Train acc: 93.01 Val acc: 93.80
+Epoch: 156 Train loss: 0.21 Val loss: 0.22 Train acc: 93.36 Val acc: 93.40
+Epoch: 157 Train loss: 0.22 Val loss: 0.20 Train acc: 93.11 Val acc: 93.40
+Epoch: 158 Train loss: 0.21 Val loss: 0.20 Train acc: 93.18 Val acc: 93.60
+Epoch: 159 Train loss: 0.21 Val loss: 0.20 Train acc: 93.17 Val acc: 93.20
+Epoch: 160 Train loss: 0.22 Val loss: 0.20 Train acc: 92.95 Val acc: 93.60
+Epoch: 161 Train loss: 0.21 Val loss: 0.20 Train acc: 93.37 Val acc: 93.80
+Epoch: 162 Train loss: 0.22 Val loss: 0.19 Train acc: 92.99 Val acc: 93.60
+Epoch: 163 Train loss: 0.21 Val loss: 0.20 Train acc: 93.42 Val acc: 93.60
+Epoch: 164 Train loss: 0.21 Val loss: 0.20 Train acc: 93.14 Val acc: 93.60
+Epoch: 165 Train loss: 0.21 Val loss: 0.20 Train acc: 93.14 Val acc: 94.00
+Epoch: 166 Train loss: 0.21 Val loss: 0.20 Train acc: 93.20 Val acc: 93.80
+Epoch: 167 Train loss: 0.20 Val loss: 0.20 Train acc: 93.49 Val acc: 93.80
+Epoch: 168 Train loss: 0.21 Val loss: 0.20 Train acc: 93.32 Val acc: 93.60
+Epoch: 169 Train loss: 0.21 Val loss: 0.20 Train acc: 93.12 Val acc: 93.60
+Epoch: 170 Train loss: 0.21 Val loss: 0.20 Train acc: 93.28 Val acc: 93.60
+Epoch: 171 Train loss: 0.20 Val loss: 0.20 Train acc: 93.52 Val acc: 93.80
+Epoch: 172 Train loss: 0.22 Val loss: 0.20 Train acc: 93.26 Val acc: 93.60
+Epoch: 173 Train loss: 0.21 Val loss: 0.20 Train acc: 93.35 Val acc: 93.60
+Epoch: 174 Train loss: 0.21 Val loss: 0.20 Train acc: 93.34 Val acc: 93.60
+Epoch: 175 Train loss: 0.21 Val loss: 0.20 Train acc: 93.32 Val acc: 93.60
+Epoch: 176 Train loss: 0.21 Val loss: 0.20 Train acc: 93.00 Val acc: 94.00
+Epoch: 177 Train loss: 0.22 Val loss: 0.20 Train acc: 92.92 Val acc: 93.60
+Epoch: 178 Train loss: 0.22 Val loss: 0.20 Train acc: 93.17 Val acc: 93.60
+Epoch: 179 Train loss: 0.21 Val loss: 0.19 Train acc: 93.29 Val acc: 93.60
+Epoch: 180 Train loss: 0.21 Val loss: 0.20 Train acc: 93.38 Val acc: 94.00
+Epoch: 181 Train loss: 0.22 Val loss: 0.20 Train acc: 93.23 Val acc: 93.60
+Epoch: 182 Train loss: 0.21 Val loss: 0.19 Train acc: 93.27 Val acc: 93.80
+Epoch: 183 Train loss: 0.20 Val loss: 0.20 Train acc: 93.43 Val acc: 93.60
+Epoch: 184 Train loss: 0.20 Val loss: 0.19 Train acc: 93.46 Val acc: 93.60
+Epoch: 185 Train loss: 0.21 Val loss: 0.20 Train acc: 93.38 Val acc: 93.60
+Epoch: 186 Train loss: 0.21 Val loss: 0.20 Train acc: 93.26 Val acc: 93.80
+Epoch: 187 Train loss: 0.21 Val loss: 0.20 Train acc: 93.13 Val acc: 93.80
+Epoch: 188 Train loss: 0.21 Val loss: 0.20 Train acc: 93.53 Val acc: 93.80
+Epoch: 189 Train loss: 0.21 Val loss: 0.20 Train acc: 93.42 Val acc: 93.40
+Epoch: 190 Train loss: 0.21 Val loss: 0.20 Train acc: 93.30 Val acc: 94.00
+Epoch: 191 Train loss: 0.22 Val loss: 0.20 Train acc: 92.95 Val acc: 94.00
+Epoch: 192 Train loss: 0.22 Val loss: 0.20 Train acc: 92.92 Val acc: 93.60
+Epoch: 193 Train loss: 0.21 Val loss: 0.20 Train acc: 93.28 Val acc: 93.60
+Epoch: 194 Train loss: 0.22 Val loss: 0.20 Train acc: 92.94 Val acc: 94.20
+Epoch: 195 Train loss: 0.21 Val loss: 0.20 Train acc: 93.37 Val acc: 94.00
+Epoch: 196 Train loss: 0.21 Val loss: 0.19 Train acc: 93.33 Val acc: 94.00
+Epoch: 197 Train loss: 0.21 Val loss: 0.19 Train acc: 93.25 Val acc: 93.80
+Epoch: 198 Train loss: 0.22 Val loss: 0.20 Train acc: 92.99 Val acc: 93.60
+Epoch: 199 Train loss: 0.20 Val loss: 0.20 Train acc: 93.48 Val acc: 93.40
+Creating distributions for task 3:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+Training backbone on task 4:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 1.19 Val loss: 0.92 Train acc: 59.95 Val acc: 70.20
+Epoch: 1 Train loss: 0.94 Val loss: 0.84 Train acc: 68.60 Val acc: 72.80
+Epoch: 2 Train loss: 0.90 Val loss: 0.68 Train acc: 70.11 Val acc: 79.60
+Epoch: 3 Train loss: 0.86 Val loss: 0.83 Train acc: 71.01 Val acc: 73.20
+Epoch: 4 Train loss: 0.83 Val loss: 0.57 Train acc: 72.33 Val acc: 79.40
+Epoch: 5 Train loss: 0.81 Val loss: 0.79 Train acc: 72.86 Val acc: 72.60
+Epoch: 6 Train loss: 0.77 Val loss: 0.63 Train acc: 74.66 Val acc: 78.80
+Epoch: 7 Train loss: 0.76 Val loss: 0.57 Train acc: 74.58 Val acc: 78.80
+Epoch: 8 Train loss: 0.75 Val loss: 0.78 Train acc: 74.69 Val acc: 75.60
+Epoch: 9 Train loss: 0.74 Val loss: 0.45 Train acc: 75.46 Val acc: 85.00
+Epoch: 10 Train loss: 0.73 Val loss: 0.50 Train acc: 75.74 Val acc: 82.20
+Epoch: 11 Train loss: 0.71 Val loss: 0.58 Train acc: 76.30 Val acc: 79.80
+Epoch: 12 Train loss: 0.69 Val loss: 0.54 Train acc: 77.06 Val acc: 80.00
+Epoch: 13 Train loss: 0.70 Val loss: 0.80 Train acc: 76.81 Val acc: 72.40
+Epoch: 14 Train loss: 0.69 Val loss: 0.49 Train acc: 77.33 Val acc: 83.40
+Epoch: 15 Train loss: 0.67 Val loss: 0.56 Train acc: 77.97 Val acc: 80.80
+Epoch: 16 Train loss: 0.68 Val loss: 0.60 Train acc: 77.62 Val acc: 79.00
+Epoch: 17 Train loss: 0.68 Val loss: 0.58 Train acc: 77.29 Val acc: 81.40
+Epoch: 18 Train loss: 0.66 Val loss: 0.48 Train acc: 77.69 Val acc: 82.80
+Epoch: 19 Train loss: 0.65 Val loss: 0.51 Train acc: 78.49 Val acc: 84.80
+Epoch: 20 Train loss: 0.65 Val loss: 0.56 Train acc: 78.38 Val acc: 81.60
+Epoch: 21 Train loss: 0.64 Val loss: 0.52 Train acc: 78.58 Val acc: 83.60
+Epoch: 22 Train loss: 0.64 Val loss: 0.58 Train acc: 78.90 Val acc: 83.00
+Epoch: 23 Train loss: 0.65 Val loss: 0.65 Train acc: 78.15 Val acc: 80.20
+Epoch: 24 Train loss: 0.62 Val loss: 0.48 Train acc: 79.13 Val acc: 84.20
+Epoch: 25 Train loss: 0.62 Val loss: 0.46 Train acc: 79.20 Val acc: 84.60
+Epoch: 26 Train loss: 0.62 Val loss: 0.45 Train acc: 79.26 Val acc: 84.80
+Epoch: 27 Train loss: 0.62 Val loss: 0.52 Train acc: 79.41 Val acc: 82.80
+Epoch: 28 Train loss: 0.62 Val loss: 0.55 Train acc: 79.11 Val acc: 81.80
+Epoch: 29 Train loss: 0.61 Val loss: 0.46 Train acc: 79.69 Val acc: 83.60
+Epoch: 30 Train loss: 0.61 Val loss: 0.46 Train acc: 79.89 Val acc: 85.80
+Epoch: 31 Train loss: 0.60 Val loss: 0.46 Train acc: 79.81 Val acc: 85.00
+Epoch: 32 Train loss: 0.62 Val loss: 0.54 Train acc: 79.37 Val acc: 82.60
+Epoch: 33 Train loss: 0.59 Val loss: 0.55 Train acc: 80.33 Val acc: 82.20
+Epoch: 34 Train loss: 0.59 Val loss: 0.59 Train acc: 80.23 Val acc: 81.80
+Epoch: 35 Train loss: 0.59 Val loss: 0.42 Train acc: 80.16 Val acc: 84.40
+Epoch: 36 Train loss: 0.59 Val loss: 0.48 Train acc: 80.83 Val acc: 83.20
+Epoch: 37 Train loss: 0.59 Val loss: 0.55 Train acc: 80.37 Val acc: 80.60
+Epoch: 38 Train loss: 0.58 Val loss: 0.44 Train acc: 80.64 Val acc: 85.80
+Epoch: 39 Train loss: 0.60 Val loss: 0.48 Train acc: 80.14 Val acc: 84.40
+Epoch: 40 Train loss: 0.59 Val loss: 0.45 Train acc: 80.65 Val acc: 83.60
+Epoch: 41 Train loss: 0.57 Val loss: 0.47 Train acc: 80.92 Val acc: 85.20
+Epoch: 42 Train loss: 0.58 Val loss: 0.48 Train acc: 80.68 Val acc: 84.00
+Epoch: 43 Train loss: 0.58 Val loss: 0.56 Train acc: 81.02 Val acc: 80.20
+Epoch: 44 Train loss: 0.56 Val loss: 0.43 Train acc: 81.16 Val acc: 87.00
+Epoch: 45 Train loss: 0.57 Val loss: 0.52 Train acc: 80.81 Val acc: 81.20
+Epoch: 46 Train loss: 0.57 Val loss: 0.41 Train acc: 81.13 Val acc: 86.40
+Epoch: 47 Train loss: 0.57 Val loss: 0.48 Train acc: 81.00 Val acc: 83.20
+Epoch: 48 Train loss: 0.57 Val loss: 0.47 Train acc: 80.71 Val acc: 83.80
+Epoch: 49 Train loss: 0.56 Val loss: 0.51 Train acc: 81.43 Val acc: 84.40
+Epoch: 50 Train loss: 0.56 Val loss: 0.51 Train acc: 81.05 Val acc: 83.00
+Epoch: 51 Train loss: 0.55 Val loss: 0.49 Train acc: 81.54 Val acc: 84.80
+Epoch: 52 Train loss: 0.54 Val loss: 0.44 Train acc: 81.88 Val acc: 84.60
+Epoch: 53 Train loss: 0.55 Val loss: 0.45 Train acc: 81.69 Val acc: 86.40
+Epoch: 54 Train loss: 0.56 Val loss: 0.34 Train acc: 81.14 Val acc: 88.60
+Epoch: 55 Train loss: 0.55 Val loss: 0.49 Train acc: 81.81 Val acc: 84.20
+Epoch: 56 Train loss: 0.55 Val loss: 0.45 Train acc: 82.05 Val acc: 83.20
+Epoch: 57 Train loss: 0.54 Val loss: 0.43 Train acc: 81.84 Val acc: 84.60
+Epoch: 58 Train loss: 0.56 Val loss: 0.52 Train acc: 81.33 Val acc: 84.40
+Epoch: 59 Train loss: 0.54 Val loss: 0.47 Train acc: 81.97 Val acc: 85.40
+Epoch: 60 Train loss: 0.44 Val loss: 0.28 Train acc: 85.61 Val acc: 90.60
+Epoch: 61 Train loss: 0.40 Val loss: 0.26 Train acc: 86.82 Val acc: 91.60
+Epoch: 62 Train loss: 0.38 Val loss: 0.26 Train acc: 87.45 Val acc: 91.40
+Epoch: 63 Train loss: 0.35 Val loss: 0.25 Train acc: 88.36 Val acc: 91.80
+Epoch: 64 Train loss: 0.35 Val loss: 0.26 Train acc: 88.54 Val acc: 90.60
+Epoch: 65 Train loss: 0.35 Val loss: 0.26 Train acc: 88.60 Val acc: 90.80
+Epoch: 66 Train loss: 0.34 Val loss: 0.24 Train acc: 88.51 Val acc: 91.80
+Epoch: 67 Train loss: 0.35 Val loss: 0.24 Train acc: 88.58 Val acc: 91.40
+Epoch: 68 Train loss: 0.33 Val loss: 0.23 Train acc: 89.11 Val acc: 91.40
+Epoch: 69 Train loss: 0.33 Val loss: 0.24 Train acc: 89.19 Val acc: 91.40
+Epoch: 70 Train loss: 0.33 Val loss: 0.23 Train acc: 89.07 Val acc: 91.80
+Epoch: 71 Train loss: 0.32 Val loss: 0.23 Train acc: 89.44 Val acc: 91.00
+Epoch: 72 Train loss: 0.32 Val loss: 0.25 Train acc: 89.27 Val acc: 91.20
+Epoch: 73 Train loss: 0.32 Val loss: 0.25 Train acc: 89.37 Val acc: 91.00
+Epoch: 74 Train loss: 0.31 Val loss: 0.24 Train acc: 89.90 Val acc: 91.00
+Epoch: 75 Train loss: 0.31 Val loss: 0.23 Train acc: 89.59 Val acc: 91.00
+Epoch: 76 Train loss: 0.31 Val loss: 0.25 Train acc: 89.72 Val acc: 91.00
+Epoch: 77 Train loss: 0.31 Val loss: 0.23 Train acc: 90.02 Val acc: 92.60
+Epoch: 78 Train loss: 0.30 Val loss: 0.26 Train acc: 90.13 Val acc: 91.40
+Epoch: 79 Train loss: 0.30 Val loss: 0.23 Train acc: 90.06 Val acc: 91.00
+Epoch: 80 Train loss: 0.31 Val loss: 0.25 Train acc: 89.76 Val acc: 90.40
+Epoch: 81 Train loss: 0.30 Val loss: 0.25 Train acc: 89.96 Val acc: 91.80
+Epoch: 82 Train loss: 0.29 Val loss: 0.23 Train acc: 90.44 Val acc: 91.20
+Epoch: 83 Train loss: 0.30 Val loss: 0.23 Train acc: 90.09 Val acc: 91.80
+Epoch: 84 Train loss: 0.29 Val loss: 0.21 Train acc: 90.30 Val acc: 92.00
+Epoch: 85 Train loss: 0.28 Val loss: 0.26 Train acc: 90.60 Val acc: 91.00
+Epoch: 86 Train loss: 0.29 Val loss: 0.23 Train acc: 90.62 Val acc: 91.20
+Epoch: 87 Train loss: 0.29 Val loss: 0.23 Train acc: 90.24 Val acc: 91.60
+Epoch: 88 Train loss: 0.29 Val loss: 0.24 Train acc: 90.25 Val acc: 91.80
+Epoch: 89 Train loss: 0.28 Val loss: 0.24 Train acc: 90.66 Val acc: 92.20
+Epoch: 90 Train loss: 0.27 Val loss: 0.24 Train acc: 91.03 Val acc: 91.60
+Epoch: 91 Train loss: 0.28 Val loss: 0.25 Train acc: 90.69 Val acc: 91.40
+Epoch: 92 Train loss: 0.27 Val loss: 0.24 Train acc: 90.93 Val acc: 91.60
+Epoch: 93 Train loss: 0.28 Val loss: 0.24 Train acc: 90.67 Val acc: 91.80
+Epoch: 94 Train loss: 0.27 Val loss: 0.26 Train acc: 90.99 Val acc: 91.60
+Epoch: 95 Train loss: 0.28 Val loss: 0.25 Train acc: 90.88 Val acc: 91.40
+Epoch: 96 Train loss: 0.27 Val loss: 0.25 Train acc: 90.97 Val acc: 91.00
+Epoch: 97 Train loss: 0.27 Val loss: 0.25 Train acc: 91.07 Val acc: 90.40
+Epoch: 98 Train loss: 0.27 Val loss: 0.23 Train acc: 91.07 Val acc: 91.60
+Epoch: 99 Train loss: 0.26 Val loss: 0.24 Train acc: 91.14 Val acc: 91.00
+Epoch: 100 Train loss: 0.28 Val loss: 0.23 Train acc: 90.86 Val acc: 92.20
+Epoch: 101 Train loss: 0.27 Val loss: 0.23 Train acc: 90.90 Val acc: 92.20
+Epoch: 102 Train loss: 0.27 Val loss: 0.22 Train acc: 91.15 Val acc: 91.40
+Epoch: 103 Train loss: 0.26 Val loss: 0.23 Train acc: 91.27 Val acc: 92.80
+Epoch: 104 Train loss: 0.27 Val loss: 0.24 Train acc: 90.86 Val acc: 92.40
+Epoch: 105 Train loss: 0.26 Val loss: 0.22 Train acc: 91.34 Val acc: 92.60
+Epoch: 106 Train loss: 0.26 Val loss: 0.23 Train acc: 91.52 Val acc: 92.20
+Epoch: 107 Train loss: 0.26 Val loss: 0.24 Train acc: 91.38 Val acc: 91.80
+Epoch: 108 Train loss: 0.26 Val loss: 0.23 Train acc: 91.48 Val acc: 91.60
+Epoch: 109 Train loss: 0.27 Val loss: 0.26 Train acc: 91.10 Val acc: 91.20
+Epoch: 110 Train loss: 0.26 Val loss: 0.24 Train acc: 91.27 Val acc: 92.20
+Epoch: 111 Train loss: 0.26 Val loss: 0.24 Train acc: 91.38 Val acc: 91.60
+Epoch: 112 Train loss: 0.25 Val loss: 0.24 Train acc: 91.81 Val acc: 91.80
+Epoch: 113 Train loss: 0.26 Val loss: 0.23 Train acc: 91.39 Val acc: 91.00
+Epoch: 114 Train loss: 0.25 Val loss: 0.23 Train acc: 91.87 Val acc: 92.40
+Epoch: 115 Train loss: 0.26 Val loss: 0.24 Train acc: 91.38 Val acc: 92.40
+Epoch: 116 Train loss: 0.25 Val loss: 0.23 Train acc: 91.41 Val acc: 91.60
+Epoch: 117 Train loss: 0.25 Val loss: 0.22 Train acc: 91.68 Val acc: 91.20
+Epoch: 118 Train loss: 0.25 Val loss: 0.22 Train acc: 91.53 Val acc: 92.40
+Epoch: 119 Train loss: 0.25 Val loss: 0.24 Train acc: 91.74 Val acc: 92.00
+Epoch: 120 Train loss: 0.25 Val loss: 0.22 Train acc: 91.91 Val acc: 93.00
+Epoch: 121 Train loss: 0.24 Val loss: 0.21 Train acc: 92.02 Val acc: 93.40
+Epoch: 122 Train loss: 0.23 Val loss: 0.21 Train acc: 92.37 Val acc: 93.40
+Epoch: 123 Train loss: 0.23 Val loss: 0.22 Train acc: 92.78 Val acc: 93.20
+Epoch: 124 Train loss: 0.23 Val loss: 0.21 Train acc: 92.54 Val acc: 93.60
+Epoch: 125 Train loss: 0.24 Val loss: 0.22 Train acc: 92.19 Val acc: 92.80
+Epoch: 126 Train loss: 0.23 Val loss: 0.21 Train acc: 92.34 Val acc: 93.60
+Epoch: 127 Train loss: 0.23 Val loss: 0.21 Train acc: 92.47 Val acc: 93.60
+Epoch: 128 Train loss: 0.23 Val loss: 0.21 Train acc: 92.72 Val acc: 93.40
+Epoch: 129 Train loss: 0.22 Val loss: 0.22 Train acc: 92.66 Val acc: 92.80
+Epoch: 130 Train loss: 0.24 Val loss: 0.22 Train acc: 92.16 Val acc: 93.00
+Epoch: 131 Train loss: 0.22 Val loss: 0.21 Train acc: 92.68 Val acc: 93.40
+Epoch: 132 Train loss: 0.22 Val loss: 0.21 Train acc: 92.95 Val acc: 93.20
+Epoch: 133 Train loss: 0.23 Val loss: 0.22 Train acc: 92.36 Val acc: 93.00
+Epoch: 134 Train loss: 0.23 Val loss: 0.21 Train acc: 92.47 Val acc: 93.40
+Epoch: 135 Train loss: 0.22 Val loss: 0.22 Train acc: 93.11 Val acc: 93.40
+Epoch: 136 Train loss: 0.23 Val loss: 0.21 Train acc: 92.64 Val acc: 93.60
+Epoch: 137 Train loss: 0.22 Val loss: 0.21 Train acc: 92.93 Val acc: 93.20
+Epoch: 138 Train loss: 0.23 Val loss: 0.21 Train acc: 92.55 Val acc: 93.20
+Epoch: 139 Train loss: 0.22 Val loss: 0.22 Train acc: 92.88 Val acc: 92.80
+Epoch: 140 Train loss: 0.22 Val loss: 0.21 Train acc: 92.58 Val acc: 93.80
+Epoch: 141 Train loss: 0.22 Val loss: 0.22 Train acc: 92.92 Val acc: 93.60
+Epoch: 142 Train loss: 0.22 Val loss: 0.22 Train acc: 93.03 Val acc: 93.20
+Epoch: 143 Train loss: 0.22 Val loss: 0.21 Train acc: 92.97 Val acc: 93.00
+Epoch: 144 Train loss: 0.22 Val loss: 0.22 Train acc: 92.99 Val acc: 92.80
+Epoch: 145 Train loss: 0.22 Val loss: 0.21 Train acc: 92.58 Val acc: 92.80
+Epoch: 146 Train loss: 0.22 Val loss: 0.22 Train acc: 92.93 Val acc: 92.80
+Epoch: 147 Train loss: 0.21 Val loss: 0.22 Train acc: 93.46 Val acc: 93.00
+Epoch: 148 Train loss: 0.22 Val loss: 0.22 Train acc: 92.95 Val acc: 93.20
+Epoch: 149 Train loss: 0.22 Val loss: 0.21 Train acc: 92.54 Val acc: 93.60
+Epoch: 150 Train loss: 0.22 Val loss: 0.22 Train acc: 92.72 Val acc: 92.80
+Epoch: 151 Train loss: 0.22 Val loss: 0.21 Train acc: 92.94 Val acc: 93.00
+Epoch: 152 Train loss: 0.24 Val loss: 0.21 Train acc: 92.45 Val acc: 93.40
+Epoch: 153 Train loss: 0.22 Val loss: 0.22 Train acc: 92.88 Val acc: 93.00
+Epoch: 154 Train loss: 0.21 Val loss: 0.21 Train acc: 93.12 Val acc: 93.00
+Epoch: 155 Train loss: 0.21 Val loss: 0.21 Train acc: 93.24 Val acc: 92.80
+Epoch: 156 Train loss: 0.22 Val loss: 0.21 Train acc: 92.92 Val acc: 93.20
+Epoch: 157 Train loss: 0.22 Val loss: 0.21 Train acc: 92.82 Val acc: 93.40
+Epoch: 158 Train loss: 0.22 Val loss: 0.21 Train acc: 92.83 Val acc: 93.60
+Epoch: 159 Train loss: 0.22 Val loss: 0.22 Train acc: 92.70 Val acc: 93.40
+Epoch: 160 Train loss: 0.23 Val loss: 0.21 Train acc: 92.52 Val acc: 93.40
+Epoch: 161 Train loss: 0.21 Val loss: 0.22 Train acc: 92.98 Val acc: 92.60
+Epoch: 162 Train loss: 0.22 Val loss: 0.22 Train acc: 92.92 Val acc: 93.00
+Epoch: 163 Train loss: 0.22 Val loss: 0.22 Train acc: 92.68 Val acc: 93.40
+Epoch: 164 Train loss: 0.21 Val loss: 0.22 Train acc: 92.93 Val acc: 93.60
+Epoch: 165 Train loss: 0.21 Val loss: 0.22 Train acc: 93.06 Val acc: 92.80
+Epoch: 166 Train loss: 0.21 Val loss: 0.22 Train acc: 93.08 Val acc: 93.20
+Epoch: 167 Train loss: 0.22 Val loss: 0.22 Train acc: 92.96 Val acc: 93.40
+Epoch: 168 Train loss: 0.22 Val loss: 0.21 Train acc: 92.82 Val acc: 93.40
+Epoch: 169 Train loss: 0.22 Val loss: 0.22 Train acc: 92.82 Val acc: 93.20
+Epoch: 170 Train loss: 0.22 Val loss: 0.21 Train acc: 93.07 Val acc: 93.20
+Epoch: 171 Train loss: 0.22 Val loss: 0.21 Train acc: 92.90 Val acc: 93.40
+Epoch: 172 Train loss: 0.21 Val loss: 0.21 Train acc: 93.22 Val acc: 93.40
+Epoch: 173 Train loss: 0.21 Val loss: 0.21 Train acc: 93.19 Val acc: 93.40
+Epoch: 174 Train loss: 0.22 Val loss: 0.22 Train acc: 92.92 Val acc: 93.20
+Epoch: 175 Train loss: 0.22 Val loss: 0.22 Train acc: 92.85 Val acc: 93.40
+Epoch: 176 Train loss: 0.22 Val loss: 0.21 Train acc: 93.05 Val acc: 93.40
+Epoch: 177 Train loss: 0.21 Val loss: 0.22 Train acc: 93.19 Val acc: 93.00
+Epoch: 178 Train loss: 0.22 Val loss: 0.21 Train acc: 92.65 Val acc: 93.40
+Epoch: 179 Train loss: 0.22 Val loss: 0.21 Train acc: 92.57 Val acc: 93.60
+Epoch: 180 Train loss: 0.22 Val loss: 0.21 Train acc: 92.83 Val acc: 93.20
+Epoch: 181 Train loss: 0.22 Val loss: 0.22 Train acc: 93.12 Val acc: 93.00
+Epoch: 182 Train loss: 0.21 Val loss: 0.22 Train acc: 93.19 Val acc: 93.60
+Epoch: 183 Train loss: 0.22 Val loss: 0.21 Train acc: 92.91 Val acc: 93.20
+Epoch: 184 Train loss: 0.21 Val loss: 0.21 Train acc: 93.03 Val acc: 93.40
+Epoch: 185 Train loss: 0.21 Val loss: 0.21 Train acc: 93.57 Val acc: 93.40
+Epoch: 186 Train loss: 0.22 Val loss: 0.22 Train acc: 92.92 Val acc: 93.40
+Epoch: 187 Train loss: 0.22 Val loss: 0.21 Train acc: 92.78 Val acc: 93.40
+Epoch: 188 Train loss: 0.21 Val loss: 0.22 Train acc: 93.05 Val acc: 93.60
+Epoch: 189 Train loss: 0.21 Val loss: 0.22 Train acc: 93.14 Val acc: 93.60
+Epoch: 190 Train loss: 0.21 Val loss: 0.22 Train acc: 92.95 Val acc: 93.20
+Epoch: 191 Train loss: 0.22 Val loss: 0.21 Train acc: 92.88 Val acc: 93.60
+Epoch: 192 Train loss: 0.22 Val loss: 0.21 Train acc: 92.86 Val acc: 93.00
+Epoch: 193 Train loss: 0.22 Val loss: 0.21 Train acc: 93.04 Val acc: 93.20
+Epoch: 194 Train loss: 0.21 Val loss: 0.22 Train acc: 93.08 Val acc: 93.00
+Epoch: 195 Train loss: 0.22 Val loss: 0.21 Train acc: 92.83 Val acc: 93.00
+Epoch: 196 Train loss: 0.21 Val loss: 0.21 Train acc: 93.04 Val acc: 93.00
+Epoch: 197 Train loss: 0.22 Val loss: 0.21 Train acc: 92.83 Val acc: 93.20
+Epoch: 198 Train loss: 0.22 Val loss: 0.22 Train acc: 93.03 Val acc: 93.20
+Epoch: 199 Train loss: 0.22 Val loss: 0.21 Train acc: 92.98 Val acc: 93.40
+Creating distributions for task 4:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  4 : loss=0.000 | TAw acc= 56.2%, forg=  0.0%| TAg acc= 56.2%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+************************************************************************************************************
+Task  5
+************************************************************************************************************
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+Expert overlap:tensor([  30.6634,    6.9970,    7.8823, 4731.1084,    6.3513],
+       device='cuda:0')
+Finetuning backbone 3 on task 5:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 0.10 Val loss: 0.11 Train acc: 15.45 Val acc: 20.60
+Epoch: 1 Train loss: 0.08 Val loss: 0.09 Train acc: 28.41 Val acc: 39.40
+Epoch: 2 Train loss: 0.07 Val loss: 0.08 Train acc: 36.75 Val acc: 47.20
+Epoch: 3 Train loss: 0.07 Val loss: 0.07 Train acc: 41.54 Val acc: 46.40
+Epoch: 4 Train loss: 0.06 Val loss: 0.05 Train acc: 44.52 Val acc: 55.60
+Epoch: 5 Train loss: 0.07 Val loss: 0.06 Train acc: 47.14 Val acc: 51.40
+Epoch: 6 Train loss: 0.06 Val loss: 0.07 Train acc: 49.40 Val acc: 52.80
+Epoch: 7 Train loss: 0.06 Val loss: 0.06 Train acc: 50.59 Val acc: 55.60
+Epoch: 8 Train loss: 0.05 Val loss: 0.06 Train acc: 51.85 Val acc: 58.00
+Epoch: 9 Train loss: 0.05 Val loss: 0.05 Train acc: 52.22 Val acc: 60.20
+Epoch: 10 Train loss: 0.05 Val loss: 0.05 Train acc: 53.08 Val acc: 59.40
+Epoch: 11 Train loss: 0.05 Val loss: 0.05 Train acc: 53.42 Val acc: 62.00
+Epoch: 12 Train loss: 0.05 Val loss: 0.05 Train acc: 53.92 Val acc: 59.20
+Epoch: 13 Train loss: 0.04 Val loss: 0.04 Train acc: 54.58 Val acc: 62.20
+Epoch: 14 Train loss: 0.05 Val loss: 0.04 Train acc: 54.09 Val acc: 62.60
+Epoch: 15 Train loss: 0.04 Val loss: 0.05 Train acc: 54.88 Val acc: 62.00
+Epoch: 16 Train loss: 0.04 Val loss: 0.05 Train acc: 55.16 Val acc: 59.00
+Epoch: 17 Train loss: 0.04 Val loss: 0.04 Train acc: 54.98 Val acc: 60.80
+Epoch: 18 Train loss: 0.04 Val loss: 0.04 Train acc: 55.15 Val acc: 62.60
+Epoch: 19 Train loss: 0.04 Val loss: 0.04 Train acc: 55.44 Val acc: 60.20
+Epoch: 20 Train loss: 0.04 Val loss: 0.04 Train acc: 54.52 Val acc: 61.80
+Epoch: 21 Train loss: 0.04 Val loss: 0.03 Train acc: 55.49 Val acc: 61.40
+Epoch: 22 Train loss: 0.04 Val loss: 0.03 Train acc: 55.42 Val acc: 62.20
+Epoch: 23 Train loss: 0.04 Val loss: 0.04 Train acc: 55.92 Val acc: 62.40
+Epoch: 24 Train loss: 0.04 Val loss: 0.05 Train acc: 55.43 Val acc: 61.40
+Epoch: 25 Train loss: 0.04 Val loss: 0.03 Train acc: 55.48 Val acc: 60.20
+Epoch: 26 Train loss: 0.04 Val loss: 0.03 Train acc: 55.78 Val acc: 62.40
+Epoch: 27 Train loss: 0.03 Val loss: 0.04 Train acc: 55.84 Val acc: 59.20
+Epoch: 28 Train loss: 0.04 Val loss: 0.04 Train acc: 56.47 Val acc: 62.40
+Epoch: 29 Train loss: 0.04 Val loss: 0.04 Train acc: 56.98 Val acc: 64.20
+Epoch: 30 Train loss: 0.02 Val loss: 0.02 Train acc: 57.01 Val acc: 63.20
+Epoch: 31 Train loss: 0.02 Val loss: 0.02 Train acc: 56.97 Val acc: 63.00
+Epoch: 32 Train loss: 0.02 Val loss: 0.02 Train acc: 56.75 Val acc: 62.40
+Epoch: 33 Train loss: 0.02 Val loss: 0.02 Train acc: 56.35 Val acc: 63.20
+Epoch: 34 Train loss: 0.02 Val loss: 0.02 Train acc: 56.38 Val acc: 62.20
+Epoch: 35 Train loss: 0.02 Val loss: 0.02 Train acc: 56.62 Val acc: 62.80
+Epoch: 36 Train loss: 0.02 Val loss: 0.02 Train acc: 55.97 Val acc: 62.80
+Epoch: 37 Train loss: 0.02 Val loss: 0.02 Train acc: 56.48 Val acc: 63.00
+Epoch: 38 Train loss: 0.02 Val loss: 0.02 Train acc: 56.28 Val acc: 63.00
+Epoch: 39 Train loss: 0.02 Val loss: 0.02 Train acc: 56.72 Val acc: 62.80
+Epoch: 40 Train loss: 0.02 Val loss: 0.02 Train acc: 56.68 Val acc: 63.00
+Epoch: 41 Train loss: 0.02 Val loss: 0.02 Train acc: 56.28 Val acc: 63.00
+Epoch: 42 Train loss: 0.02 Val loss: 0.02 Train acc: 56.58 Val acc: 63.20
+Epoch: 43 Train loss: 0.02 Val loss: 0.02 Train acc: 56.42 Val acc: 63.00
+Epoch: 44 Train loss: 0.02 Val loss: 0.02 Train acc: 55.82 Val acc: 63.00
+Epoch: 45 Train loss: 0.02 Val loss: 0.02 Train acc: 55.60 Val acc: 63.20
+Epoch: 46 Train loss: 0.02 Val loss: 0.02 Train acc: 55.93 Val acc: 62.40
+Epoch: 47 Train loss: 0.02 Val loss: 0.02 Train acc: 55.50 Val acc: 63.20
+Epoch: 48 Train loss: 0.02 Val loss: 0.02 Train acc: 56.55 Val acc: 63.40
+Epoch: 49 Train loss: 0.02 Val loss: 0.02 Train acc: 56.28 Val acc: 62.80
+Epoch: 50 Train loss: 0.02 Val loss: 0.02 Train acc: 56.78 Val acc: 63.20
+Epoch: 51 Train loss: 0.02 Val loss: 0.02 Train acc: 56.56 Val acc: 63.20
+Epoch: 52 Train loss: 0.02 Val loss: 0.02 Train acc: 56.10 Val acc: 63.00
+Epoch: 53 Train loss: 0.02 Val loss: 0.02 Train acc: 56.20 Val acc: 63.40
+Epoch: 54 Train loss: 0.02 Val loss: 0.02 Train acc: 56.31 Val acc: 63.20
+Epoch: 55 Train loss: 0.02 Val loss: 0.02 Train acc: 56.63 Val acc: 63.00
+Epoch: 56 Train loss: 0.02 Val loss: 0.02 Train acc: 55.69 Val acc: 63.20
+Epoch: 57 Train loss: 0.02 Val loss: 0.02 Train acc: 56.52 Val acc: 63.60
+Epoch: 58 Train loss: 0.02 Val loss: 0.02 Train acc: 55.96 Val acc: 63.40
+Epoch: 59 Train loss: 0.02 Val loss: 0.02 Train acc: 55.63 Val acc: 62.80
+Epoch: 60 Train loss: 0.02 Val loss: 0.02 Train acc: 56.59 Val acc: 63.40
+Epoch: 61 Train loss: 0.02 Val loss: 0.02 Train acc: 56.29 Val acc: 63.40
+Epoch: 62 Train loss: 0.02 Val loss: 0.02 Train acc: 56.54 Val acc: 63.60
+Epoch: 63 Train loss: 0.02 Val loss: 0.02 Train acc: 55.39 Val acc: 63.60
+Epoch: 64 Train loss: 0.02 Val loss: 0.02 Train acc: 56.12 Val acc: 63.20
+Epoch: 65 Train loss: 0.02 Val loss: 0.02 Train acc: 56.23 Val acc: 63.60
+Epoch: 66 Train loss: 0.02 Val loss: 0.02 Train acc: 56.61 Val acc: 63.60
+Epoch: 67 Train loss: 0.02 Val loss: 0.02 Train acc: 56.72 Val acc: 63.40
+Epoch: 68 Train loss: 0.02 Val loss: 0.02 Train acc: 56.39 Val acc: 63.60
+Epoch: 69 Train loss: 0.02 Val loss: 0.02 Train acc: 56.58 Val acc: 63.60
+Epoch: 70 Train loss: 0.02 Val loss: 0.02 Train acc: 56.34 Val acc: 63.60
+Epoch: 71 Train loss: 0.02 Val loss: 0.02 Train acc: 55.92 Val acc: 63.60
+Epoch: 72 Train loss: 0.02 Val loss: 0.02 Train acc: 56.97 Val acc: 63.60
+Epoch: 73 Train loss: 0.02 Val loss: 0.02 Train acc: 56.71 Val acc: 63.60
+Epoch: 74 Train loss: 0.02 Val loss: 0.02 Train acc: 57.41 Val acc: 63.60
+Epoch: 75 Train loss: 0.02 Val loss: 0.02 Train acc: 55.88 Val acc: 63.60
+Epoch: 76 Train loss: 0.02 Val loss: 0.02 Train acc: 56.07 Val acc: 63.60
+Epoch: 77 Train loss: 0.02 Val loss: 0.02 Train acc: 56.87 Val acc: 63.60
+Epoch: 78 Train loss: 0.02 Val loss: 0.02 Train acc: 56.39 Val acc: 63.60
+Epoch: 79 Train loss: 0.02 Val loss: 0.02 Train acc: 56.30 Val acc: 63.40
+Epoch: 80 Train loss: 0.02 Val loss: 0.02 Train acc: 56.59 Val acc: 63.60
+Epoch: 81 Train loss: 0.02 Val loss: 0.02 Train acc: 56.62 Val acc: 63.60
+Epoch: 82 Train loss: 0.02 Val loss: 0.02 Train acc: 56.36 Val acc: 63.60
+Epoch: 83 Train loss: 0.02 Val loss: 0.02 Train acc: 56.54 Val acc: 63.60
+Epoch: 84 Train loss: 0.02 Val loss: 0.02 Train acc: 56.67 Val acc: 63.60
+Epoch: 85 Train loss: 0.02 Val loss: 0.02 Train acc: 55.97 Val acc: 63.60
+Epoch: 86 Train loss: 0.02 Val loss: 0.02 Train acc: 56.42 Val acc: 63.60
+Epoch: 87 Train loss: 0.02 Val loss: 0.02 Train acc: 56.47 Val acc: 63.60
+Epoch: 88 Train loss: 0.02 Val loss: 0.02 Train acc: 55.95 Val acc: 63.60
+Epoch: 89 Train loss: 0.02 Val loss: 0.02 Train acc: 55.77 Val acc: 63.60
+Epoch: 90 Train loss: 0.02 Val loss: 0.02 Train acc: 56.49 Val acc: 63.60
+Epoch: 91 Train loss: 0.02 Val loss: 0.02 Train acc: 56.26 Val acc: 63.60
+Epoch: 92 Train loss: 0.02 Val loss: 0.02 Train acc: 55.83 Val acc: 63.60
+Epoch: 93 Train loss: 0.02 Val loss: 0.02 Train acc: 56.42 Val acc: 63.60
+Epoch: 94 Train loss: 0.02 Val loss: 0.02 Train acc: 57.00 Val acc: 63.60
+Epoch: 95 Train loss: 0.02 Val loss: 0.02 Train acc: 56.24 Val acc: 63.60
+Epoch: 96 Train loss: 0.02 Val loss: 0.02 Train acc: 56.88 Val acc: 63.60
+Epoch: 97 Train loss: 0.02 Val loss: 0.02 Train acc: 56.53 Val acc: 63.60
+Epoch: 98 Train loss: 0.02 Val loss: 0.02 Train acc: 56.36 Val acc: 63.60
+Epoch: 99 Train loss: 0.02 Val loss: 0.02 Train acc: 56.17 Val acc: 63.60
+Creating distributions for task 5:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  4 : loss=0.000 | TAw acc= 53.1%, forg=  3.1%| TAg acc= 53.1%, forg=  3.1% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 79.4%, forg=  0.0%| TAg acc=  9.8%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+************************************************************************************************************
+Task  6
+************************************************************************************************************
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+Expert overlap:tensor([35.2465, 10.6675, 11.2276, 10.4070,  9.4677], device='cuda:0')
+Finetuning backbone 0 on task 6:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 0.12 Val loss: 0.11 Train acc: 14.81 Val acc: 24.20
+Epoch: 1 Train loss: 0.10 Val loss: 0.09 Train acc: 25.25 Val acc: 28.00
+Epoch: 2 Train loss: 0.08 Val loss: 0.11 Train acc: 29.93 Val acc: 35.40
+Epoch: 3 Train loss: 0.08 Val loss: 0.07 Train acc: 35.16 Val acc: 39.40
+Epoch: 4 Train loss: 0.08 Val loss: 0.08 Train acc: 38.55 Val acc: 41.40
+Epoch: 5 Train loss: 0.07 Val loss: 0.08 Train acc: 40.48 Val acc: 44.60
+Epoch: 6 Train loss: 0.07 Val loss: 0.07 Train acc: 43.30 Val acc: 45.20
+Epoch: 7 Train loss: 0.07 Val loss: 0.07 Train acc: 44.52 Val acc: 50.60
+Epoch: 8 Train loss: 0.06 Val loss: 0.07 Train acc: 46.22 Val acc: 52.40
+Epoch: 9 Train loss: 0.06 Val loss: 0.07 Train acc: 47.42 Val acc: 54.00
+Epoch: 10 Train loss: 0.06 Val loss: 0.06 Train acc: 48.33 Val acc: 54.00
+Epoch: 11 Train loss: 0.06 Val loss: 0.07 Train acc: 49.22 Val acc: 54.20
+Epoch: 12 Train loss: 0.06 Val loss: 0.07 Train acc: 48.98 Val acc: 53.20
+Epoch: 13 Train loss: 0.06 Val loss: 0.06 Train acc: 50.12 Val acc: 57.20
+Epoch: 14 Train loss: 0.05 Val loss: 0.05 Train acc: 50.76 Val acc: 55.00
+Epoch: 15 Train loss: 0.05 Val loss: 0.05 Train acc: 51.08 Val acc: 56.60
+Epoch: 16 Train loss: 0.05 Val loss: 0.06 Train acc: 51.04 Val acc: 52.80
+Epoch: 17 Train loss: 0.05 Val loss: 0.05 Train acc: 51.01 Val acc: 55.40
+Epoch: 18 Train loss: 0.05 Val loss: 0.05 Train acc: 51.85 Val acc: 54.20
+Epoch: 19 Train loss: 0.05 Val loss: 0.07 Train acc: 51.65 Val acc: 53.40
+Epoch: 20 Train loss: 0.05 Val loss: 0.04 Train acc: 51.95 Val acc: 56.20
+Epoch: 21 Train loss: 0.05 Val loss: 0.05 Train acc: 51.97 Val acc: 58.80
+Epoch: 22 Train loss: 0.05 Val loss: 0.05 Train acc: 51.85 Val acc: 55.20
+Epoch: 23 Train loss: 0.05 Val loss: 0.06 Train acc: 51.62 Val acc: 56.60
+Epoch: 24 Train loss: 0.04 Val loss: 0.04 Train acc: 52.29 Val acc: 56.00
+Epoch: 25 Train loss: 0.04 Val loss: 0.05 Train acc: 52.48 Val acc: 57.60
+Epoch: 26 Train loss: 0.04 Val loss: 0.04 Train acc: 52.98 Val acc: 57.00
+Epoch: 27 Train loss: 0.04 Val loss: 0.05 Train acc: 52.66 Val acc: 56.80
+Epoch: 28 Train loss: 0.04 Val loss: 0.05 Train acc: 51.98 Val acc: 58.20
+Epoch: 29 Train loss: 0.05 Val loss: 0.05 Train acc: 52.19 Val acc: 56.40
+Epoch: 30 Train loss: 0.03 Val loss: 0.03 Train acc: 54.09 Val acc: 57.20
+Epoch: 31 Train loss: 0.02 Val loss: 0.02 Train acc: 53.48 Val acc: 58.00
+Epoch: 32 Train loss: 0.02 Val loss: 0.02 Train acc: 53.65 Val acc: 57.80
+Epoch: 33 Train loss: 0.02 Val loss: 0.02 Train acc: 54.66 Val acc: 57.40
+Epoch: 34 Train loss: 0.02 Val loss: 0.02 Train acc: 53.51 Val acc: 57.20
+Epoch: 35 Train loss: 0.02 Val loss: 0.02 Train acc: 53.70 Val acc: 57.80
+Epoch: 36 Train loss: 0.02 Val loss: 0.02 Train acc: 53.65 Val acc: 57.60
+Epoch: 37 Train loss: 0.02 Val loss: 0.02 Train acc: 53.65 Val acc: 57.40
+Epoch: 38 Train loss: 0.02 Val loss: 0.02 Train acc: 53.93 Val acc: 57.60
+Epoch: 39 Train loss: 0.02 Val loss: 0.02 Train acc: 53.38 Val acc: 57.40
+Epoch: 40 Train loss: 0.02 Val loss: 0.02 Train acc: 53.46 Val acc: 56.80
+Epoch: 41 Train loss: 0.02 Val loss: 0.02 Train acc: 53.30 Val acc: 57.80
+Epoch: 42 Train loss: 0.02 Val loss: 0.02 Train acc: 53.43 Val acc: 57.40
+Epoch: 43 Train loss: 0.02 Val loss: 0.02 Train acc: 53.07 Val acc: 57.40
+Epoch: 44 Train loss: 0.02 Val loss: 0.02 Train acc: 53.29 Val acc: 57.40
+Epoch: 45 Train loss: 0.02 Val loss: 0.02 Train acc: 54.14 Val acc: 57.80
+Epoch: 46 Train loss: 0.02 Val loss: 0.02 Train acc: 53.32 Val acc: 56.80
+Epoch: 47 Train loss: 0.02 Val loss: 0.02 Train acc: 53.62 Val acc: 58.00
+Epoch: 48 Train loss: 0.02 Val loss: 0.02 Train acc: 53.35 Val acc: 58.00
+Epoch: 49 Train loss: 0.02 Val loss: 0.02 Train acc: 53.36 Val acc: 56.60
+Epoch: 50 Train loss: 0.02 Val loss: 0.02 Train acc: 53.40 Val acc: 57.20
+Epoch: 51 Train loss: 0.02 Val loss: 0.02 Train acc: 53.63 Val acc: 58.40
+Epoch: 52 Train loss: 0.02 Val loss: 0.02 Train acc: 53.17 Val acc: 57.40
+Epoch: 53 Train loss: 0.02 Val loss: 0.02 Train acc: 53.52 Val acc: 57.00
+Epoch: 54 Train loss: 0.02 Val loss: 0.02 Train acc: 53.95 Val acc: 58.20
+Epoch: 55 Train loss: 0.02 Val loss: 0.02 Train acc: 53.66 Val acc: 56.80
+Epoch: 56 Train loss: 0.02 Val loss: 0.02 Train acc: 52.97 Val acc: 57.60
+Epoch: 57 Train loss: 0.02 Val loss: 0.02 Train acc: 53.55 Val acc: 56.60
+Epoch: 58 Train loss: 0.02 Val loss: 0.02 Train acc: 53.76 Val acc: 56.60
+Epoch: 59 Train loss: 0.02 Val loss: 0.02 Train acc: 53.60 Val acc: 57.40
+Epoch: 60 Train loss: 0.02 Val loss: 0.02 Train acc: 53.21 Val acc: 57.20
+Epoch: 61 Train loss: 0.02 Val loss: 0.02 Train acc: 53.74 Val acc: 57.20
+Epoch: 62 Train loss: 0.02 Val loss: 0.02 Train acc: 53.54 Val acc: 57.20
+Epoch: 63 Train loss: 0.02 Val loss: 0.02 Train acc: 53.88 Val acc: 57.60
+Epoch: 64 Train loss: 0.02 Val loss: 0.02 Train acc: 53.75 Val acc: 57.80
+Epoch: 65 Train loss: 0.02 Val loss: 0.02 Train acc: 54.10 Val acc: 57.60
+Epoch: 66 Train loss: 0.02 Val loss: 0.02 Train acc: 53.22 Val acc: 56.80
+Epoch: 67 Train loss: 0.02 Val loss: 0.02 Train acc: 54.28 Val acc: 56.60
+Epoch: 68 Train loss: 0.02 Val loss: 0.02 Train acc: 53.34 Val acc: 56.40
+Epoch: 69 Train loss: 0.02 Val loss: 0.02 Train acc: 53.64 Val acc: 57.80
+Epoch: 70 Train loss: 0.02 Val loss: 0.02 Train acc: 54.05 Val acc: 57.60
+Epoch: 71 Train loss: 0.02 Val loss: 0.02 Train acc: 53.18 Val acc: 57.60
+Epoch: 72 Train loss: 0.02 Val loss: 0.02 Train acc: 54.25 Val acc: 57.40
+Epoch: 73 Train loss: 0.02 Val loss: 0.02 Train acc: 53.60 Val acc: 57.00
+Epoch: 74 Train loss: 0.02 Val loss: 0.02 Train acc: 53.25 Val acc: 57.20
+Epoch: 75 Train loss: 0.02 Val loss: 0.02 Train acc: 53.65 Val acc: 57.00
+Epoch: 76 Train loss: 0.02 Val loss: 0.02 Train acc: 53.87 Val acc: 57.20
+Epoch: 77 Train loss: 0.02 Val loss: 0.02 Train acc: 53.05 Val acc: 57.20
+Epoch: 78 Train loss: 0.02 Val loss: 0.02 Train acc: 53.82 Val acc: 57.20
+Epoch: 79 Train loss: 0.02 Val loss: 0.02 Train acc: 54.05 Val acc: 57.40
+Epoch: 80 Train loss: 0.02 Val loss: 0.02 Train acc: 54.22 Val acc: 57.40
+Epoch: 81 Train loss: 0.02 Val loss: 0.02 Train acc: 54.52 Val acc: 57.80
+Epoch: 82 Train loss: 0.02 Val loss: 0.02 Train acc: 53.99 Val acc: 57.00
+Epoch: 83 Train loss: 0.02 Val loss: 0.02 Train acc: 53.73 Val acc: 57.60
+Epoch: 84 Train loss: 0.02 Val loss: 0.02 Train acc: 53.24 Val acc: 57.60
+Epoch: 85 Train loss: 0.02 Val loss: 0.02 Train acc: 54.19 Val acc: 57.80
+Epoch: 86 Train loss: 0.02 Val loss: 0.02 Train acc: 54.18 Val acc: 57.40
+Epoch: 87 Train loss: 0.02 Val loss: 0.02 Train acc: 54.34 Val acc: 57.40
+Epoch: 88 Train loss: 0.02 Val loss: 0.02 Train acc: 53.26 Val acc: 57.40
+Epoch: 89 Train loss: 0.02 Val loss: 0.02 Train acc: 53.42 Val acc: 57.60
+Epoch: 90 Train loss: 0.02 Val loss: 0.02 Train acc: 53.95 Val acc: 57.60
+Epoch: 91 Train loss: 0.02 Val loss: 0.02 Train acc: 53.29 Val acc: 57.60
+Epoch: 92 Train loss: 0.02 Val loss: 0.02 Train acc: 54.02 Val acc: 57.80
+Epoch: 93 Train loss: 0.02 Val loss: 0.02 Train acc: 53.36 Val acc: 57.40
+Epoch: 94 Train loss: 0.02 Val loss: 0.02 Train acc: 54.02 Val acc: 57.40
+Epoch: 95 Train loss: 0.02 Val loss: 0.02 Train acc: 53.50 Val acc: 57.20
+Epoch: 96 Train loss: 0.02 Val loss: 0.02 Train acc: 52.94 Val acc: 57.00
+Epoch: 97 Train loss: 0.02 Val loss: 0.02 Train acc: 53.73 Val acc: 56.80
+Epoch: 98 Train loss: 0.02 Val loss: 0.02 Train acc: 53.68 Val acc: 57.60
+Epoch: 99 Train loss: 0.02 Val loss: 0.02 Train acc: 53.74 Val acc: 57.60
+Creating distributions for task 6:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  4 : loss=0.000 | TAw acc= 44.4%, forg= 11.8%| TAg acc= 44.4%, forg= 11.8% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 79.2%, forg=  0.2%| TAg acc=  5.8%, forg=  4.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 81.6%, forg=  0.0%| TAg acc= 23.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+************************************************************************************************************
+Task  7
+************************************************************************************************************
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+Expert overlap:tensor([  30.7881,   12.2762, 4714.6118,    9.4812,   10.8633],
+       device='cuda:0')
+Finetuning backbone 2 on task 7:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 0.11 Val loss: 0.11 Train acc: 7.95 Val acc: 13.60
+Epoch: 1 Train loss: 0.09 Val loss: 0.10 Train acc: 16.79 Val acc: 17.60
+Epoch: 2 Train loss: 0.08 Val loss: 0.07 Train acc: 26.32 Val acc: 31.60
+Epoch: 3 Train loss: 0.08 Val loss: 0.07 Train acc: 33.19 Val acc: 35.20
+Epoch: 4 Train loss: 0.07 Val loss: 0.07 Train acc: 38.28 Val acc: 41.80
+Epoch: 5 Train loss: 0.07 Val loss: 0.06 Train acc: 43.56 Val acc: 49.80
+Epoch: 6 Train loss: 0.06 Val loss: 0.06 Train acc: 46.22 Val acc: 52.40
+Epoch: 7 Train loss: 0.06 Val loss: 0.05 Train acc: 47.96 Val acc: 51.20
+Epoch: 8 Train loss: 0.06 Val loss: 0.07 Train acc: 49.29 Val acc: 48.60
+Epoch: 9 Train loss: 0.05 Val loss: 0.07 Train acc: 51.02 Val acc: 57.20
+Epoch: 10 Train loss: 0.05 Val loss: 0.05 Train acc: 51.38 Val acc: 54.20
+Epoch: 11 Train loss: 0.05 Val loss: 0.05 Train acc: 52.46 Val acc: 54.80
+Epoch: 12 Train loss: 0.05 Val loss: 0.05 Train acc: 52.92 Val acc: 54.60
+Epoch: 13 Train loss: 0.05 Val loss: 0.06 Train acc: 53.53 Val acc: 59.20
+Epoch: 14 Train loss: 0.05 Val loss: 0.04 Train acc: 53.72 Val acc: 58.80
+Epoch: 15 Train loss: 0.05 Val loss: 0.05 Train acc: 53.86 Val acc: 59.00
+Epoch: 16 Train loss: 0.04 Val loss: 0.04 Train acc: 54.21 Val acc: 58.00
+Epoch: 17 Train loss: 0.04 Val loss: 0.05 Train acc: 55.36 Val acc: 56.80
+Epoch: 18 Train loss: 0.04 Val loss: 0.04 Train acc: 54.66 Val acc: 57.20
+Epoch: 19 Train loss: 0.04 Val loss: 0.04 Train acc: 55.54 Val acc: 57.20
+Epoch: 20 Train loss: 0.04 Val loss: 0.05 Train acc: 55.47 Val acc: 56.60
+Epoch: 21 Train loss: 0.04 Val loss: 0.04 Train acc: 55.31 Val acc: 59.00
+Epoch: 22 Train loss: 0.04 Val loss: 0.04 Train acc: 55.05 Val acc: 59.20
+Epoch: 23 Train loss: 0.04 Val loss: 0.04 Train acc: 55.81 Val acc: 59.20
+Epoch: 24 Train loss: 0.04 Val loss: 0.03 Train acc: 55.24 Val acc: 60.60
+Epoch: 25 Train loss: 0.04 Val loss: 0.04 Train acc: 56.15 Val acc: 61.80
+Epoch: 26 Train loss: 0.04 Val loss: 0.03 Train acc: 55.69 Val acc: 58.80
+Epoch: 27 Train loss: 0.03 Val loss: 0.03 Train acc: 56.14 Val acc: 59.20
+Epoch: 28 Train loss: 0.04 Val loss: 0.04 Train acc: 56.16 Val acc: 59.00
+Epoch: 29 Train loss: 0.03 Val loss: 0.04 Train acc: 56.74 Val acc: 57.20
+Epoch: 30 Train loss: 0.02 Val loss: 0.02 Train acc: 56.10 Val acc: 58.60
+Epoch: 31 Train loss: 0.02 Val loss: 0.02 Train acc: 57.25 Val acc: 58.00
+Epoch: 32 Train loss: 0.02 Val loss: 0.02 Train acc: 56.83 Val acc: 58.00
+Epoch: 33 Train loss: 0.02 Val loss: 0.02 Train acc: 56.38 Val acc: 58.00
+Epoch: 34 Train loss: 0.02 Val loss: 0.02 Train acc: 56.07 Val acc: 58.20
+Epoch: 35 Train loss: 0.02 Val loss: 0.02 Train acc: 56.71 Val acc: 58.20
+Epoch: 36 Train loss: 0.02 Val loss: 0.02 Train acc: 56.57 Val acc: 57.60
+Epoch: 37 Train loss: 0.02 Val loss: 0.02 Train acc: 56.38 Val acc: 58.80
+Epoch: 38 Train loss: 0.02 Val loss: 0.02 Train acc: 56.98 Val acc: 58.20
+Epoch: 39 Train loss: 0.02 Val loss: 0.02 Train acc: 56.67 Val acc: 58.00
+Epoch: 40 Train loss: 0.02 Val loss: 0.02 Train acc: 55.90 Val acc: 57.60
+Epoch: 41 Train loss: 0.02 Val loss: 0.02 Train acc: 56.49 Val acc: 57.20
+Epoch: 42 Train loss: 0.02 Val loss: 0.02 Train acc: 56.03 Val acc: 58.20
+Epoch: 43 Train loss: 0.02 Val loss: 0.02 Train acc: 57.15 Val acc: 58.20
+Epoch: 44 Train loss: 0.02 Val loss: 0.02 Train acc: 57.11 Val acc: 58.60
+Epoch: 45 Train loss: 0.02 Val loss: 0.02 Train acc: 56.52 Val acc: 58.40
+Epoch: 46 Train loss: 0.02 Val loss: 0.02 Train acc: 57.02 Val acc: 58.00
+Epoch: 47 Train loss: 0.02 Val loss: 0.02 Train acc: 56.41 Val acc: 57.80
+Epoch: 48 Train loss: 0.02 Val loss: 0.02 Train acc: 57.12 Val acc: 58.60
+Epoch: 49 Train loss: 0.02 Val loss: 0.02 Train acc: 57.12 Val acc: 58.20
+Epoch: 50 Train loss: 0.02 Val loss: 0.02 Train acc: 56.38 Val acc: 58.20
+Epoch: 51 Train loss: 0.02 Val loss: 0.02 Train acc: 56.29 Val acc: 58.80
+Epoch: 52 Train loss: 0.02 Val loss: 0.02 Train acc: 56.32 Val acc: 57.80
+Epoch: 53 Train loss: 0.02 Val loss: 0.02 Train acc: 56.55 Val acc: 59.00
+Epoch: 54 Train loss: 0.02 Val loss: 0.02 Train acc: 57.05 Val acc: 58.40
+Epoch: 55 Train loss: 0.02 Val loss: 0.02 Train acc: 57.01 Val acc: 57.80
+Epoch: 56 Train loss: 0.02 Val loss: 0.02 Train acc: 56.78 Val acc: 57.80
+Epoch: 57 Train loss: 0.02 Val loss: 0.02 Train acc: 56.16 Val acc: 58.40
+Epoch: 58 Train loss: 0.02 Val loss: 0.02 Train acc: 56.59 Val acc: 59.00
+Epoch: 59 Train loss: 0.02 Val loss: 0.02 Train acc: 56.46 Val acc: 58.40
+Epoch: 60 Train loss: 0.02 Val loss: 0.02 Train acc: 56.86 Val acc: 58.20
+Epoch: 61 Train loss: 0.02 Val loss: 0.02 Train acc: 56.72 Val acc: 58.00
+Epoch: 62 Train loss: 0.02 Val loss: 0.02 Train acc: 56.54 Val acc: 58.40
+Epoch: 63 Train loss: 0.02 Val loss: 0.02 Train acc: 56.53 Val acc: 58.40
+Epoch: 64 Train loss: 0.02 Val loss: 0.02 Train acc: 56.27 Val acc: 58.40
+Epoch: 65 Train loss: 0.02 Val loss: 0.02 Train acc: 56.21 Val acc: 58.60
+Epoch: 66 Train loss: 0.02 Val loss: 0.02 Train acc: 56.15 Val acc: 58.40
+Epoch: 67 Train loss: 0.02 Val loss: 0.02 Train acc: 56.32 Val acc: 58.60
+Epoch: 68 Train loss: 0.02 Val loss: 0.02 Train acc: 56.81 Val acc: 58.40
+Epoch: 69 Train loss: 0.02 Val loss: 0.02 Train acc: 56.58 Val acc: 58.20
+Epoch: 70 Train loss: 0.02 Val loss: 0.02 Train acc: 56.21 Val acc: 58.40
+Epoch: 71 Train loss: 0.02 Val loss: 0.02 Train acc: 56.71 Val acc: 58.40
+Epoch: 72 Train loss: 0.02 Val loss: 0.02 Train acc: 56.82 Val acc: 58.20
+Epoch: 73 Train loss: 0.02 Val loss: 0.02 Train acc: 56.56 Val acc: 58.20
+Epoch: 74 Train loss: 0.02 Val loss: 0.02 Train acc: 56.86 Val acc: 58.20
+Epoch: 75 Train loss: 0.02 Val loss: 0.02 Train acc: 56.25 Val acc: 58.40
+Epoch: 76 Train loss: 0.02 Val loss: 0.02 Train acc: 56.75 Val acc: 58.40
+Epoch: 77 Train loss: 0.02 Val loss: 0.02 Train acc: 56.36 Val acc: 58.60
+Epoch: 78 Train loss: 0.02 Val loss: 0.02 Train acc: 56.42 Val acc: 58.60
+Epoch: 79 Train loss: 0.02 Val loss: 0.02 Train acc: 56.51 Val acc: 58.20
+Epoch: 80 Train loss: 0.02 Val loss: 0.02 Train acc: 56.28 Val acc: 58.60
+Epoch: 81 Train loss: 0.02 Val loss: 0.02 Train acc: 56.48 Val acc: 58.60
+Epoch: 82 Train loss: 0.02 Val loss: 0.02 Train acc: 56.95 Val acc: 58.40
+Epoch: 83 Train loss: 0.02 Val loss: 0.02 Train acc: 56.64 Val acc: 58.40
+Epoch: 84 Train loss: 0.02 Val loss: 0.02 Train acc: 56.24 Val acc: 58.40
+Epoch: 85 Train loss: 0.02 Val loss: 0.02 Train acc: 56.42 Val acc: 58.40
+Epoch: 86 Train loss: 0.02 Val loss: 0.02 Train acc: 56.59 Val acc: 58.40
+Epoch: 87 Train loss: 0.02 Val loss: 0.02 Train acc: 56.40 Val acc: 58.20
+Epoch: 88 Train loss: 0.02 Val loss: 0.02 Train acc: 55.95 Val acc: 58.40
+Epoch: 89 Train loss: 0.02 Val loss: 0.02 Train acc: 56.50 Val acc: 58.60
+Epoch: 90 Train loss: 0.02 Val loss: 0.02 Train acc: 56.40 Val acc: 58.20
+Epoch: 91 Train loss: 0.02 Val loss: 0.02 Train acc: 56.62 Val acc: 58.40
+Epoch: 92 Train loss: 0.02 Val loss: 0.02 Train acc: 56.95 Val acc: 58.40
+Epoch: 93 Train loss: 0.02 Val loss: 0.02 Train acc: 56.52 Val acc: 58.40
+Epoch: 94 Train loss: 0.02 Val loss: 0.02 Train acc: 55.95 Val acc: 58.40
+Epoch: 95 Train loss: 0.02 Val loss: 0.02 Train acc: 57.36 Val acc: 58.40
+Epoch: 96 Train loss: 0.02 Val loss: 0.02 Train acc: 56.03 Val acc: 58.40
+Epoch: 97 Train loss: 0.02 Val loss: 0.02 Train acc: 56.82 Val acc: 58.40
+Epoch: 98 Train loss: 0.02 Val loss: 0.02 Train acc: 56.77 Val acc: 58.20
+Epoch: 99 Train loss: 0.02 Val loss: 0.02 Train acc: 56.58 Val acc: 58.40
+Creating distributions for task 7:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  4 : loss=0.000 | TAw acc= 32.9%, forg= 23.2%| TAg acc= 32.9%, forg= 23.2% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 78.8%, forg=  0.6%| TAg acc=  2.4%, forg=  7.4% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 82.0%, forg= -0.4%| TAg acc= 10.8%, forg= 12.2% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 71.8%, forg=  0.0%| TAg acc= 29.4%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+************************************************************************************************************
+Task  8
+************************************************************************************************************
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+Expert overlap:tensor([  35.2722, 2429.3594,   12.1530, 2408.4453, 2447.0850],
+       device='cuda:0')
+Finetuning backbone 4 on task 8:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 0.09 Val loss: 0.11 Train acc: 14.62 Val acc: 25.80
+Epoch: 1 Train loss: 0.08 Val loss: 0.07 Train acc: 29.68 Val acc: 36.00
+Epoch: 2 Train loss: 0.07 Val loss: 0.09 Train acc: 35.35 Val acc: 40.20
+Epoch: 3 Train loss: 0.07 Val loss: 0.07 Train acc: 40.28 Val acc: 47.00
+Epoch: 4 Train loss: 0.06 Val loss: 0.07 Train acc: 44.59 Val acc: 46.80
+Epoch: 5 Train loss: 0.06 Val loss: 0.07 Train acc: 47.37 Val acc: 54.40
+Epoch: 6 Train loss: 0.06 Val loss: 0.08 Train acc: 48.81 Val acc: 54.60
+Epoch: 7 Train loss: 0.06 Val loss: 0.07 Train acc: 51.48 Val acc: 52.60
+Epoch: 8 Train loss: 0.05 Val loss: 0.05 Train acc: 52.05 Val acc: 55.40
+Epoch: 9 Train loss: 0.05 Val loss: 0.06 Train acc: 52.00 Val acc: 58.20
+Epoch: 10 Train loss: 0.05 Val loss: 0.06 Train acc: 52.92 Val acc: 56.60
+Epoch: 11 Train loss: 0.05 Val loss: 0.05 Train acc: 53.52 Val acc: 58.60
+Epoch: 12 Train loss: 0.05 Val loss: 0.05 Train acc: 53.71 Val acc: 58.60
+Epoch: 13 Train loss: 0.05 Val loss: 0.05 Train acc: 54.37 Val acc: 58.60
+Epoch: 14 Train loss: 0.04 Val loss: 0.04 Train acc: 53.78 Val acc: 58.40
+Epoch: 15 Train loss: 0.04 Val loss: 0.04 Train acc: 54.33 Val acc: 58.40
+Epoch: 16 Train loss: 0.04 Val loss: 0.07 Train acc: 54.50 Val acc: 54.80
+Epoch: 17 Train loss: 0.04 Val loss: 0.04 Train acc: 55.03 Val acc: 60.00
+Epoch: 18 Train loss: 0.04 Val loss: 0.04 Train acc: 55.07 Val acc: 58.60
+Epoch: 19 Train loss: 0.04 Val loss: 0.05 Train acc: 55.58 Val acc: 59.60
+Epoch: 20 Train loss: 0.04 Val loss: 0.04 Train acc: 54.95 Val acc: 58.40
+Epoch: 21 Train loss: 0.04 Val loss: 0.04 Train acc: 55.11 Val acc: 60.00
+Epoch: 22 Train loss: 0.04 Val loss: 0.04 Train acc: 55.22 Val acc: 57.00
+Epoch: 23 Train loss: 0.04 Val loss: 0.04 Train acc: 55.43 Val acc: 59.20
+Epoch: 24 Train loss: 0.04 Val loss: 0.04 Train acc: 55.24 Val acc: 58.00
+Epoch: 25 Train loss: 0.04 Val loss: 0.04 Train acc: 55.83 Val acc: 58.80
+Epoch: 26 Train loss: 0.03 Val loss: 0.03 Train acc: 55.39 Val acc: 60.80
+Epoch: 27 Train loss: 0.04 Val loss: 0.05 Train acc: 55.79 Val acc: 59.60
+Epoch: 28 Train loss: 0.04 Val loss: 0.04 Train acc: 56.35 Val acc: 60.40
+Epoch: 29 Train loss: 0.04 Val loss: 0.04 Train acc: 56.11 Val acc: 60.80
+Epoch: 30 Train loss: 0.02 Val loss: 0.02 Train acc: 56.83 Val acc: 59.40
+Epoch: 31 Train loss: 0.02 Val loss: 0.02 Train acc: 56.96 Val acc: 59.00
+Epoch: 32 Train loss: 0.02 Val loss: 0.02 Train acc: 57.16 Val acc: 59.20
+Epoch: 33 Train loss: 0.02 Val loss: 0.02 Train acc: 56.82 Val acc: 59.40
+Epoch: 34 Train loss: 0.02 Val loss: 0.02 Train acc: 56.44 Val acc: 60.00
+Epoch: 35 Train loss: 0.02 Val loss: 0.02 Train acc: 56.71 Val acc: 60.40
+Epoch: 36 Train loss: 0.02 Val loss: 0.02 Train acc: 56.11 Val acc: 60.40
+Epoch: 37 Train loss: 0.02 Val loss: 0.02 Train acc: 56.07 Val acc: 60.40
+Epoch: 38 Train loss: 0.02 Val loss: 0.02 Train acc: 56.73 Val acc: 60.00
+Epoch: 39 Train loss: 0.02 Val loss: 0.02 Train acc: 56.17 Val acc: 60.20
+Epoch: 40 Train loss: 0.02 Val loss: 0.02 Train acc: 56.80 Val acc: 59.60
+Epoch: 41 Train loss: 0.02 Val loss: 0.02 Train acc: 56.75 Val acc: 60.20
+Epoch: 42 Train loss: 0.02 Val loss: 0.02 Train acc: 56.23 Val acc: 60.20
+Epoch: 43 Train loss: 0.02 Val loss: 0.02 Train acc: 56.51 Val acc: 59.80
+Epoch: 44 Train loss: 0.02 Val loss: 0.02 Train acc: 56.46 Val acc: 59.40
+Epoch: 45 Train loss: 0.02 Val loss: 0.02 Train acc: 56.20 Val acc: 60.80
+Epoch: 46 Train loss: 0.02 Val loss: 0.02 Train acc: 56.51 Val acc: 60.20
+Epoch: 47 Train loss: 0.02 Val loss: 0.02 Train acc: 56.62 Val acc: 60.00
+Epoch: 48 Train loss: 0.02 Val loss: 0.02 Train acc: 56.05 Val acc: 60.00
+Epoch: 49 Train loss: 0.02 Val loss: 0.02 Train acc: 56.75 Val acc: 60.80
+Epoch: 50 Train loss: 0.02 Val loss: 0.02 Train acc: 56.79 Val acc: 60.60
+Epoch: 51 Train loss: 0.02 Val loss: 0.02 Train acc: 56.89 Val acc: 60.20
+Epoch: 52 Train loss: 0.02 Val loss: 0.02 Train acc: 56.57 Val acc: 60.20
+Epoch: 53 Train loss: 0.02 Val loss: 0.02 Train acc: 56.26 Val acc: 60.20
+Epoch: 54 Train loss: 0.02 Val loss: 0.02 Train acc: 56.31 Val acc: 60.20
+Epoch: 55 Train loss: 0.02 Val loss: 0.02 Train acc: 55.95 Val acc: 60.60
+Epoch: 56 Train loss: 0.02 Val loss: 0.02 Train acc: 56.74 Val acc: 60.40
+Epoch: 57 Train loss: 0.02 Val loss: 0.02 Train acc: 56.90 Val acc: 60.00
+Epoch: 58 Train loss: 0.02 Val loss: 0.02 Train acc: 56.55 Val acc: 60.80
+Epoch: 59 Train loss: 0.02 Val loss: 0.02 Train acc: 56.71 Val acc: 60.80
+Epoch: 60 Train loss: 0.02 Val loss: 0.02 Train acc: 56.35 Val acc: 61.00
+Epoch: 61 Train loss: 0.02 Val loss: 0.02 Train acc: 56.59 Val acc: 60.80
+Epoch: 62 Train loss: 0.02 Val loss: 0.02 Train acc: 56.23 Val acc: 60.80
+Epoch: 63 Train loss: 0.02 Val loss: 0.02 Train acc: 56.39 Val acc: 60.60
+Epoch: 64 Train loss: 0.02 Val loss: 0.02 Train acc: 56.55 Val acc: 61.00
+Epoch: 65 Train loss: 0.02 Val loss: 0.02 Train acc: 56.79 Val acc: 60.60
+Epoch: 66 Train loss: 0.02 Val loss: 0.02 Train acc: 56.51 Val acc: 60.80
+Epoch: 67 Train loss: 0.02 Val loss: 0.02 Train acc: 55.65 Val acc: 60.60
+Epoch: 68 Train loss: 0.02 Val loss: 0.02 Train acc: 55.41 Val acc: 60.80
+Epoch: 69 Train loss: 0.02 Val loss: 0.02 Train acc: 56.53 Val acc: 61.00
+Epoch: 70 Train loss: 0.02 Val loss: 0.02 Train acc: 56.73 Val acc: 60.80
+Epoch: 71 Train loss: 0.02 Val loss: 0.02 Train acc: 55.81 Val acc: 60.80
+Epoch: 72 Train loss: 0.02 Val loss: 0.02 Train acc: 56.03 Val acc: 60.60
+Epoch: 73 Train loss: 0.02 Val loss: 0.02 Train acc: 56.95 Val acc: 60.60
+Epoch: 74 Train loss: 0.02 Val loss: 0.02 Train acc: 56.33 Val acc: 60.60
+Epoch: 75 Train loss: 0.02 Val loss: 0.02 Train acc: 56.33 Val acc: 61.40
+Epoch: 76 Train loss: 0.02 Val loss: 0.02 Train acc: 56.17 Val acc: 61.00
+Epoch: 77 Train loss: 0.02 Val loss: 0.02 Train acc: 56.73 Val acc: 60.60
+Epoch: 78 Train loss: 0.02 Val loss: 0.02 Train acc: 56.41 Val acc: 61.00
+Epoch: 79 Train loss: 0.02 Val loss: 0.02 Train acc: 56.28 Val acc: 61.00
+Epoch: 80 Train loss: 0.02 Val loss: 0.02 Train acc: 56.20 Val acc: 61.00
+Epoch: 81 Train loss: 0.02 Val loss: 0.02 Train acc: 56.66 Val acc: 61.00
+Epoch: 82 Train loss: 0.02 Val loss: 0.02 Train acc: 56.63 Val acc: 61.00
+Epoch: 83 Train loss: 0.02 Val loss: 0.02 Train acc: 56.30 Val acc: 61.00
+Epoch: 84 Train loss: 0.02 Val loss: 0.02 Train acc: 56.23 Val acc: 61.00
+Epoch: 85 Train loss: 0.02 Val loss: 0.02 Train acc: 56.59 Val acc: 61.00
+Epoch: 86 Train loss: 0.02 Val loss: 0.02 Train acc: 56.70 Val acc: 61.00
+Epoch: 87 Train loss: 0.02 Val loss: 0.02 Train acc: 56.56 Val acc: 61.00
+Epoch: 88 Train loss: 0.02 Val loss: 0.02 Train acc: 56.22 Val acc: 61.00
+Epoch: 89 Train loss: 0.02 Val loss: 0.02 Train acc: 57.06 Val acc: 61.00
+Epoch: 90 Train loss: 0.02 Val loss: 0.02 Train acc: 56.27 Val acc: 61.00
+Epoch: 91 Train loss: 0.02 Val loss: 0.02 Train acc: 57.01 Val acc: 61.00
+Epoch: 92 Train loss: 0.02 Val loss: 0.02 Train acc: 56.27 Val acc: 61.00
+Epoch: 93 Train loss: 0.02 Val loss: 0.02 Train acc: 56.30 Val acc: 61.00
+Epoch: 94 Train loss: 0.02 Val loss: 0.02 Train acc: 56.44 Val acc: 61.00
+Epoch: 95 Train loss: 0.02 Val loss: 0.02 Train acc: 56.45 Val acc: 61.00
+Epoch: 96 Train loss: 0.02 Val loss: 0.02 Train acc: 56.53 Val acc: 61.00
+Epoch: 97 Train loss: 0.02 Val loss: 0.02 Train acc: 56.47 Val acc: 61.00
+Epoch: 98 Train loss: 0.02 Val loss: 0.02 Train acc: 56.88 Val acc: 61.00
+Epoch: 99 Train loss: 0.02 Val loss: 0.02 Train acc: 56.79 Val acc: 61.00
+Creating distributions for task 8:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  4 : loss=0.000 | TAw acc= 29.5%, forg= 26.7%| TAg acc= 29.5%, forg= 26.7% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 79.0%, forg=  0.4%| TAg acc=  2.4%, forg=  7.4% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 81.6%, forg=  0.4%| TAg acc=  8.8%, forg= 14.2% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 71.6%, forg=  0.2%| TAg acc= 29.0%, forg=  0.4% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 77.2%, forg=  0.0%| TAg acc= 14.0%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+************************************************************************************************************
+Task  9
+************************************************************************************************************
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+Expert overlap:tensor([22.6138,  7.7702,  6.3132,  5.6730,  6.6446], device='cuda:0')
+Finetuning backbone 0 on task 9:
+The expert has 11,209,994 trainable parameters
+The expert has 0 shared parameters
+
+Epoch: 0 Train loss: 0.05 Val loss: 0.04 Train acc: 15.73 Val acc: 27.40
+Epoch: 1 Train loss: 0.04 Val loss: 0.03 Train acc: 32.19 Val acc: 44.40
+Epoch: 2 Train loss: 0.03 Val loss: 0.03 Train acc: 40.18 Val acc: 48.20
+Epoch: 3 Train loss: 0.03 Val loss: 0.03 Train acc: 43.42 Val acc: 54.20
+Epoch: 4 Train loss: 0.03 Val loss: 0.02 Train acc: 45.42 Val acc: 55.80
+Epoch: 5 Train loss: 0.02 Val loss: 0.03 Train acc: 47.32 Val acc: 57.60
+Epoch: 6 Train loss: 0.03 Val loss: 0.02 Train acc: 48.41 Val acc: 56.40
+Epoch: 7 Train loss: 0.03 Val loss: 0.03 Train acc: 49.46 Val acc: 58.60
+Epoch: 8 Train loss: 0.03 Val loss: 0.02 Train acc: 49.33 Val acc: 59.00
+Epoch: 9 Train loss: 0.02 Val loss: 0.02 Train acc: 50.20 Val acc: 60.20
+Epoch: 10 Train loss: 0.02 Val loss: 0.02 Train acc: 50.80 Val acc: 60.60
+Epoch: 11 Train loss: 0.02 Val loss: 0.02 Train acc: 50.88 Val acc: 61.00
+Epoch: 12 Train loss: 0.02 Val loss: 0.02 Train acc: 51.42 Val acc: 61.60
+Epoch: 13 Train loss: 0.02 Val loss: 0.03 Train acc: 51.97 Val acc: 60.80
+Epoch: 14 Train loss: 0.02 Val loss: 0.02 Train acc: 51.94 Val acc: 62.20
+Epoch: 15 Train loss: 0.02 Val loss: 0.02 Train acc: 51.48 Val acc: 60.80
+Epoch: 16 Train loss: 0.02 Val loss: 0.03 Train acc: 52.38 Val acc: 59.00
+Epoch: 17 Train loss: 0.02 Val loss: 0.02 Train acc: 52.45 Val acc: 61.00
+Epoch: 18 Train loss: 0.02 Val loss: 0.02 Train acc: 52.56 Val acc: 61.20
+Epoch: 19 Train loss: 0.02 Val loss: 0.02 Train acc: 52.22 Val acc: 60.40
+Epoch: 20 Train loss: 0.02 Val loss: 0.02 Train acc: 53.16 Val acc: 60.00
+Epoch: 21 Train loss: 0.02 Val loss: 0.02 Train acc: 51.92 Val acc: 59.80
+Epoch: 22 Train loss: 0.02 Val loss: 0.02 Train acc: 52.15 Val acc: 60.60
+Epoch: 23 Train loss: 0.02 Val loss: 0.02 Train acc: 52.92 Val acc: 60.40
+Epoch: 24 Train loss: 0.02 Val loss: 0.02 Train acc: 52.68 Val acc: 60.60
+Epoch: 25 Train loss: 0.02 Val loss: 0.02 Train acc: 53.05 Val acc: 62.20
+Epoch: 26 Train loss: 0.02 Val loss: 0.02 Train acc: 52.65 Val acc: 63.20
+Epoch: 27 Train loss: 0.02 Val loss: 0.02 Train acc: 52.62 Val acc: 61.80
+Epoch: 28 Train loss: 0.02 Val loss: 0.02 Train acc: 52.79 Val acc: 62.20
+Epoch: 29 Train loss: 0.02 Val loss: 0.02 Train acc: 52.85 Val acc: 61.60
+Epoch: 30 Train loss: 0.02 Val loss: 0.01 Train acc: 53.41 Val acc: 61.80
+Epoch: 31 Train loss: 0.02 Val loss: 0.01 Train acc: 53.32 Val acc: 61.60
+Epoch: 32 Train loss: 0.02 Val loss: 0.01 Train acc: 52.80 Val acc: 62.00
+Epoch: 33 Train loss: 0.02 Val loss: 0.01 Train acc: 52.95 Val acc: 62.20
+Epoch: 34 Train loss: 0.01 Val loss: 0.01 Train acc: 53.33 Val acc: 61.80
+Epoch: 35 Train loss: 0.01 Val loss: 0.01 Train acc: 54.09 Val acc: 62.00
+Epoch: 36 Train loss: 0.01 Val loss: 0.01 Train acc: 53.29 Val acc: 62.40
+Epoch: 37 Train loss: 0.01 Val loss: 0.01 Train acc: 52.99 Val acc: 61.80
+Epoch: 38 Train loss: 0.01 Val loss: 0.01 Train acc: 53.02 Val acc: 62.20
+Epoch: 39 Train loss: 0.01 Val loss: 0.01 Train acc: 53.08 Val acc: 61.60
+Epoch: 40 Train loss: 0.01 Val loss: 0.01 Train acc: 53.22 Val acc: 62.40
+Epoch: 41 Train loss: 0.01 Val loss: 0.01 Train acc: 53.10 Val acc: 62.20
+Epoch: 42 Train loss: 0.01 Val loss: 0.01 Train acc: 52.66 Val acc: 61.60
+Epoch: 43 Train loss: 0.01 Val loss: 0.01 Train acc: 53.86 Val acc: 62.20
+Epoch: 44 Train loss: 0.01 Val loss: 0.01 Train acc: 52.69 Val acc: 62.40
+Epoch: 45 Train loss: 0.01 Val loss: 0.01 Train acc: 53.48 Val acc: 62.60
+Epoch: 46 Train loss: 0.01 Val loss: 0.01 Train acc: 53.17 Val acc: 62.40
+Epoch: 47 Train loss: 0.01 Val loss: 0.01 Train acc: 52.93 Val acc: 62.40
+Epoch: 48 Train loss: 0.01 Val loss: 0.01 Train acc: 52.87 Val acc: 62.20
+Epoch: 49 Train loss: 0.01 Val loss: 0.01 Train acc: 53.08 Val acc: 62.60
+Epoch: 50 Train loss: 0.01 Val loss: 0.01 Train acc: 53.18 Val acc: 62.20
+Epoch: 51 Train loss: 0.01 Val loss: 0.01 Train acc: 52.76 Val acc: 61.80
+Epoch: 52 Train loss: 0.01 Val loss: 0.01 Train acc: 53.20 Val acc: 62.20
+Epoch: 53 Train loss: 0.01 Val loss: 0.01 Train acc: 53.48 Val acc: 62.40
+Epoch: 54 Train loss: 0.01 Val loss: 0.01 Train acc: 52.92 Val acc: 62.20
+Epoch: 55 Train loss: 0.01 Val loss: 0.01 Train acc: 53.38 Val acc: 62.20
+Epoch: 56 Train loss: 0.01 Val loss: 0.01 Train acc: 53.24 Val acc: 62.20
+Epoch: 57 Train loss: 0.01 Val loss: 0.01 Train acc: 53.32 Val acc: 62.20
+Epoch: 58 Train loss: 0.01 Val loss: 0.01 Train acc: 53.44 Val acc: 62.40
+Epoch: 59 Train loss: 0.01 Val loss: 0.01 Train acc: 53.15 Val acc: 62.00
+Epoch: 60 Train loss: 0.01 Val loss: 0.01 Train acc: 52.94 Val acc: 62.20
+Epoch: 61 Train loss: 0.01 Val loss: 0.01 Train acc: 53.39 Val acc: 62.20
+Epoch: 62 Train loss: 0.01 Val loss: 0.01 Train acc: 53.84 Val acc: 62.20
+Epoch: 63 Train loss: 0.01 Val loss: 0.01 Train acc: 53.62 Val acc: 62.20
+Epoch: 64 Train loss: 0.01 Val loss: 0.01 Train acc: 52.61 Val acc: 62.00
+Epoch: 65 Train loss: 0.01 Val loss: 0.01 Train acc: 52.61 Val acc: 62.20
+Epoch: 66 Train loss: 0.01 Val loss: 0.01 Train acc: 53.33 Val acc: 62.20
+Epoch: 67 Train loss: 0.01 Val loss: 0.01 Train acc: 53.48 Val acc: 62.20
+Epoch: 68 Train loss: 0.01 Val loss: 0.01 Train acc: 52.64 Val acc: 62.20
+Epoch: 69 Train loss: 0.01 Val loss: 0.01 Train acc: 52.95 Val acc: 62.20
+Epoch: 70 Train loss: 0.01 Val loss: 0.01 Train acc: 54.08 Val acc: 62.20
+Epoch: 71 Train loss: 0.01 Val loss: 0.01 Train acc: 52.78 Val acc: 62.20
+Epoch: 72 Train loss: 0.01 Val loss: 0.01 Train acc: 53.12 Val acc: 62.00
+Epoch: 73 Train loss: 0.01 Val loss: 0.01 Train acc: 53.56 Val acc: 62.20
+Epoch: 74 Train loss: 0.01 Val loss: 0.01 Train acc: 53.43 Val acc: 62.20
+Epoch: 75 Train loss: 0.01 Val loss: 0.01 Train acc: 52.90 Val acc: 62.00
+Epoch: 76 Train loss: 0.01 Val loss: 0.01 Train acc: 53.05 Val acc: 62.20
+Epoch: 77 Train loss: 0.01 Val loss: 0.01 Train acc: 52.99 Val acc: 62.20
+Epoch: 78 Train loss: 0.01 Val loss: 0.01 Train acc: 53.18 Val acc: 62.20
+Epoch: 79 Train loss: 0.01 Val loss: 0.01 Train acc: 53.22 Val acc: 62.20
+Epoch: 80 Train loss: 0.01 Val loss: 0.01 Train acc: 53.45 Val acc: 62.20
+Epoch: 81 Train loss: 0.01 Val loss: 0.01 Train acc: 53.67 Val acc: 62.20
+Epoch: 82 Train loss: 0.01 Val loss: 0.01 Train acc: 53.04 Val acc: 62.20
+Epoch: 83 Train loss: 0.01 Val loss: 0.01 Train acc: 53.79 Val acc: 62.20
+Epoch: 84 Train loss: 0.01 Val loss: 0.01 Train acc: 53.13 Val acc: 62.20
+Epoch: 85 Train loss: 0.01 Val loss: 0.01 Train acc: 53.36 Val acc: 62.20
+Epoch: 86 Train loss: 0.01 Val loss: 0.01 Train acc: 53.33 Val acc: 62.20
+Epoch: 87 Train loss: 0.01 Val loss: 0.01 Train acc: 53.77 Val acc: 62.20
+Epoch: 88 Train loss: 0.01 Val loss: 0.01 Train acc: 53.33 Val acc: 62.20
+Epoch: 89 Train loss: 0.01 Val loss: 0.01 Train acc: 53.85 Val acc: 62.20
+Epoch: 90 Train loss: 0.01 Val loss: 0.01 Train acc: 53.64 Val acc: 62.20
+Epoch: 91 Train loss: 0.01 Val loss: 0.01 Train acc: 53.58 Val acc: 62.20
+Epoch: 92 Train loss: 0.01 Val loss: 0.01 Train acc: 53.45 Val acc: 62.20
+Epoch: 93 Train loss: 0.01 Val loss: 0.01 Train acc: 53.22 Val acc: 62.20
+Epoch: 94 Train loss: 0.01 Val loss: 0.01 Train acc: 53.08 Val acc: 62.20
+Epoch: 95 Train loss: 0.01 Val loss: 0.01 Train acc: 53.51 Val acc: 62.20
+Epoch: 96 Train loss: 0.01 Val loss: 0.01 Train acc: 53.11 Val acc: 62.20
+Epoch: 97 Train loss: 0.01 Val loss: 0.01 Train acc: 52.80 Val acc: 62.20
+Epoch: 98 Train loss: 0.01 Val loss: 0.01 Train acc: 53.52 Val acc: 62.20
+Epoch: 99 Train loss: 0.01 Val loss: 0.01 Train acc: 53.32 Val acc: 62.20
+Creating distributions for task 9:
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000001 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000010 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0000100 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0001000 but this may hurt results
+WARNING: Covariance matrix is singular. Increasing eps to: 0.0010000 but this may hurt results
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  4 : loss=0.000 | TAw acc= 25.2%, forg= 31.0%| TAg acc= 25.2%, forg= 31.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  5 : loss=0.000 | TAw acc= 78.4%, forg=  1.0%| TAg acc=  1.6%, forg=  8.2% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  6 : loss=0.000 | TAw acc= 81.4%, forg=  0.6%| TAg acc=  9.0%, forg= 14.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  7 : loss=0.000 | TAw acc= 72.4%, forg= -0.6%| TAg acc= 25.2%, forg=  4.2% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  8 : loss=0.000 | TAw acc= 74.6%, forg=  2.6%| TAg acc= 13.2%, forg=  0.8% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+>>> Test on task  9 : loss=0.000 | TAw acc= 79.2%, forg=  0.0%| TAg acc= 15.4%, forg=  0.0% <<<
+Save at ../results/imagenet_subset_kaggle_seed_image-SEED0823-F10xT10xC10-seed1993
+************************************************************************************************************
+TAw Acc
+	56.16  0.00  0.00  0.00  0.00  0.00 	Avg.:56.16 
+	53.08 79.40  0.00  0.00  0.00  0.00 	Avg.:66.24 
+	44.36 79.20 81.60  0.00  0.00  0.00 	Avg.:68.39 
+	32.92 78.80 82.00 71.80  0.00  0.00 	Avg.:66.38 
+	29.48 79.00 81.60 71.60 77.20  0.00 	Avg.:67.78 
+	25.20 78.40 81.40 72.40 74.60 79.20 	Avg.:68.53 
+Average incremental:65.58 
+--------------------------------------------------
+TAw Acc on CIL taskes
+
+	79.40  0.00  0.00  0.00  0.00 	Avg.:79.40 
+	79.20 81.60  0.00  0.00  0.00 	Avg.:80.40 
+	78.80 82.00 71.80  0.00  0.00 	Avg.:77.53 
+	79.00 81.60 71.60 77.20  0.00 	Avg.:77.35 
+	78.40 81.40 72.40 74.60 79.20 	Avg.:77.20 
+Average on CIL taskes:78.38 
+************************************************************************************************************
+TAg Acc
+	56.16  0.00  0.00  0.00  0.00  0.00 	Avg.:56.16 
+	53.08  9.80  0.00  0.00  0.00  0.00 	Avg.:31.44 
+	44.36  5.80 23.00  0.00  0.00  0.00 	Avg.:24.39 
+	32.92  2.40 10.80 29.40  0.00  0.00 	Avg.:18.88 
+	29.48  2.40  8.80 29.00 14.00  0.00 	Avg.:16.74 
+	25.20  1.60  9.00 25.20 13.20 15.40 	Avg.:14.93 
+Average incremental:27.09 
+--------------------------------------------------
+TAg Acc on CIL taskes
+
+	 9.80  0.00  0.00  0.00  0.00 	Avg.: 9.80 
+	 5.80 23.00  0.00  0.00  0.00 	Avg.:14.40 
+	 2.40 10.80 29.40  0.00  0.00 	Avg.:14.20 
+	 2.40  8.80 29.00 14.00  0.00 	Avg.:13.55 
+	 1.60  9.00 25.20 13.20 15.40 	Avg.:12.88 
+Average on CIL taskes:12.97 
+************************************************************************************************************
+TAw Forg
+	 0.00  0.00  0.00  0.00  0.00  0.00 	Avg.:12.88 
+	 3.08  0.00  0.00  0.00  0.00  0.00 	Avg.: 3.08 
+	11.80  0.20  0.00  0.00  0.00  0.00 	Avg.: 6.00 
+	23.24  0.60 -0.40  0.00  0.00  0.00 	Avg.: 7.81 
+	26.68  0.40  0.40  0.20  0.00  0.00 	Avg.: 6.92 
+	30.96  1.00  0.60 -0.60  2.60  0.00 	Avg.: 6.91 
+************************************************************************************************************
+TAg Forg
+	 0.00  0.00  0.00  0.00  0.00  0.00 	Avg.: 6.91 
+	 3.08  0.00  0.00  0.00  0.00  0.00 	Avg.: 3.08 
+	11.80  4.00  0.00  0.00  0.00  0.00 	Avg.: 7.90 
+	23.24  7.40 12.20  0.00  0.00  0.00 	Avg.:14.28 
+	26.68  7.40 14.20  0.40  0.00  0.00 	Avg.:12.17 
+	30.96  8.20 14.00  4.20  0.80  0.00 	Avg.:11.63 
+************************************************************************************************************
+[Elapsed time = 12.1 h]
+Done!

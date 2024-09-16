@@ -1,0 +1,235 @@
+gcc-9.3.0 loaded successful
+cuda-12.1 loaded successful
+============================================================================================================
+Arguments =
+	approach: ILFTF
+	batch_size: 128
+	clipping: 1.0
+	collapse_alpha: 0.2
+	datasets: ['cifar100_icarl']
+	eval_on_train: False
+	exp_name: cifar_0820_ma_I50_T6_C10
+	extra_aug: fetril
+	fix_bn: False
+	ftepochs: 100
+	gpu: 0
+	inc_sub_rate: 0.2
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.05
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.9
+	multi_softmax: False
+	nc_first_task: 50
+	nc_inc_tasks: 10
+	nc_total: 100
+	nepochs: 200
+	network: resnet32
+	no_cudnn_deterministic: False
+	num_experts: 5
+	num_tasks: 6
+	num_workers: 4
+	pin_memory: False
+	pretrained: False
+	random_seed: 1993
+	results_path: ../results
+	save_models: False
+	seed: 1
+	shared: 1.0
+	small_data_rate: 0.1
+	stop_at_task: 0
+	use_test_as_val: True
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0005
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	ftwd: 0
+	ini_kd_loss: 0.1
+	initialization_strategy: first
+	max_experts: 5
+	tau: 3.0
+	use_nmc: False
+============================================================================================================
+WARNING: ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10 already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+[(0, 50), (1, 10), (2, 10), (3, 10), (4, 10), (5, 10)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+Training backbone_0 on task_0:
+The expert_0 has 469,506 trainable parameters
+The expert_0 has 0 shared parameters
+
+Training backbone_1 on task_0:
+The expert_1 has 445,682 trainable parameters
+The expert_1 has 23,824 shared parameters
+
+Training backbone_2 on task_0:
+The expert_2 has 445,682 trainable parameters
+The expert_2 has 23,824 shared parameters
+
+Training backbone_3 on task_0:
+The expert_3 has 445,682 trainable parameters
+The expert_3 has 23,824 shared parameters
+
+Training backbone_4 on task_0:
+The expert_4 has 445,682 trainable parameters
+The expert_4 has 23,824 shared parameters
+
+Creating distributions for task_0:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 75.0%, forg=  0.0%| TAg acc= 75.0%, forg=  0.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+[Elapsed time in init_stage = 0.6 h]
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+Finetuning backbone_0 on task_1:
+Finetuning other backbones_1 on task_1:
+Finetuning other backbones_2 on task_1:
+Finetuning other backbones_3 on task_1:
+Finetuning other backbones_4 on task_1:
+Creating distributions for task_1:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 72.0%, forg=  3.0%| TAg acc= 72.0%, forg=  3.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  1 : loss=0.000 | TAw acc= 84.0%, forg=  0.0%| TAg acc= 70.0%, forg=  0.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+Finetuning backbone_0 on task_2:
+Finetuning other backbones_1 on task_2:
+Finetuning other backbones_2 on task_2:
+Finetuning other backbones_3 on task_2:
+Finetuning other backbones_4 on task_2:
+Creating distributions for task_2:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 70.0%, forg=  5.0%| TAg acc= 70.0%, forg=  5.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  1 : loss=0.000 | TAw acc= 82.0%, forg=  2.0%| TAg acc= 68.0%, forg=  2.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  2 : loss=0.000 | TAw acc= 89.0%, forg=  0.0%| TAg acc= 83.0%, forg=  0.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+Finetuning backbone_0 on task_3:
+Finetuning other backbones_1 on task_3:
+Finetuning other backbones_2 on task_3:
+Finetuning other backbones_3 on task_3:
+Finetuning other backbones_4 on task_3:
+Creating distributions for task_3:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 67.0%, forg=  8.0%| TAg acc= 67.0%, forg=  8.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  1 : loss=0.000 | TAw acc= 81.0%, forg=  3.0%| TAg acc= 69.0%, forg=  1.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  2 : loss=0.000 | TAw acc= 88.0%, forg=  1.0%| TAg acc= 79.0%, forg=  4.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  3 : loss=0.000 | TAw acc= 86.0%, forg=  0.0%| TAg acc= 80.0%, forg=  0.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+Finetuning backbone_0 on task_4:
+Finetuning other backbones_1 on task_4:
+Finetuning other backbones_2 on task_4:
+Finetuning other backbones_3 on task_4:
+Finetuning other backbones_4 on task_4:
+Creating distributions for task_4:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 63.0%, forg= 12.0%| TAg acc= 63.0%, forg= 12.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  1 : loss=0.000 | TAw acc= 79.0%, forg=  5.0%| TAg acc= 67.0%, forg=  3.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  2 : loss=0.000 | TAw acc= 85.0%, forg=  4.0%| TAg acc= 73.0%, forg= 10.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  3 : loss=0.000 | TAw acc= 85.0%, forg=  1.0%| TAg acc= 76.0%, forg=  4.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  4 : loss=0.000 | TAw acc= 88.0%, forg=  0.0%| TAg acc= 81.0%, forg=  0.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+************************************************************************************************************
+Task  5
+************************************************************************************************************
+Finetuning backbone_0 on task_5:
+Finetuning other backbones_1 on task_5:
+Finetuning other backbones_2 on task_5:
+Finetuning other backbones_3 on task_5:
+Finetuning other backbones_4 on task_5:
+Creating distributions for task_5:
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.000 | TAw acc= 59.0%, forg= 16.0%| TAg acc= 59.0%, forg= 16.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  1 : loss=0.000 | TAw acc= 76.0%, forg=  8.0%| TAg acc= 63.0%, forg=  7.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  2 : loss=0.000 | TAw acc= 83.0%, forg=  6.0%| TAg acc= 69.0%, forg= 14.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  3 : loss=0.000 | TAw acc= 82.0%, forg=  4.0%| TAg acc= 71.0%, forg=  9.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  4 : loss=0.000 | TAw acc= 86.0%, forg=  2.0%| TAg acc= 74.0%, forg=  7.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+>>> Test on task  5 : loss=0.000 | TAw acc= 82.0%, forg=  0.0%| TAg acc= 74.0%, forg=  0.0% <<<
+Save at ../results/cifar100_icarl_ILFTF_cifar_0820_ma_I50_T6_C10
+************************************************************************************************************
+TAw Acc
+	 75.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 75.0% 
+	 72.0%  84.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 78.0% 
+	 70.0%  82.0%  89.0%   0.0%   0.0%   0.0% 	Avg.: 80.3% 
+	 67.0%  81.0%  88.0%  86.0%   0.0%   0.0% 	Avg.: 80.5% 
+	 63.0%  79.0%  85.0%  85.0%  88.0%   0.0% 	Avg.: 80.0% 
+	 59.0%  76.0%  83.0%  82.0%  86.0%  82.0% 	Avg.: 78.0% 
+Average incremental: 78.6% 
+--------------------------------------------------
+TAw Acc on CIL taskes
+
+	 84.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 84.0% 
+	 82.0%  89.0%   0.0%   0.0%   0.0% 	Avg.: 85.5% 
+	 81.0%  88.0%  86.0%   0.0%   0.0% 	Avg.: 85.0% 
+	 79.0%  85.0%  85.0%  88.0%   0.0% 	Avg.: 84.2% 
+	 76.0%  83.0%  82.0%  86.0%  82.0% 	Avg.: 81.8% 
+Average on CIL taskes: 84.1% 
+************************************************************************************************************
+TAg Acc
+	 75.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 75.0% 
+	 72.0%  70.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 71.0% 
+	 70.0%  68.0%  83.0%   0.0%   0.0%   0.0% 	Avg.: 73.7% 
+	 67.0%  69.0%  79.0%  80.0%   0.0%   0.0% 	Avg.: 73.8% 
+	 63.0%  67.0%  73.0%  76.0%  81.0%   0.0% 	Avg.: 72.0% 
+	 59.0%  63.0%  69.0%  71.0%  74.0%  74.0% 	Avg.: 68.3% 
+Average incremental: 72.3% 
+--------------------------------------------------
+TAg Acc on CIL taskes
+
+	 70.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.0% 
+	 68.0%  83.0%   0.0%   0.0%   0.0% 	Avg.: 75.5% 
+	 69.0%  79.0%  80.0%   0.0%   0.0% 	Avg.: 76.0% 
+	 67.0%  73.0%  76.0%  81.0%   0.0% 	Avg.: 74.2% 
+	 63.0%  69.0%  71.0%  74.0%  74.0% 	Avg.: 70.2% 
+Average on CIL taskes: 73.2% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 70.2% 
+	  3.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.0% 
+	  5.0%   2.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.5% 
+	  8.0%   3.0%   1.0%   0.0%   0.0%   0.0% 	Avg.:  4.0% 
+	 12.0%   5.0%   4.0%   1.0%   0.0%   0.0% 	Avg.:  5.5% 
+	 16.0%   8.0%   6.0%   4.0%   2.0%   0.0% 	Avg.:  7.2% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  7.2% 
+	  3.0%   0.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.0% 
+	  5.0%   2.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.5% 
+	  8.0%   1.0%   4.0%   0.0%   0.0%   0.0% 	Avg.:  4.3% 
+	 12.0%   3.0%  10.0%   4.0%   0.0%   0.0% 	Avg.:  7.2% 
+	 16.0%   7.0%  14.0%   9.0%   7.0%   0.0% 	Avg.: 10.6% 
+************************************************************************************************************
+[Elapsed time for incremental learning = 0.3 h]
+Done!
